@@ -134,7 +134,7 @@ namespace WorldLabs
                 PrepareGetWorldMarbleV1WorldsWorldIdGetRequest(
                     httpClient: HttpClient,
                     httpRequestMessage: __httpRequest,
-                    worldId: worldId);
+                    worldId: worldId!);
 
                 return __httpRequest;
             }

@@ -143,7 +143,7 @@ namespace WorldLabs
                 PrepareGetOperationMarbleV1OperationsOperationIdGetRequest(
                     httpClient: HttpClient,
                     httpRequestMessage: __httpRequest,
-                    operationId: operationId);
+                    operationId: operationId!);
 
                 return __httpRequest;
             }

@@ -135,7 +135,7 @@ namespace WorldLabs
                 PrepareDeleteWorldMarbleV1WorldsWorldIdDeleteRequest(
                     httpClient: HttpClient,
                     httpRequestMessage: __httpRequest,
-                    worldId: worldId);
+                    worldId: worldId!);
 
                 return __httpRequest;
             }
