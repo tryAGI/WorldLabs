@@ -133,7 +133,7 @@ namespace WorldLabs
                 PrepareGetMediaAssetMarbleV1MediaAssetsMediaAssetIdGetRequest(
                     httpClient: HttpClient,
                     httpRequestMessage: __httpRequest,
-                    mediaAssetId: mediaAssetId);
+                    mediaAssetId: mediaAssetId!);
 
                 return __httpRequest;
             }
