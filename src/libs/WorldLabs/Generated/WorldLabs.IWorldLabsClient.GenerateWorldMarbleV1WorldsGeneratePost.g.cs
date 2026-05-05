@@ -47,6 +47,32 @@ namespace WorldLabs
         ///     HTTPException: 402 if insufficient credits<br/>
         ///     HTTPException: 500 if generation could not be started
         /// </summary>
+        /// <param name="request"></param>
+        /// <param name="requestOptions">Per-request overrides such as headers, query parameters, timeout, retries, and response buffering.</param>
+        /// <param name="cancellationToken">The token to cancel the operation with</param>
+        /// <exception cref="global::WorldLabs.ApiException"></exception>
+        global::System.Threading.Tasks.Task<global::WorldLabs.AutoSDKHttpResponse<global::WorldLabs.GenerateWorldResponse>> GenerateWorldMarbleV1WorldsGeneratePostAsResponseAsync(
+
+            global::WorldLabs.WorldsGenerateRequest request,
+            global::WorldLabs.AutoSDKRequestOptions? requestOptions = default,
+            global::System.Threading.CancellationToken cancellationToken = default);
+        /// <summary>
+        /// Generate World<br/>
+        /// Start world generation.<br/>
+        /// Creates a new world generation job and returns a long-running operation.<br/>
+        /// Poll the /operations/{operation_id} endpoint to check generation status<br/>
+        /// and retrieve the generated world when complete.<br/>
+        /// Args:<br/>
+        ///     request: The world generation request containing world_prompt, display_name,<br/>
+        ///         tags, model, seed, and permission settings.<br/>
+        /// Returns:<br/>
+        ///     GenerateWorldResponse with operation_id and timestamps. Use the operation_id<br/>
+        ///     to poll for completion.<br/>
+        /// Raises:<br/>
+        ///     HTTPException: 400 if invalid request or content violates policies<br/>
+        ///     HTTPException: 402 if insufficient credits<br/>
+        ///     HTTPException: 500 if generation could not be started
+        /// </summary>
         /// <param name="displayName">
         /// Optional display name (max 64 characters)
         /// </param>
