@@ -33,6 +33,19 @@ namespace WorldLabs
         public bool IsText => Text != null;
 
         /// <summary>
+        /// 
+        /// </summary>
+        public bool TryPickText(
+#if NET6_0_OR_GREATER
+            [global::System.Diagnostics.CodeAnalysis.NotNullWhen(true)]
+#endif
+            out global::WorldLabs.WorldTextPromptInput? value)
+        {
+            value = Text;
+            return IsText;
+        }
+
+        /// <summary>
         /// Image-to-world generation.<br/>
         /// Generates a world from an image. text_prompt is optional - if not provided,<br/>
         /// it will be generated via recaptioning.<br/>
@@ -51,6 +64,19 @@ namespace WorldLabs
         [global::System.Diagnostics.CodeAnalysis.MemberNotNullWhen(true, nameof(Image))]
 #endif
         public bool IsImage => Image != null;
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public bool TryPickImage(
+#if NET6_0_OR_GREATER
+            [global::System.Diagnostics.CodeAnalysis.NotNullWhen(true)]
+#endif
+            out global::WorldLabs.ImagePrompt? value)
+        {
+            value = Image;
+            return IsImage;
+        }
 
         /// <summary>
         /// Multi-image-to-world generation.<br/>
@@ -72,6 +98,19 @@ namespace WorldLabs
         public bool IsMultiImage => MultiImage != null;
 
         /// <summary>
+        /// 
+        /// </summary>
+        public bool TryPickMultiImage(
+#if NET6_0_OR_GREATER
+            [global::System.Diagnostics.CodeAnalysis.NotNullWhen(true)]
+#endif
+            out global::WorldLabs.MultiImagePromptInput? value)
+        {
+            value = MultiImage;
+            return IsMultiImage;
+        }
+
+        /// <summary>
         /// Video-to-world generation.<br/>
         /// Generates a world from a video. text_prompt is optional.<br/>
         /// Recommended video formats: mp4, webm, mov, avi.<br/>
@@ -90,6 +129,19 @@ namespace WorldLabs
         [global::System.Diagnostics.CodeAnalysis.MemberNotNullWhen(true, nameof(Video))]
 #endif
         public bool IsVideo => Video != null;
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public bool TryPickVideo(
+#if NET6_0_OR_GREATER
+            [global::System.Diagnostics.CodeAnalysis.NotNullWhen(true)]
+#endif
+            out global::WorldLabs.VideoPromptInput? value)
+        {
+            value = Video;
+            return IsVideo;
+        }
         /// <summary>
         /// 
         /// </summary>
@@ -213,10 +265,10 @@ namespace WorldLabs
         /// 
         /// </summary>
         public TResult? Match<TResult>(
-            global::System.Func<global::WorldLabs.WorldTextPromptInput?, TResult>? text = null,
-            global::System.Func<global::WorldLabs.ImagePrompt?, TResult>? image = null,
-            global::System.Func<global::WorldLabs.MultiImagePromptInput?, TResult>? multiImage = null,
-            global::System.Func<global::WorldLabs.VideoPromptInput?, TResult>? video = null,
+            global::System.Func<global::WorldLabs.WorldTextPromptInput, TResult>? text = null,
+            global::System.Func<global::WorldLabs.ImagePrompt, TResult>? image = null,
+            global::System.Func<global::WorldLabs.MultiImagePromptInput, TResult>? multiImage = null,
+            global::System.Func<global::WorldLabs.VideoPromptInput, TResult>? video = null,
             bool validate = true)
         {
             if (validate)
@@ -248,10 +300,46 @@ namespace WorldLabs
         /// 
         /// </summary>
         public void Match(
-            global::System.Action<global::WorldLabs.WorldTextPromptInput?>? text = null,
-            global::System.Action<global::WorldLabs.ImagePrompt?>? image = null,
-            global::System.Action<global::WorldLabs.MultiImagePromptInput?>? multiImage = null,
-            global::System.Action<global::WorldLabs.VideoPromptInput?>? video = null,
+            global::System.Action<global::WorldLabs.WorldTextPromptInput>? text = null,
+
+            global::System.Action<global::WorldLabs.ImagePrompt>? image = null,
+
+            global::System.Action<global::WorldLabs.MultiImagePromptInput>? multiImage = null,
+
+            global::System.Action<global::WorldLabs.VideoPromptInput>? video = null,
+            bool validate = true)
+        {
+            if (validate)
+            {
+                Validate();
+            }
+
+            if (IsText)
+            {
+                text?.Invoke(Text!);
+            }
+            else if (IsImage)
+            {
+                image?.Invoke(Image!);
+            }
+            else if (IsMultiImage)
+            {
+                multiImage?.Invoke(MultiImage!);
+            }
+            else if (IsVideo)
+            {
+                video?.Invoke(Video!);
+            }
+        }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public void Switch(
+            global::System.Action<global::WorldLabs.WorldTextPromptInput>? text = null,
+            global::System.Action<global::WorldLabs.ImagePrompt>? image = null,
+            global::System.Action<global::WorldLabs.MultiImagePromptInput>? multiImage = null,
+            global::System.Action<global::WorldLabs.VideoPromptInput>? video = null,
             bool validate = true)
         {
             if (validate)
