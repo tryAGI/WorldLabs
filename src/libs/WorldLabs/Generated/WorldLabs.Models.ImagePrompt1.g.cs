@@ -32,6 +32,19 @@ namespace WorldLabs
         public bool IsMediaAsset => MediaAsset != null;
 
         /// <summary>
+        /// 
+        /// </summary>
+        public bool TryPickMediaAsset(
+#if NET6_0_OR_GREATER
+            [global::System.Diagnostics.CodeAnalysis.NotNullWhen(true)]
+#endif
+            out global::WorldLabs.MediaAssetReference? value)
+        {
+            value = MediaAsset;
+            return IsMediaAsset;
+        }
+
+        /// <summary>
         /// Reference to content via a publicly accessible URL.
         /// </summary>
 #if NET6_0_OR_GREATER
@@ -49,6 +62,19 @@ namespace WorldLabs
         public bool IsUri => Uri != null;
 
         /// <summary>
+        /// 
+        /// </summary>
+        public bool TryPickUri(
+#if NET6_0_OR_GREATER
+            [global::System.Diagnostics.CodeAnalysis.NotNullWhen(true)]
+#endif
+            out global::WorldLabs.UriReference? value)
+        {
+            value = Uri;
+            return IsUri;
+        }
+
+        /// <summary>
         /// Reference to content via base64-encoded data.
         /// </summary>
 #if NET6_0_OR_GREATER
@@ -64,6 +90,19 @@ namespace WorldLabs
         [global::System.Diagnostics.CodeAnalysis.MemberNotNullWhen(true, nameof(DataBase64))]
 #endif
         public bool IsDataBase64 => DataBase64 != null;
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public bool TryPickDataBase64(
+#if NET6_0_OR_GREATER
+            [global::System.Diagnostics.CodeAnalysis.NotNullWhen(true)]
+#endif
+            out global::WorldLabs.DataBase64Reference? value)
+        {
+            value = DataBase64;
+            return IsDataBase64;
+        }
         /// <summary>
         /// 
         /// </summary>
@@ -165,9 +204,9 @@ namespace WorldLabs
         /// 
         /// </summary>
         public TResult? Match<TResult>(
-            global::System.Func<global::WorldLabs.MediaAssetReference?, TResult>? mediaAsset = null,
-            global::System.Func<global::WorldLabs.UriReference?, TResult>? uri = null,
-            global::System.Func<global::WorldLabs.DataBase64Reference?, TResult>? dataBase64 = null,
+            global::System.Func<global::WorldLabs.MediaAssetReference, TResult>? mediaAsset = null,
+            global::System.Func<global::WorldLabs.UriReference, TResult>? uri = null,
+            global::System.Func<global::WorldLabs.DataBase64Reference, TResult>? dataBase64 = null,
             bool validate = true)
         {
             if (validate)
@@ -195,9 +234,39 @@ namespace WorldLabs
         /// 
         /// </summary>
         public void Match(
-            global::System.Action<global::WorldLabs.MediaAssetReference?>? mediaAsset = null,
-            global::System.Action<global::WorldLabs.UriReference?>? uri = null,
-            global::System.Action<global::WorldLabs.DataBase64Reference?>? dataBase64 = null,
+            global::System.Action<global::WorldLabs.MediaAssetReference>? mediaAsset = null,
+
+            global::System.Action<global::WorldLabs.UriReference>? uri = null,
+
+            global::System.Action<global::WorldLabs.DataBase64Reference>? dataBase64 = null,
+            bool validate = true)
+        {
+            if (validate)
+            {
+                Validate();
+            }
+
+            if (IsMediaAsset)
+            {
+                mediaAsset?.Invoke(MediaAsset!);
+            }
+            else if (IsUri)
+            {
+                uri?.Invoke(Uri!);
+            }
+            else if (IsDataBase64)
+            {
+                dataBase64?.Invoke(DataBase64!);
+            }
+        }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public void Switch(
+            global::System.Action<global::WorldLabs.MediaAssetReference>? mediaAsset = null,
+            global::System.Action<global::WorldLabs.UriReference>? uri = null,
+            global::System.Action<global::WorldLabs.DataBase64Reference>? dataBase64 = null,
             bool validate = true)
         {
             if (validate)
