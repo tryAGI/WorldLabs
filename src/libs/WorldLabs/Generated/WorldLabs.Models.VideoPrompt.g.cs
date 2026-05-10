@@ -45,6 +45,13 @@ namespace WorldLabs
         }
 
         /// <summary>
+        /// 
+        /// </summary>
+        public global::WorldLabs.MediaAssetReference PickMediaAsset() => IsMediaAsset
+            ? MediaAsset!
+            : throw new global::System.InvalidOperationException($"Expected union variant 'MediaAsset' but the value was {ToString()}.");
+
+        /// <summary>
         /// Reference to content via a publicly accessible URL.
         /// </summary>
 #if NET6_0_OR_GREATER
@@ -75,6 +82,13 @@ namespace WorldLabs
         }
 
         /// <summary>
+        /// 
+        /// </summary>
+        public global::WorldLabs.UriReference PickUri() => IsUri
+            ? Uri!
+            : throw new global::System.InvalidOperationException($"Expected union variant 'Uri' but the value was {ToString()}.");
+
+        /// <summary>
         /// Reference to content via base64-encoded data.
         /// </summary>
 #if NET6_0_OR_GREATER
@@ -103,6 +117,13 @@ namespace WorldLabs
             value = DataBase64;
             return IsDataBase64;
         }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public global::WorldLabs.DataBase64Reference PickDataBase64() => IsDataBase64
+            ? DataBase64!
+            : throw new global::System.InvalidOperationException($"Expected union variant 'DataBase64' but the value was {ToString()}.");
         /// <summary>
         /// 
         /// </summary>

@@ -45,6 +45,13 @@ namespace WorldLabs
         }
 
         /// <summary>
+        /// 
+        /// </summary>
+        public global::WorldLabs.WorldTextPromptOutput PickText() => IsText
+            ? Text!
+            : throw new global::System.InvalidOperationException($"Expected union variant 'Text' but the value was {ToString()}.");
+
+        /// <summary>
         /// For world models generating a world from a single image (+ text).<br/>
         /// Images can be generated using the :image-generation method.<br/>
         /// If no text prompt is provided, it will be generated via recaption.
@@ -77,6 +84,13 @@ namespace WorldLabs
         }
 
         /// <summary>
+        /// 
+        /// </summary>
+        public global::WorldLabs.Prompt PickDepthPano1() => IsDepthPano1
+            ? DepthPano1!
+            : throw new global::System.InvalidOperationException($"Expected union variant 'DepthPano1' but the value was {ToString()}.");
+
+        /// <summary>
         /// For world models supporting multi-image (+ text) input.
         /// </summary>
 #if NET6_0_OR_GREATER
@@ -107,6 +121,13 @@ namespace WorldLabs
         }
 
         /// <summary>
+        /// 
+        /// </summary>
+        public global::WorldLabs.MultiImagePromptOutput PickMultiImage() => IsMultiImage
+            ? MultiImage!
+            : throw new global::System.InvalidOperationException($"Expected union variant 'MultiImage' but the value was {ToString()}.");
+
+        /// <summary>
         /// For world models supporting video (+ text) input.
         /// </summary>
 #if NET6_0_OR_GREATER
@@ -135,6 +156,13 @@ namespace WorldLabs
             value = Video;
             return IsVideo;
         }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public global::WorldLabs.VideoPromptOutput PickVideo() => IsVideo
+            ? Video!
+            : throw new global::System.InvalidOperationException($"Expected union variant 'Video' but the value was {ToString()}.");
 
         /// <summary>
         /// For models conditioned on a depth pano and text.<br/>
@@ -171,6 +199,13 @@ namespace WorldLabs
         }
 
         /// <summary>
+        /// 
+        /// </summary>
+        public global::WorldLabs.DepthPanoPrompt PickDepthPano2() => IsDepthPano2
+            ? DepthPano2!
+            : throw new global::System.InvalidOperationException($"Expected union variant 'DepthPano2' but the value was {ToString()}.");
+
+        /// <summary>
         /// For models that inpaint the masked portion of a pano image.
         /// </summary>
 #if NET6_0_OR_GREATER
@@ -199,6 +234,13 @@ namespace WorldLabs
             value = InpaintPano;
             return IsInpaintPano;
         }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public global::WorldLabs.InpaintPanoPrompt PickInpaintPano() => IsInpaintPano
+            ? InpaintPano!
+            : throw new global::System.InvalidOperationException($"Expected union variant 'InpaintPano' but the value was {ToString()}.");
         /// <summary>
         /// 
         /// </summary>

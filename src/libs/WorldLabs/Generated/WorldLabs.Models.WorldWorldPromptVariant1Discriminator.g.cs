@@ -40,5 +40,6 @@ namespace WorldLabs
         public WorldWorldPromptVariant1Discriminator()
         {
         }
+
     }
 }

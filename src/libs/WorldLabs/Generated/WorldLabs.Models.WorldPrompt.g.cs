@@ -46,6 +46,13 @@ namespace WorldLabs
         }
 
         /// <summary>
+        /// 
+        /// </summary>
+        public global::WorldLabs.WorldTextPromptInput PickText() => IsText
+            ? Text!
+            : throw new global::System.InvalidOperationException($"Expected union variant 'Text' but the value was {ToString()}.");
+
+        /// <summary>
         /// Image-to-world generation.<br/>
         /// Generates a world from an image. text_prompt is optional - if not provided,<br/>
         /// it will be generated via recaptioning.<br/>
@@ -77,6 +84,13 @@ namespace WorldLabs
             value = Image;
             return IsImage;
         }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public global::WorldLabs.ImagePrompt PickImage() => IsImage
+            ? Image!
+            : throw new global::System.InvalidOperationException($"Expected union variant 'Image' but the value was {ToString()}.");
 
         /// <summary>
         /// Multi-image-to-world generation.<br/>
@@ -111,6 +125,13 @@ namespace WorldLabs
         }
 
         /// <summary>
+        /// 
+        /// </summary>
+        public global::WorldLabs.MultiImagePromptInput PickMultiImage() => IsMultiImage
+            ? MultiImage!
+            : throw new global::System.InvalidOperationException($"Expected union variant 'MultiImage' but the value was {ToString()}.");
+
+        /// <summary>
         /// Video-to-world generation.<br/>
         /// Generates a world from a video. text_prompt is optional.<br/>
         /// Recommended video formats: mp4, webm, mov, avi.<br/>
@@ -142,6 +163,13 @@ namespace WorldLabs
             value = Video;
             return IsVideo;
         }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public global::WorldLabs.VideoPromptInput PickVideo() => IsVideo
+            ? Video!
+            : throw new global::System.InvalidOperationException($"Expected union variant 'Video' but the value was {ToString()}.");
         /// <summary>
         /// 
         /// </summary>
