@@ -124,6 +124,11 @@ namespace WorldLabs
         /// <summary>
         /// 
         /// </summary>
+        public static Content2 FromMediaAsset(global::WorldLabs.MediaAssetReference? value) => new Content2(value);
+
+        /// <summary>
+        /// 
+        /// </summary>
         public static implicit operator Content2(global::WorldLabs.UriReference value) => new Content2((global::WorldLabs.UriReference?)value);
 
         /// <summary>
@@ -142,6 +147,11 @@ namespace WorldLabs
         /// <summary>
         /// 
         /// </summary>
+        public static Content2 FromUri(global::WorldLabs.UriReference? value) => new Content2(value);
+
+        /// <summary>
+        /// 
+        /// </summary>
         public static implicit operator Content2(global::WorldLabs.DataBase64Reference value) => new Content2((global::WorldLabs.DataBase64Reference?)value);
 
         /// <summary>
@@ -156,6 +166,11 @@ namespace WorldLabs
         {
             DataBase64 = value;
         }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public static Content2 FromDataBase64(global::WorldLabs.DataBase64Reference? value) => new Content2(value);
 
         /// <summary>
         /// 

@@ -163,6 +163,11 @@ namespace WorldLabs
         /// <summary>
         /// 
         /// </summary>
+        public static WorldPrompt FromText(global::WorldLabs.WorldTextPromptInput? value) => new WorldPrompt(value);
+
+        /// <summary>
+        /// 
+        /// </summary>
         public static implicit operator WorldPrompt(global::WorldLabs.ImagePrompt value) => new WorldPrompt((global::WorldLabs.ImagePrompt?)value);
 
         /// <summary>
@@ -177,6 +182,11 @@ namespace WorldLabs
         {
             Image = value;
         }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public static WorldPrompt FromImage(global::WorldLabs.ImagePrompt? value) => new WorldPrompt(value);
 
         /// <summary>
         /// 
@@ -199,6 +209,11 @@ namespace WorldLabs
         /// <summary>
         /// 
         /// </summary>
+        public static WorldPrompt FromMultiImage(global::WorldLabs.MultiImagePromptInput? value) => new WorldPrompt(value);
+
+        /// <summary>
+        /// 
+        /// </summary>
         public static implicit operator WorldPrompt(global::WorldLabs.VideoPromptInput value) => new WorldPrompt((global::WorldLabs.VideoPromptInput?)value);
 
         /// <summary>
@@ -213,6 +228,11 @@ namespace WorldLabs
         {
             Video = value;
         }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public static WorldPrompt FromVideo(global::WorldLabs.VideoPromptInput? value) => new WorldPrompt(value);
 
         /// <summary>
         /// 

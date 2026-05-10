@@ -220,6 +220,11 @@ namespace WorldLabs
         /// <summary>
         /// 
         /// </summary>
+        public static WorldPromptVariant1 FromText(global::WorldLabs.WorldTextPromptOutput? value) => new WorldPromptVariant1(value);
+
+        /// <summary>
+        /// 
+        /// </summary>
         public static implicit operator WorldPromptVariant1(global::WorldLabs.Prompt value) => new WorldPromptVariant1((global::WorldLabs.Prompt?)value);
 
         /// <summary>
@@ -234,6 +239,11 @@ namespace WorldLabs
         {
             DepthPano1 = value;
         }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public static WorldPromptVariant1 FromDepthPano1(global::WorldLabs.Prompt? value) => new WorldPromptVariant1(value);
 
         /// <summary>
         /// 
@@ -256,6 +266,11 @@ namespace WorldLabs
         /// <summary>
         /// 
         /// </summary>
+        public static WorldPromptVariant1 FromMultiImage(global::WorldLabs.MultiImagePromptOutput? value) => new WorldPromptVariant1(value);
+
+        /// <summary>
+        /// 
+        /// </summary>
         public static implicit operator WorldPromptVariant1(global::WorldLabs.VideoPromptOutput value) => new WorldPromptVariant1((global::WorldLabs.VideoPromptOutput?)value);
 
         /// <summary>
@@ -270,6 +285,11 @@ namespace WorldLabs
         {
             Video = value;
         }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public static WorldPromptVariant1 FromVideo(global::WorldLabs.VideoPromptOutput? value) => new WorldPromptVariant1(value);
 
         /// <summary>
         /// 
@@ -292,6 +312,11 @@ namespace WorldLabs
         /// <summary>
         /// 
         /// </summary>
+        public static WorldPromptVariant1 FromDepthPano2(global::WorldLabs.DepthPanoPrompt? value) => new WorldPromptVariant1(value);
+
+        /// <summary>
+        /// 
+        /// </summary>
         public static implicit operator WorldPromptVariant1(global::WorldLabs.InpaintPanoPrompt value) => new WorldPromptVariant1((global::WorldLabs.InpaintPanoPrompt?)value);
 
         /// <summary>
@@ -306,6 +331,11 @@ namespace WorldLabs
         {
             InpaintPano = value;
         }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public static WorldPromptVariant1 FromInpaintPano(global::WorldLabs.InpaintPanoPrompt? value) => new WorldPromptVariant1(value);
 
         /// <summary>
         /// 
