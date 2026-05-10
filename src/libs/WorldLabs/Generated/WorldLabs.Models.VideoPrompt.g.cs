@@ -124,6 +124,11 @@ namespace WorldLabs
         /// <summary>
         /// 
         /// </summary>
+        public static VideoPrompt FromMediaAsset(global::WorldLabs.MediaAssetReference? value) => new VideoPrompt(value);
+
+        /// <summary>
+        /// 
+        /// </summary>
         public static implicit operator VideoPrompt(global::WorldLabs.UriReference value) => new VideoPrompt((global::WorldLabs.UriReference?)value);
 
         /// <summary>
@@ -142,6 +147,11 @@ namespace WorldLabs
         /// <summary>
         /// 
         /// </summary>
+        public static VideoPrompt FromUri(global::WorldLabs.UriReference? value) => new VideoPrompt(value);
+
+        /// <summary>
+        /// 
+        /// </summary>
         public static implicit operator VideoPrompt(global::WorldLabs.DataBase64Reference value) => new VideoPrompt((global::WorldLabs.DataBase64Reference?)value);
 
         /// <summary>
@@ -156,6 +166,11 @@ namespace WorldLabs
         {
             DataBase64 = value;
         }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public static VideoPrompt FromDataBase64(global::WorldLabs.DataBase64Reference? value) => new VideoPrompt(value);
 
         /// <summary>
         /// 

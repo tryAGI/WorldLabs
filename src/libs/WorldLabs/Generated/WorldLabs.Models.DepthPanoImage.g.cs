@@ -124,6 +124,11 @@ namespace WorldLabs
         /// <summary>
         /// 
         /// </summary>
+        public static DepthPanoImage FromMediaAsset(global::WorldLabs.MediaAssetReference? value) => new DepthPanoImage(value);
+
+        /// <summary>
+        /// 
+        /// </summary>
         public static implicit operator DepthPanoImage(global::WorldLabs.UriReference value) => new DepthPanoImage((global::WorldLabs.UriReference?)value);
 
         /// <summary>
@@ -142,6 +147,11 @@ namespace WorldLabs
         /// <summary>
         /// 
         /// </summary>
+        public static DepthPanoImage FromUri(global::WorldLabs.UriReference? value) => new DepthPanoImage(value);
+
+        /// <summary>
+        /// 
+        /// </summary>
         public static implicit operator DepthPanoImage(global::WorldLabs.DataBase64Reference value) => new DepthPanoImage((global::WorldLabs.DataBase64Reference?)value);
 
         /// <summary>
@@ -156,6 +166,11 @@ namespace WorldLabs
         {
             DataBase64 = value;
         }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public static DepthPanoImage FromDataBase64(global::WorldLabs.DataBase64Reference? value) => new DepthPanoImage(value);
 
         /// <summary>
         /// 
