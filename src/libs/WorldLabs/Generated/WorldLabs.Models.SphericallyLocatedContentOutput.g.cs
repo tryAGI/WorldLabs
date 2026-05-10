@@ -68,5 +68,6 @@ namespace WorldLabs
         public SphericallyLocatedContentOutput()
         {
         }
+
     }
 }

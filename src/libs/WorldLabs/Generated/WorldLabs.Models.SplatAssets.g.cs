@@ -52,5 +52,6 @@ namespace WorldLabs
         public SplatAssets()
         {
         }
+
     }
 }
