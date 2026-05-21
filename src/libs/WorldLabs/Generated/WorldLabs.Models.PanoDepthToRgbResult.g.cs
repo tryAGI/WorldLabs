@@ -43,5 +43,6 @@ namespace WorldLabs
         public PanoDepthToRgbResult()
         {
         }
+
     }
 }

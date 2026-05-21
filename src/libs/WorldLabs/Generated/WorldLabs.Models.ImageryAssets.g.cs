@@ -41,5 +41,6 @@ namespace WorldLabs
         public ImageryAssets()
         {
         }
+
     }
 }

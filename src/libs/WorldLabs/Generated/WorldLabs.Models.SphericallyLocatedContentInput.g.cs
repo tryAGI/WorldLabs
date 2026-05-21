@@ -54,5 +54,6 @@ namespace WorldLabs
         public SphericallyLocatedContentInput()
         {
         }
+
     }
 }

@@ -78,5 +78,6 @@ namespace WorldLabs
         public InpaintPanoPrompt()
         {
         }
+
     }
 }

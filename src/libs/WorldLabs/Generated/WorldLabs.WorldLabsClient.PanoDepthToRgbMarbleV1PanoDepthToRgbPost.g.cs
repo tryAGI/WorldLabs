@@ -76,6 +76,50 @@ namespace WorldLabs
             global::WorldLabs.AutoSDKRequestOptions? requestOptions = default,
             global::System.Threading.CancellationToken cancellationToken = default)
         {
+            var __response = await PanoDepthToRgbMarbleV1PanoDepthToRgbPostAsResponseAsync(
+
+                request: request,
+                requestOptions: requestOptions,
+                cancellationToken: cancellationToken
+            ).ConfigureAwait(false);
+
+            return __response.Body;
+        }
+        /// <summary>
+        /// Pano Depth To Rgb<br/>
+        /// Generate an RGB panorama from a depth panorama.<br/>
+        /// Provide a depth panorama and a text prompt<br/>
+        /// describing the desired appearance. The depth map<br/>
+        /// supplies the scene geometry; the model synthesizes<br/>
+        /// textures that match that geometry and returns a<br/>
+        /// panoramic RGB image.<br/>
+        /// Accepted depth inputs:<br/>
+        /// * **EXR**: float depth values. Omit<br/>
+        ///   ``z_min`` and ``z_max``.<br/>
+        /// * **PNG**: depth values normalized to [0, 1].<br/>
+        ///   Provide both ``z_min`` and ``z_max`` so the<br/>
+        ///   service can decode the PNG correctly.<br/>
+        /// For a complete PNG-based workflow, see the<br/>
+        /// [web-chisel-depth-png example](https://github.com/worldlabsai/worldlabs-api-examples/tree/main/web-chisel-depth-png).<br/>
+        /// Returns a long-running ``Operation``. Poll<br/>
+        /// ``GET /operations/{operation_id}`` until<br/>
+        /// ``done`` is ``true``, then read the generated<br/>
+        /// panorama URL from ``response.pano_url``.<br/>
+        /// Raises:<br/>
+        ///     HTTPException: 400 if invalid request<br/>
+        ///     HTTPException: 402 if insufficient credits<br/>
+        ///     HTTPException: 500 if generation could not start
+        /// </summary>
+        /// <param name="request"></param>
+        /// <param name="requestOptions">Per-request overrides such as headers, query parameters, timeout, retries, and response buffering.</param>
+        /// <param name="cancellationToken">The token to cancel the operation with</param>
+        /// <exception cref="global::WorldLabs.ApiException"></exception>
+        public async global::System.Threading.Tasks.Task<global::WorldLabs.AutoSDKHttpResponse<global::WorldLabs.OperationPanoDepthToRgbResult>> PanoDepthToRgbMarbleV1PanoDepthToRgbPostAsResponseAsync(
+
+            global::WorldLabs.PanoDepthToRgbRequest request,
+            global::WorldLabs.AutoSDKRequestOptions? requestOptions = default,
+            global::System.Threading.CancellationToken cancellationToken = default)
+        {
             request = request ?? throw new global::System.ArgumentNullException(nameof(request));
 
             PrepareArguments(
@@ -106,6 +150,7 @@ namespace WorldLabs
 
             global::System.Net.Http.HttpRequestMessage __CreateHttpRequest()
             {
+
                             var __pathBuilder = new global::WorldLabs.PathBuilder(
                                 path: "/marble/v1/pano:depth_to_rgb",
                                 baseUri: HttpClient.BaseAddress);
@@ -185,6 +230,8 @@ namespace WorldLabs
                                 attempt: __attempt,
                                 maxAttempts: __maxAttempts,
                                 willRetry: false,
+                                retryDelay: null,
+                                retryReason: global::System.String.Empty,
                                 cancellationToken: __effectiveCancellationToken)).ConfigureAwait(false);
                     try
                     {
@@ -195,6 +242,11 @@ namespace WorldLabs
                     }
                     catch (global::System.Net.Http.HttpRequestException __exception)
                     {
+                        var __retryDelay = global::WorldLabs.AutoSDKRequestOptionsSupport.GetRetryDelay(
+                            clientOptions: Options,
+                            requestOptions: requestOptions,
+                            response: null,
+                            attempt: __attempt);
                         var __willRetry = __attempt < __maxAttempts && !__effectiveCancellationToken.IsCancellationRequested;
                         await global::WorldLabs.AutoSDKRequestOptionsSupport.OnAfterErrorAsync(
                             clientOptions: Options,
@@ -212,6 +264,8 @@ namespace WorldLabs
                                 attempt: __attempt,
                                 maxAttempts: __maxAttempts,
                                 willRetry: __willRetry,
+                                retryDelay: __willRetry ? __retryDelay : (global::System.TimeSpan?)null,
+                                retryReason: "exception",
                                 cancellationToken: __effectiveCancellationToken)).ConfigureAwait(false);
                         if (!__willRetry)
                         {
@@ -221,8 +275,7 @@ namespace WorldLabs
                         __httpRequest.Dispose();
                         __httpRequest = null;
                         await global::WorldLabs.AutoSDKRequestOptionsSupport.DelayBeforeRetryAsync(
-                            clientOptions: Options,
-                            requestOptions: requestOptions,
+                            retryDelay: __retryDelay,
                             cancellationToken: __effectiveCancellationToken).ConfigureAwait(false);
                         continue;
                     }
@@ -231,6 +284,11 @@ namespace WorldLabs
                         __attempt < __maxAttempts &&
                         global::WorldLabs.AutoSDKRequestOptionsSupport.ShouldRetryStatusCode(__response.StatusCode))
                     {
+                        var __retryDelay = global::WorldLabs.AutoSDKRequestOptionsSupport.GetRetryDelay(
+                            clientOptions: Options,
+                            requestOptions: requestOptions,
+                            response: __response,
+                            attempt: __attempt);
                         await global::WorldLabs.AutoSDKRequestOptionsSupport.OnAfterErrorAsync(
                             clientOptions: Options,
                             context: global::WorldLabs.AutoSDKRequestOptionsSupport.CreateHookContext(
@@ -247,14 +305,15 @@ namespace WorldLabs
                                 attempt: __attempt,
                                 maxAttempts: __maxAttempts,
                                 willRetry: true,
+                                retryDelay: __retryDelay,
+                                retryReason: "status:" + ((int)__response.StatusCode).ToString(global::System.Globalization.CultureInfo.InvariantCulture),
                                 cancellationToken: __effectiveCancellationToken)).ConfigureAwait(false);
                         __response.Dispose();
                         __response = null;
                         __httpRequest.Dispose();
                         __httpRequest = null;
                         await global::WorldLabs.AutoSDKRequestOptionsSupport.DelayBeforeRetryAsync(
-                            clientOptions: Options,
-                            requestOptions: requestOptions,
+                            retryDelay: __retryDelay,
                             cancellationToken: __effectiveCancellationToken).ConfigureAwait(false);
                         continue;
                     }
@@ -294,6 +353,8 @@ namespace WorldLabs
                                 attempt: __attemptNumber,
                                 maxAttempts: __maxAttempts,
                                 willRetry: false,
+                                retryDelay: null,
+                                retryReason: global::System.String.Empty,
                                 cancellationToken: __effectiveCancellationToken)).ConfigureAwait(false);
                 }
                 else
@@ -314,6 +375,8 @@ namespace WorldLabs
                                 attempt: __attemptNumber,
                                 maxAttempts: __maxAttempts,
                                 willRetry: false,
+                                retryDelay: null,
+                                retryReason: global::System.String.Empty,
                                 cancellationToken: __effectiveCancellationToken)).ConfigureAwait(false);
                 }
                             // Validation Error
@@ -376,9 +439,13 @@ namespace WorldLabs
                                 {
                                     __response.EnsureSuccessStatusCode();
 
-                                    return
-                                        global::WorldLabs.OperationPanoDepthToRgbResult.FromJson(__content, JsonSerializerContext) ??
+                                    var __value = global::WorldLabs.OperationPanoDepthToRgbResult.FromJson(__content, JsonSerializerContext) ??
                                         throw new global::System.InvalidOperationException($"Response deserialization failed for \"{__content}\" ");
+                                    return new global::WorldLabs.AutoSDKHttpResponse<global::WorldLabs.OperationPanoDepthToRgbResult>(
+                                        statusCode: __response.StatusCode,
+                                        headers: global::WorldLabs.AutoSDKHttpResponse.CreateHeaders(__response),
+                                        requestUri: __response.RequestMessage?.RequestUri,
+                                        body: __value);
                                 }
                                 catch (global::System.Exception __ex)
                                 {
@@ -406,9 +473,13 @@ namespace WorldLabs
                 #endif
                                     ).ConfigureAwait(false);
 
-                                    return
-                                        await global::WorldLabs.OperationPanoDepthToRgbResult.FromJsonStreamAsync(__content, JsonSerializerContext).ConfigureAwait(false) ??
+                                    var __value = await global::WorldLabs.OperationPanoDepthToRgbResult.FromJsonStreamAsync(__content, JsonSerializerContext).ConfigureAwait(false) ??
                                         throw new global::System.InvalidOperationException("Response deserialization failed.");
+                                    return new global::WorldLabs.AutoSDKHttpResponse<global::WorldLabs.OperationPanoDepthToRgbResult>(
+                                        statusCode: __response.StatusCode,
+                                        headers: global::WorldLabs.AutoSDKHttpResponse.CreateHeaders(__response),
+                                        requestUri: __response.RequestMessage?.RequestUri,
+                                        body: __value);
                                 }
                                 catch (global::System.Exception __ex)
                                 {

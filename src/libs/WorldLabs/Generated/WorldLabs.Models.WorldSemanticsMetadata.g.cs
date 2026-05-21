@@ -48,5 +48,6 @@ namespace WorldLabs
         public WorldSemanticsMetadata()
         {
         }
+
     }
 }

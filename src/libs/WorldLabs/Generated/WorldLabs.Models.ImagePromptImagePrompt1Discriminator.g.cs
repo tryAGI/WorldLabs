@@ -40,5 +40,6 @@ namespace WorldLabs
         public ImagePromptImagePrompt1Discriminator()
         {
         }
+
     }
 }

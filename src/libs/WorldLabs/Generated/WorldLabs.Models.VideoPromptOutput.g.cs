@@ -64,5 +64,6 @@ namespace WorldLabs
         public VideoPromptOutput()
         {
         }
+
     }
 }

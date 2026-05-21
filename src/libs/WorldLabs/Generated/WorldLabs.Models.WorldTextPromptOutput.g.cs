@@ -50,5 +50,6 @@ namespace WorldLabs
         public WorldTextPromptOutput()
         {
         }
+
     }
 }

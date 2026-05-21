@@ -53,5 +53,6 @@ namespace WorldLabs
         public MediaAssetReference()
         {
         }
+
     }
 }

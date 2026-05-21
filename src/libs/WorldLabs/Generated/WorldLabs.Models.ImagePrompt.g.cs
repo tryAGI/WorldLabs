@@ -90,5 +90,6 @@ namespace WorldLabs
         public ImagePrompt()
         {
         }
+
     }
 }
