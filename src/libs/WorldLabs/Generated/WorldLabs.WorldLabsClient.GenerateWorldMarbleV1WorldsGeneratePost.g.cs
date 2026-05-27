@@ -541,7 +541,7 @@ namespace WorldLabs
             string? displayName = default,
             global::WorldLabs.AnyOf<global::WorldLabs.WorldsGenerateRequestModelVariant1?, global::WorldLabs.WorldsGenerateRequestModelVariant2?>? model = default,
             global::WorldLabs.Permission? permission = default,
-            int? seed = default,
+            long? seed = default,
             global::System.Collections.Generic.IList<string>? tags = default,
             global::WorldLabs.AutoSDKRequestOptions? requestOptions = default,
             global::System.Threading.CancellationToken cancellationToken = default)

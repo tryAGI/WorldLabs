@@ -118,7 +118,7 @@ namespace WorldLabs
         global::System.Threading.Tasks.Task<global::WorldLabs.OperationPanoDepthToRgbResult> PanoDepthToRgbMarbleV1PanoDepthToRgbPostAsync(
             global::WorldLabs.DepthPanoImage depthPanoImage,
             string textPrompt,
-            int? seed = default,
+            long? seed = default,
             double? zMax = default,
             double? zMin = default,
             global::WorldLabs.AutoSDKRequestOptions? requestOptions = default,
