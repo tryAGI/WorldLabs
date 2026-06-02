@@ -7,7 +7,7 @@ namespace WorldLabs
     {
 
 
-        private static readonly global::WorldLabs.EndPointSecurityRequirement s_GenerateWorldMarbleV1WorldsGeneratePostSecurityRequirement0 =
+        private static readonly global::WorldLabs.EndPointSecurityRequirement s_GetCreditsMarbleV1CreditsGetSecurityRequirement0 =
             new global::WorldLabs.EndPointSecurityRequirement
             {
                 Authorizations = new global::WorldLabs.EndPointAuthorizationRequirement[]
@@ -21,56 +21,41 @@ namespace WorldLabs
                     },
                 },
             };
-        private static readonly global::WorldLabs.EndPointSecurityRequirement[] s_GenerateWorldMarbleV1WorldsGeneratePostSecurityRequirements =
+        private static readonly global::WorldLabs.EndPointSecurityRequirement[] s_GetCreditsMarbleV1CreditsGetSecurityRequirements =
             new global::WorldLabs.EndPointSecurityRequirement[]
-            {                s_GenerateWorldMarbleV1WorldsGeneratePostSecurityRequirement0,
+            {                s_GetCreditsMarbleV1CreditsGetSecurityRequirement0,
             };
-        partial void PrepareGenerateWorldMarbleV1WorldsGeneratePostArguments(
+        partial void PrepareGetCreditsMarbleV1CreditsGetArguments(
+            global::System.Net.Http.HttpClient httpClient);
+        partial void PrepareGetCreditsMarbleV1CreditsGetRequest(
             global::System.Net.Http.HttpClient httpClient,
-            global::WorldLabs.WorldsGenerateRequest request);
-        partial void PrepareGenerateWorldMarbleV1WorldsGeneratePostRequest(
-            global::System.Net.Http.HttpClient httpClient,
-            global::System.Net.Http.HttpRequestMessage httpRequestMessage,
-            global::WorldLabs.WorldsGenerateRequest request);
-        partial void ProcessGenerateWorldMarbleV1WorldsGeneratePostResponse(
+            global::System.Net.Http.HttpRequestMessage httpRequestMessage);
+        partial void ProcessGetCreditsMarbleV1CreditsGetResponse(
             global::System.Net.Http.HttpClient httpClient,
             global::System.Net.Http.HttpResponseMessage httpResponseMessage);
 
-        partial void ProcessGenerateWorldMarbleV1WorldsGeneratePostResponseContent(
+        partial void ProcessGetCreditsMarbleV1CreditsGetResponseContent(
             global::System.Net.Http.HttpClient httpClient,
             global::System.Net.Http.HttpResponseMessage httpResponseMessage,
             ref string content);
 
         /// <summary>
-        /// Generate World<br/>
-        /// Start world generation.<br/>
-        /// Creates a new world generation job and returns a long-running operation.<br/>
-        /// Poll the /operations/{operation_id} endpoint to check generation status<br/>
-        /// and retrieve the generated world when complete.<br/>
-        /// Args:<br/>
-        ///     request: The world generation request containing world_prompt, display_name,<br/>
-        ///         tags, model, seed, and permission settings.<br/>
+        /// Get Credits<br/>
+        /// Get remaining API credits for the authenticated user.<br/>
         /// Returns:<br/>
-        ///     GenerateWorldResponse with operation_id and timestamps. Use the operation_id<br/>
-        ///     to poll for completion.<br/>
+        ///     CreditsResponse with the current aggregate API credit balance.<br/>
         /// Raises:<br/>
-        ///     HTTPException: 400 if invalid request or content violates policies<br/>
-        ///     HTTPException: 402 if insufficient credits<br/>
-        ///     HTTPException: 500 if generation could not be started
+        ///     HTTPException: 404 if the caller is not an API-enabled user<br/>
+        ///     HTTPException: 503 if the billing backend is unavailable
         /// </summary>
-        /// <param name="request"></param>
         /// <param name="requestOptions">Per-request overrides such as headers, query parameters, timeout, retries, and response buffering.</param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::WorldLabs.ApiException"></exception>
-        public async global::System.Threading.Tasks.Task<global::WorldLabs.GenerateWorldResponse> GenerateWorldMarbleV1WorldsGeneratePostAsync(
-
-            global::WorldLabs.WorldsGenerateRequest request,
+        public async global::System.Threading.Tasks.Task<global::WorldLabs.CreditsResponse> GetCreditsMarbleV1CreditsGetAsync(
             global::WorldLabs.AutoSDKRequestOptions? requestOptions = default,
             global::System.Threading.CancellationToken cancellationToken = default)
         {
-            var __response = await GenerateWorldMarbleV1WorldsGeneratePostAsResponseAsync(
-
-                request: request,
+            var __response = await GetCreditsMarbleV1CreditsGetAsResponseAsync(
                 requestOptions: requestOptions,
                 cancellationToken: cancellationToken
             ).ConfigureAwait(false);
@@ -78,45 +63,31 @@ namespace WorldLabs
             return __response.Body;
         }
         /// <summary>
-        /// Generate World<br/>
-        /// Start world generation.<br/>
-        /// Creates a new world generation job and returns a long-running operation.<br/>
-        /// Poll the /operations/{operation_id} endpoint to check generation status<br/>
-        /// and retrieve the generated world when complete.<br/>
-        /// Args:<br/>
-        ///     request: The world generation request containing world_prompt, display_name,<br/>
-        ///         tags, model, seed, and permission settings.<br/>
+        /// Get Credits<br/>
+        /// Get remaining API credits for the authenticated user.<br/>
         /// Returns:<br/>
-        ///     GenerateWorldResponse with operation_id and timestamps. Use the operation_id<br/>
-        ///     to poll for completion.<br/>
+        ///     CreditsResponse with the current aggregate API credit balance.<br/>
         /// Raises:<br/>
-        ///     HTTPException: 400 if invalid request or content violates policies<br/>
-        ///     HTTPException: 402 if insufficient credits<br/>
-        ///     HTTPException: 500 if generation could not be started
+        ///     HTTPException: 404 if the caller is not an API-enabled user<br/>
+        ///     HTTPException: 503 if the billing backend is unavailable
         /// </summary>
-        /// <param name="request"></param>
         /// <param name="requestOptions">Per-request overrides such as headers, query parameters, timeout, retries, and response buffering.</param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::WorldLabs.ApiException"></exception>
-        public async global::System.Threading.Tasks.Task<global::WorldLabs.AutoSDKHttpResponse<global::WorldLabs.GenerateWorldResponse>> GenerateWorldMarbleV1WorldsGeneratePostAsResponseAsync(
-
-            global::WorldLabs.WorldsGenerateRequest request,
+        public async global::System.Threading.Tasks.Task<global::WorldLabs.AutoSDKHttpResponse<global::WorldLabs.CreditsResponse>> GetCreditsMarbleV1CreditsGetAsResponseAsync(
             global::WorldLabs.AutoSDKRequestOptions? requestOptions = default,
             global::System.Threading.CancellationToken cancellationToken = default)
         {
-            request = request ?? throw new global::System.ArgumentNullException(nameof(request));
-
             PrepareArguments(
                 client: HttpClient);
-            PrepareGenerateWorldMarbleV1WorldsGeneratePostArguments(
-                httpClient: HttpClient,
-                request: request);
+            PrepareGetCreditsMarbleV1CreditsGetArguments(
+                httpClient: HttpClient);
 
 
             var __authorizations = global::WorldLabs.EndPointSecurityResolver.ResolveAuthorizations(
                 availableAuthorizations: Authorizations,
-                securityRequirements: s_GenerateWorldMarbleV1WorldsGeneratePostSecurityRequirements,
-                operationName: "GenerateWorldMarbleV1WorldsGeneratePostAsync");
+                securityRequirements: s_GetCreditsMarbleV1CreditsGetSecurityRequirements,
+                operationName: "GetCreditsMarbleV1CreditsGetAsync");
 
             using var __timeoutCancellationTokenSource = global::WorldLabs.AutoSDKRequestOptionsSupport.CreateTimeoutCancellationTokenSource(
                 clientOptions: Options,
@@ -136,7 +107,7 @@ namespace WorldLabs
             {
 
                             var __pathBuilder = new global::WorldLabs.PathBuilder(
-                                path: "/marble/v1/worlds:generate",
+                                path: "/marble/v1/credits",
                                 baseUri: HttpClient.BaseAddress);
                             var __path = __pathBuilder.ToString();
                 __path = global::WorldLabs.AutoSDKRequestOptionsSupport.AppendQueryParameters(
@@ -144,7 +115,7 @@ namespace WorldLabs
                     clientParameters: Options.QueryParameters,
                     requestParameters: requestOptions?.QueryParameters);
                 var __httpRequest = new global::System.Net.Http.HttpRequestMessage(
-                    method: global::System.Net.Http.HttpMethod.Post,
+                    method: global::System.Net.Http.HttpMethod.Get,
                     requestUri: new global::System.Uri(__path, global::System.UriKind.RelativeOrAbsolute));
 #if NET6_0_OR_GREATER
                 __httpRequest.Version = global::System.Net.HttpVersion.Version11;
@@ -167,12 +138,6 @@ namespace WorldLabs
                     __httpRequest.Headers.Add(__authorization.Name, __authorization.Value);
                 } 
             }
-                            var __httpRequestContentBody = request.ToJson(JsonSerializerContext);
-                            var __httpRequestContent = new global::System.Net.Http.StringContent(
-                                content: __httpRequestContentBody,
-                                encoding: global::System.Text.Encoding.UTF8,
-                                mediaType: "application/json");
-                            __httpRequest.Content = __httpRequestContent;
                 global::WorldLabs.AutoSDKRequestOptionsSupport.ApplyHeaders(
                     request: __httpRequest,
                     clientHeaders: Options.Headers,
@@ -181,10 +146,9 @@ namespace WorldLabs
                 PrepareRequest(
                     client: HttpClient,
                     request: __httpRequest);
-                PrepareGenerateWorldMarbleV1WorldsGeneratePostRequest(
+                PrepareGetCreditsMarbleV1CreditsGetRequest(
                     httpClient: HttpClient,
-                    httpRequestMessage: __httpRequest,
-                    request: request);
+                    httpRequestMessage: __httpRequest);
 
                 return __httpRequest;
             }
@@ -201,10 +165,10 @@ namespace WorldLabs
                     await global::WorldLabs.AutoSDKRequestOptionsSupport.OnBeforeRequestAsync(
                             clientOptions: Options,
                             context: global::WorldLabs.AutoSDKRequestOptionsSupport.CreateHookContext(
-                                operationId: "GenerateWorldMarbleV1WorldsGeneratePost",
-                                methodName: "GenerateWorldMarbleV1WorldsGeneratePostAsync",
-                                pathTemplate: "\"/marble/v1/worlds:generate\"",
-                                httpMethod: "POST",
+                                operationId: "GetCreditsMarbleV1CreditsGet",
+                                methodName: "GetCreditsMarbleV1CreditsGetAsync",
+                                pathTemplate: "\"/marble/v1/credits\"",
+                                httpMethod: "GET",
                                 baseUri: BaseUri,
                                 request: __httpRequest!,
                                 response: null,
@@ -235,10 +199,10 @@ namespace WorldLabs
                         await global::WorldLabs.AutoSDKRequestOptionsSupport.OnAfterErrorAsync(
                             clientOptions: Options,
                             context: global::WorldLabs.AutoSDKRequestOptionsSupport.CreateHookContext(
-                                operationId: "GenerateWorldMarbleV1WorldsGeneratePost",
-                                methodName: "GenerateWorldMarbleV1WorldsGeneratePostAsync",
-                                pathTemplate: "\"/marble/v1/worlds:generate\"",
-                                httpMethod: "POST",
+                                operationId: "GetCreditsMarbleV1CreditsGet",
+                                methodName: "GetCreditsMarbleV1CreditsGetAsync",
+                                pathTemplate: "\"/marble/v1/credits\"",
+                                httpMethod: "GET",
                                 baseUri: BaseUri,
                                 request: __httpRequest!,
                                 response: null,
@@ -276,10 +240,10 @@ namespace WorldLabs
                         await global::WorldLabs.AutoSDKRequestOptionsSupport.OnAfterErrorAsync(
                             clientOptions: Options,
                             context: global::WorldLabs.AutoSDKRequestOptionsSupport.CreateHookContext(
-                                operationId: "GenerateWorldMarbleV1WorldsGeneratePost",
-                                methodName: "GenerateWorldMarbleV1WorldsGeneratePostAsync",
-                                pathTemplate: "\"/marble/v1/worlds:generate\"",
-                                httpMethod: "POST",
+                                operationId: "GetCreditsMarbleV1CreditsGet",
+                                methodName: "GetCreditsMarbleV1CreditsGetAsync",
+                                pathTemplate: "\"/marble/v1/credits\"",
+                                httpMethod: "GET",
                                 baseUri: BaseUri,
                                 request: __httpRequest!,
                                 response: __response,
@@ -316,7 +280,7 @@ namespace WorldLabs
                 ProcessResponse(
                     client: HttpClient,
                     response: __response);
-                ProcessGenerateWorldMarbleV1WorldsGeneratePostResponse(
+                ProcessGetCreditsMarbleV1CreditsGetResponse(
                     httpClient: HttpClient,
                     httpResponseMessage: __response);
                 if (__response.IsSuccessStatusCode)
@@ -324,10 +288,10 @@ namespace WorldLabs
                     await global::WorldLabs.AutoSDKRequestOptionsSupport.OnAfterSuccessAsync(
                             clientOptions: Options,
                             context: global::WorldLabs.AutoSDKRequestOptionsSupport.CreateHookContext(
-                                operationId: "GenerateWorldMarbleV1WorldsGeneratePost",
-                                methodName: "GenerateWorldMarbleV1WorldsGeneratePostAsync",
-                                pathTemplate: "\"/marble/v1/worlds:generate\"",
-                                httpMethod: "POST",
+                                operationId: "GetCreditsMarbleV1CreditsGet",
+                                methodName: "GetCreditsMarbleV1CreditsGetAsync",
+                                pathTemplate: "\"/marble/v1/credits\"",
+                                httpMethod: "GET",
                                 baseUri: BaseUri,
                                 request: __httpRequest!,
                                 response: __response,
@@ -346,10 +310,10 @@ namespace WorldLabs
                     await global::WorldLabs.AutoSDKRequestOptionsSupport.OnAfterErrorAsync(
                             clientOptions: Options,
                             context: global::WorldLabs.AutoSDKRequestOptionsSupport.CreateHookContext(
-                                operationId: "GenerateWorldMarbleV1WorldsGeneratePost",
-                                methodName: "GenerateWorldMarbleV1WorldsGeneratePostAsync",
-                                pathTemplate: "\"/marble/v1/worlds:generate\"",
-                                httpMethod: "POST",
+                                operationId: "GetCreditsMarbleV1CreditsGet",
+                                methodName: "GetCreditsMarbleV1CreditsGetAsync",
+                                pathTemplate: "\"/marble/v1/credits\"",
+                                httpMethod: "GET",
                                 baseUri: BaseUri,
                                 request: __httpRequest!,
                                 response: __response,
@@ -363,80 +327,6 @@ namespace WorldLabs
                                 retryReason: global::System.String.Empty,
                                 cancellationToken: __effectiveCancellationToken)).ConfigureAwait(false);
                 }
-                            // Insufficient Credits
-                            if ((int)__response.StatusCode == 402)
-                            {
-                                string? __content_402 = null;
-                                global::System.Exception? __exception_402 = null;
-                                string? __value_402 = null;
-                                try
-                                {
-                                    if (__effectiveReadResponseAsString)
-                                    {
-                                        __content_402 = await __response.Content.ReadAsStringAsync(__effectiveCancellationToken).ConfigureAwait(false);
-                                        __value_402 = (string?)global::System.Text.Json.JsonSerializer.Deserialize(__content_402, typeof(string), JsonSerializerContext);
-                                    }
-                                    else
-                                    {
-                                        __content_402 = await __response.Content.ReadAsStringAsync(__effectiveCancellationToken).ConfigureAwait(false);
-
-                                        __value_402 = (string?)global::System.Text.Json.JsonSerializer.Deserialize(__content_402, typeof(string), JsonSerializerContext);
-                                    }
-                                }
-                                catch (global::System.Exception __ex)
-                                {
-                                    __exception_402 = __ex;
-                                }
-
-
-                                throw global::WorldLabs.ApiException<string>.Create(
-                                    statusCode: __response.StatusCode,
-                                    message: __content_402 ?? __response.ReasonPhrase ?? string.Empty,
-                                    innerException: __exception_402,
-                                    responseBody: __content_402,
-                                    responseObject: __value_402,
-                                    responseHeaders: global::System.Linq.Enumerable.ToDictionary(
-                                        __response.Headers,
-                                        h => h.Key,
-                                        h => h.Value));
-                            }
-                            // Validation Error
-                            if ((int)__response.StatusCode == 422)
-                            {
-                                string? __content_422 = null;
-                                global::System.Exception? __exception_422 = null;
-                                global::WorldLabs.HTTPValidationError? __value_422 = null;
-                                try
-                                {
-                                    if (__effectiveReadResponseAsString)
-                                    {
-                                        __content_422 = await __response.Content.ReadAsStringAsync(__effectiveCancellationToken).ConfigureAwait(false);
-                                        __value_422 = global::WorldLabs.HTTPValidationError.FromJson(__content_422, JsonSerializerContext);
-                                    }
-                                    else
-                                    {
-                                        __content_422 = await __response.Content.ReadAsStringAsync(__effectiveCancellationToken).ConfigureAwait(false);
-
-                                        __value_422 = global::WorldLabs.HTTPValidationError.FromJson(__content_422, JsonSerializerContext);
-                                    }
-                                }
-                                catch (global::System.Exception __ex)
-                                {
-                                    __exception_422 = __ex;
-                                }
-
-
-                                throw global::WorldLabs.ApiException<global::WorldLabs.HTTPValidationError>.Create(
-                                    statusCode: __response.StatusCode,
-                                    message: __content_422 ?? __response.ReasonPhrase ?? string.Empty,
-                                    innerException: __exception_422,
-                                    responseBody: __content_422,
-                                    responseObject: __value_422,
-                                    responseHeaders: global::System.Linq.Enumerable.ToDictionary(
-                                        __response.Headers,
-                                        h => h.Key,
-                                        h => h.Value));
-                            }
 
                             if (__effectiveReadResponseAsString)
                             {
@@ -450,7 +340,7 @@ namespace WorldLabs
                                     client: HttpClient,
                                     response: __response,
                                     content: ref __content);
-                                ProcessGenerateWorldMarbleV1WorldsGeneratePostResponseContent(
+                                ProcessGetCreditsMarbleV1CreditsGetResponseContent(
                                     httpClient: HttpClient,
                                     httpResponseMessage: __response,
                                     content: ref __content);
@@ -459,9 +349,9 @@ namespace WorldLabs
                                 {
                                     __response.EnsureSuccessStatusCode();
 
-                                    var __value = global::WorldLabs.GenerateWorldResponse.FromJson(__content, JsonSerializerContext) ??
+                                    var __value = global::WorldLabs.CreditsResponse.FromJson(__content, JsonSerializerContext) ??
                                         throw new global::System.InvalidOperationException($"Response deserialization failed for \"{__content}\" ");
-                                    return new global::WorldLabs.AutoSDKHttpResponse<global::WorldLabs.GenerateWorldResponse>(
+                                    return new global::WorldLabs.AutoSDKHttpResponse<global::WorldLabs.CreditsResponse>(
                                         statusCode: __response.StatusCode,
                                         headers: global::WorldLabs.AutoSDKHttpResponse.CreateHeaders(__response),
                                         requestUri: __response.RequestMessage?.RequestUri,
@@ -491,9 +381,9 @@ namespace WorldLabs
                 #endif
                                     ).ConfigureAwait(false);
 
-                                    var __value = await global::WorldLabs.GenerateWorldResponse.FromJsonStreamAsync(__content, JsonSerializerContext).ConfigureAwait(false) ??
+                                    var __value = await global::WorldLabs.CreditsResponse.FromJsonStreamAsync(__content, JsonSerializerContext).ConfigureAwait(false) ??
                                         throw new global::System.InvalidOperationException("Response deserialization failed.");
-                                    return new global::WorldLabs.AutoSDKHttpResponse<global::WorldLabs.GenerateWorldResponse>(
+                                    return new global::WorldLabs.AutoSDKHttpResponse<global::WorldLabs.CreditsResponse>(
                                         statusCode: __response.StatusCode,
                                         headers: global::WorldLabs.AutoSDKHttpResponse.CreateHeaders(__response),
                                         requestUri: __response.RequestMessage?.RequestUri,
@@ -532,71 +422,6 @@ namespace WorldLabs
             {
                 __httpRequest?.Dispose();
             }
-        }
-        /// <summary>
-        /// Generate World<br/>
-        /// Start world generation.<br/>
-        /// Creates a new world generation job and returns a long-running operation.<br/>
-        /// Poll the /operations/{operation_id} endpoint to check generation status<br/>
-        /// and retrieve the generated world when complete.<br/>
-        /// Args:<br/>
-        ///     request: The world generation request containing world_prompt, display_name,<br/>
-        ///         tags, model, seed, and permission settings.<br/>
-        /// Returns:<br/>
-        ///     GenerateWorldResponse with operation_id and timestamps. Use the operation_id<br/>
-        ///     to poll for completion.<br/>
-        /// Raises:<br/>
-        ///     HTTPException: 400 if invalid request or content violates policies<br/>
-        ///     HTTPException: 402 if insufficient credits<br/>
-        ///     HTTPException: 500 if generation could not be started
-        /// </summary>
-        /// <param name="displayName">
-        /// Optional display name (max 64 characters)
-        /// </param>
-        /// <param name="model">
-        /// The model to use for generation. marble-1.1-plus includes dynamic world sizing. Legacy names ('Marble 0.1-plus', etc.) still work but are deprecated and will be removed in a future release.<br/>
-        /// Default Value: marble-1.0
-        /// </param>
-        /// <param name="permission">
-        /// The permission for the world<br/>
-        /// Default Value: {"allow_id_access":false,"allowed_readers":[],"allowed_writers":[],"public":false}
-        /// </param>
-        /// <param name="seed">
-        /// Random seed for generation
-        /// </param>
-        /// <param name="tags">
-        /// Optional tags for the world (max 10 tags, each up to 32 characters)
-        /// </param>
-        /// <param name="worldPrompt">
-        /// The prompt specifying how to generate the world
-        /// </param>
-        /// <param name="requestOptions">Per-request overrides such as headers, query parameters, timeout, retries, and response buffering.</param>
-        /// <param name="cancellationToken">The token to cancel the operation with</param>
-        /// <exception cref="global::System.InvalidOperationException"></exception>
-        public async global::System.Threading.Tasks.Task<global::WorldLabs.GenerateWorldResponse> GenerateWorldMarbleV1WorldsGeneratePostAsync(
-            global::WorldLabs.WorldPrompt worldPrompt,
-            string? displayName = default,
-            global::WorldLabs.AnyOf<global::WorldLabs.WorldsGenerateRequestModelVariant1?, global::WorldLabs.WorldsGenerateRequestModelVariant2?>? model = default,
-            global::WorldLabs.Permission? permission = default,
-            int? seed = default,
-            global::System.Collections.Generic.IList<string>? tags = default,
-            global::WorldLabs.AutoSDKRequestOptions? requestOptions = default,
-            global::System.Threading.CancellationToken cancellationToken = default)
-        {
-            var __request = new global::WorldLabs.WorldsGenerateRequest
-            {
-                DisplayName = displayName,
-                Model = model,
-                Permission = permission,
-                Seed = seed,
-                Tags = tags,
-                WorldPrompt = worldPrompt,
-            };
-
-            return await GenerateWorldMarbleV1WorldsGeneratePostAsync(
-                request: __request,
-                requestOptions: requestOptions,
-                cancellationToken: cancellationToken).ConfigureAwait(false);
         }
     }
 }
