@@ -379,6 +379,43 @@ namespace WorldLabs
                                 retryReason: global::System.String.Empty,
                                 cancellationToken: __effectiveCancellationToken)).ConfigureAwait(false);
                 }
+                            // Insufficient Credits
+                            if ((int)__response.StatusCode == 402)
+                            {
+                                string? __content_402 = null;
+                                global::System.Exception? __exception_402 = null;
+                                string? __value_402 = null;
+                                try
+                                {
+                                    if (__effectiveReadResponseAsString)
+                                    {
+                                        __content_402 = await __response.Content.ReadAsStringAsync(__effectiveCancellationToken).ConfigureAwait(false);
+                                        __value_402 = (string?)global::System.Text.Json.JsonSerializer.Deserialize(__content_402, typeof(string), JsonSerializerContext);
+                                    }
+                                    else
+                                    {
+                                        __content_402 = await __response.Content.ReadAsStringAsync(__effectiveCancellationToken).ConfigureAwait(false);
+
+                                        __value_402 = (string?)global::System.Text.Json.JsonSerializer.Deserialize(__content_402, typeof(string), JsonSerializerContext);
+                                    }
+                                }
+                                catch (global::System.Exception __ex)
+                                {
+                                    __exception_402 = __ex;
+                                }
+
+
+                                throw global::WorldLabs.ApiException<string>.Create(
+                                    statusCode: __response.StatusCode,
+                                    message: __content_402 ?? __response.ReasonPhrase ?? string.Empty,
+                                    innerException: __exception_402,
+                                    responseBody: __content_402,
+                                    responseObject: __value_402,
+                                    responseHeaders: global::System.Linq.Enumerable.ToDictionary(
+                                        __response.Headers,
+                                        h => h.Key,
+                                        h => h.Value));
+                            }
                             // Validation Error
                             if ((int)__response.StatusCode == 422)
                             {
@@ -558,7 +595,7 @@ namespace WorldLabs
         public async global::System.Threading.Tasks.Task<global::WorldLabs.OperationPanoDepthToRgbResult> PanoDepthToRgbMarbleV1PanoDepthToRgbPostAsync(
             global::WorldLabs.DepthPanoImage depthPanoImage,
             string textPrompt,
-            long? seed = default,
+            int? seed = default,
             double? zMax = default,
             double? zMin = default,
             global::WorldLabs.AutoSDKRequestOptions? requestOptions = default,
