@@ -11,6 +11,7 @@ internal static class DefaultApiGroupCommand
         var command = new Command(@"default", @"default endpoint commands.");
                          command.Subcommands.Add(DeleteWorldMarbleV1WorldsWorldIdDeleteCommandApiCommand.Create());
                          command.Subcommands.Add(GenerateWorldMarbleV1WorldsGeneratePostCommandApiCommand.Create());
+                         command.Subcommands.Add(GetCreditsMarbleV1CreditsGetCommandApiCommand.Create());
                          command.Subcommands.Add(GetMediaAssetMarbleV1MediaAssetsMediaAssetIdGetCommandApiCommand.Create());
                          command.Subcommands.Add(GetOperationMarbleV1OperationsOperationIdGetCommandApiCommand.Create());
                          command.Subcommands.Add(GetWorldMarbleV1WorldsWorldIdGetCommandApiCommand.Create());
