@@ -40,6 +40,13 @@ using WorldLabs;
 using var client = new WorldLabsClient(apiKey);
 ```
 
+### CLI
+
+```bash
+dotnet tool install --global WorldLabs.CLI --prerelease
+world-labs api --help
+```
+
 <!-- EXAMPLES:START -->
 <!-- EXAMPLES:END -->
 
