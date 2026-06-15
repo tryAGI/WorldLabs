@@ -137,10 +137,10 @@ Raises:
                             global::WorldLabs.SourceGenerationContext.Default,
                             cancellationToken).ConfigureAwait(false);
                         var depthPanoImage = parseResult.GetRequiredValue(DepthPanoImage);
-                        var seed = CliRuntime.WasSpecified(parseResult, Seed) ? parseResult.GetValue(Seed) : __requestBase is not null ? __requestBase.Seed : default;
+                        var seed = CliRuntime.WasSpecified(parseResult, Seed) ? parseResult.GetValue(Seed) : (__requestBase is { } __SeedBaseValue ? __SeedBaseValue.Seed : default);
                         var textPrompt = parseResult.GetRequiredValue(TextPrompt);
-                        var zMax = CliRuntime.WasSpecified(parseResult, ZMax) ? parseResult.GetValue(ZMax) : __requestBase is not null ? __requestBase.ZMax : default;
-                        var zMin = CliRuntime.WasSpecified(parseResult, ZMin) ? parseResult.GetValue(ZMin) : __requestBase is not null ? __requestBase.ZMin : default;
+                        var zMax = CliRuntime.WasSpecified(parseResult, ZMax) ? parseResult.GetValue(ZMax) : (__requestBase is { } __ZMaxBaseValue ? __ZMaxBaseValue.ZMax : default);
+                        var zMin = CliRuntime.WasSpecified(parseResult, ZMin) ? parseResult.GetValue(ZMin) : (__requestBase is { } __ZMinBaseValue ? __ZMinBaseValue.ZMin : default);
                 using var client = await CliRuntime.CreateClientAsync(parseResult, cancellationToken).ConfigureAwait(false);
 
 

@@ -161,10 +161,10 @@ After uploading, use the `media_asset_id` in a world generation request:
                             RequestFile,
                             global::WorldLabs.SourceGenerationContext.Default,
                             cancellationToken).ConfigureAwait(false);
-                        var extension = CliRuntime.WasSpecified(parseResult, Extension) ? parseResult.GetValue(Extension) : __requestBase is not null ? __requestBase.Extension : default;
+                        var extension = CliRuntime.WasSpecified(parseResult, Extension) ? parseResult.GetValue(Extension) : (__requestBase is { } __ExtensionBaseValue ? __ExtensionBaseValue.Extension : default);
                         var fileName = parseResult.GetRequiredValue(FileName);
                         var kind = parseResult.GetRequiredValue(Kind);
-                        var metadata = CliRuntime.WasSpecified(parseResult, Metadata) ? parseResult.GetValue(Metadata) : __requestBase is not null ? __requestBase.Metadata : default;
+                        var metadata = CliRuntime.WasSpecified(parseResult, Metadata) ? parseResult.GetValue(Metadata) : (__requestBase is { } __MetadataBaseValue ? __MetadataBaseValue.Metadata : default);
                 using var client = await CliRuntime.CreateClientAsync(parseResult, cancellationToken).ConfigureAwait(false);
 
 
