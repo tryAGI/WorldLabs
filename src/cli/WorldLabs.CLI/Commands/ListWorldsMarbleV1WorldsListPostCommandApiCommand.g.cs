@@ -154,15 +154,15 @@ Raises:
                             RequestFile,
                             global::WorldLabs.SourceGenerationContext.Default,
                             cancellationToken).ConfigureAwait(false);
-                        var createdAfter = CliRuntime.WasSpecified(parseResult, CreatedAfter) ? parseResult.GetValue(CreatedAfter) : __requestBase is not null ? __requestBase.CreatedAfter : default;
-                        var createdBefore = CliRuntime.WasSpecified(parseResult, CreatedBefore) ? parseResult.GetValue(CreatedBefore) : __requestBase is not null ? __requestBase.CreatedBefore : default;
-                        var isPublic = CliRuntime.WasSpecified(parseResult, IsPublic) ? parseResult.GetValue(IsPublic) : __requestBase is not null ? __requestBase.IsPublic : default;
-                        var model = CliRuntime.WasSpecified(parseResult, Model) ? parseResult.GetValue(Model) : __requestBase is not null ? __requestBase.Model : default;
-                        var pageSize = CliRuntime.WasSpecified(parseResult, PageSize) ? parseResult.GetValue(PageSize) : __requestBase is not null ? __requestBase.PageSize : default;
-                        var pageToken = CliRuntime.WasSpecified(parseResult, PageToken) ? parseResult.GetValue(PageToken) : __requestBase is not null ? __requestBase.PageToken : default;
-                        var sortBy = CliRuntime.WasSpecified(parseResult, SortBy) ? parseResult.GetValue(SortBy) : __requestBase is not null ? __requestBase.SortBy : default;
-                        var status = CliRuntime.WasSpecified(parseResult, Status) ? parseResult.GetValue(Status) : __requestBase is not null ? __requestBase.Status : default;
-                        var tags = CliRuntime.WasSpecified(parseResult, Tags) ? parseResult.GetValue(Tags) : __requestBase is not null ? __requestBase.Tags : default;
+                        var createdAfter = CliRuntime.WasSpecified(parseResult, CreatedAfter) ? parseResult.GetValue(CreatedAfter) : (__requestBase is { } __CreatedAfterBaseValue ? __CreatedAfterBaseValue.CreatedAfter : default);
+                        var createdBefore = CliRuntime.WasSpecified(parseResult, CreatedBefore) ? parseResult.GetValue(CreatedBefore) : (__requestBase is { } __CreatedBeforeBaseValue ? __CreatedBeforeBaseValue.CreatedBefore : default);
+                        var isPublic = CliRuntime.WasSpecified(parseResult, IsPublic) ? parseResult.GetValue(IsPublic) : (__requestBase is { } __IsPublicBaseValue ? __IsPublicBaseValue.IsPublic : default);
+                        var model = CliRuntime.WasSpecified(parseResult, Model) ? parseResult.GetValue(Model) : (__requestBase is { } __ModelBaseValue ? __ModelBaseValue.Model : default);
+                        var pageSize = CliRuntime.WasSpecified(parseResult, PageSize) ? parseResult.GetValue(PageSize) : (__requestBase is { } __PageSizeBaseValue ? __PageSizeBaseValue.PageSize : default);
+                        var pageToken = CliRuntime.WasSpecified(parseResult, PageToken) ? parseResult.GetValue(PageToken) : (__requestBase is { } __PageTokenBaseValue ? __PageTokenBaseValue.PageToken : default);
+                        var sortBy = CliRuntime.WasSpecified(parseResult, SortBy) ? parseResult.GetValue(SortBy) : (__requestBase is { } __SortByBaseValue ? __SortByBaseValue.SortBy : default);
+                        var status = CliRuntime.WasSpecified(parseResult, Status) ? parseResult.GetValue(Status) : (__requestBase is { } __StatusBaseValue ? __StatusBaseValue.Status : default);
+                        var tags = CliRuntime.WasSpecified(parseResult, Tags) ? parseResult.GetValue(Tags) : (__requestBase is { } __TagsBaseValue ? __TagsBaseValue.Tags : default);
                 using var client = await CliRuntime.CreateClientAsync(parseResult, cancellationToken).ConfigureAwait(false);
 
 

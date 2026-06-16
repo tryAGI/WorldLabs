@@ -132,11 +132,11 @@ Raises:
                             RequestFile,
                             global::WorldLabs.SourceGenerationContext.Default,
                             cancellationToken).ConfigureAwait(false);
-                        var displayName = CliRuntime.WasSpecified(parseResult, DisplayName) ? parseResult.GetValue(DisplayName) : __requestBase is not null ? __requestBase.DisplayName : default;
-                        var model = CliRuntime.WasSpecified(parseResult, Model) ? parseResult.GetValue(Model) : __requestBase is not null ? __requestBase.Model : default;
-                        var permission = CliRuntime.WasSpecified(parseResult, Permission) ? parseResult.GetValue(Permission) : __requestBase is not null ? __requestBase.Permission : default;
-                        var seed = CliRuntime.WasSpecified(parseResult, Seed) ? parseResult.GetValue(Seed) : __requestBase is not null ? __requestBase.Seed : default;
-                        var tags = CliRuntime.WasSpecified(parseResult, Tags) ? parseResult.GetValue(Tags) : __requestBase is not null ? __requestBase.Tags : default;
+                        var displayName = CliRuntime.WasSpecified(parseResult, DisplayName) ? parseResult.GetValue(DisplayName) : (__requestBase is { } __DisplayNameBaseValue ? __DisplayNameBaseValue.DisplayName : default);
+                        var model = CliRuntime.WasSpecified(parseResult, Model) ? parseResult.GetValue(Model) : (__requestBase is { } __ModelBaseValue ? __ModelBaseValue.Model : default);
+                        var permission = CliRuntime.WasSpecified(parseResult, Permission) ? parseResult.GetValue(Permission) : (__requestBase is { } __PermissionBaseValue ? __PermissionBaseValue.Permission : default);
+                        var seed = CliRuntime.WasSpecified(parseResult, Seed) ? parseResult.GetValue(Seed) : (__requestBase is { } __SeedBaseValue ? __SeedBaseValue.Seed : default);
+                        var tags = CliRuntime.WasSpecified(parseResult, Tags) ? parseResult.GetValue(Tags) : (__requestBase is { } __TagsBaseValue ? __TagsBaseValue.Tags : default);
                         var worldPrompt = parseResult.GetRequiredValue(WorldPrompt);
                 using var client = await CliRuntime.CreateClientAsync(parseResult, cancellationToken).ConfigureAwait(false);
 
