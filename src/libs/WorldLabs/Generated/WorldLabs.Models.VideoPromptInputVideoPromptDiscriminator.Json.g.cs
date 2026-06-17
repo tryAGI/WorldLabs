@@ -17,6 +17,14 @@ namespace WorldLabs
         }
 
         /// <summary>
+        /// Serializes the current instance to a JSON string using the generated default JsonSerializerContext.
+        /// </summary>
+        public string ToJson()
+        {
+            return ToJson(global::WorldLabs.SourceGenerationContext.Default);
+        }
+
+        /// <summary>
         /// Serializes the current instance to a JSON string using the provided JsonSerializerOptions.
         /// </summary>
 #if NET8_0_OR_GREATER
@@ -26,6 +34,11 @@ namespace WorldLabs
         public string ToJson(
             global::System.Text.Json.JsonSerializerOptions? jsonSerializerOptions = null)
         {
+            if (jsonSerializerOptions is null)
+            {
+                return ToJson(global::WorldLabs.SourceGenerationContext.Default);
+            }
+
             return global::System.Text.Json.JsonSerializer.Serialize(
                 this,
                 jsonSerializerOptions);
@@ -45,6 +58,17 @@ namespace WorldLabs
         }
 
         /// <summary>
+        /// Deserializes a JSON string using the generated default JsonSerializerContext.
+        /// </summary>
+        public static global::WorldLabs.VideoPromptInputVideoPromptDiscriminator? FromJson(
+            string json)
+        {
+            return FromJson(
+                json,
+                global::WorldLabs.SourceGenerationContext.Default);
+        }
+
+        /// <summary>
         /// Deserializes a JSON string using the provided JsonSerializerOptions.
         /// </summary>
 #if NET8_0_OR_GREATER
@@ -55,6 +79,13 @@ namespace WorldLabs
             string json,
             global::System.Text.Json.JsonSerializerOptions? jsonSerializerOptions = null)
         {
+            if (jsonSerializerOptions is null)
+            {
+                return FromJson(
+                    json,
+                    global::WorldLabs.SourceGenerationContext.Default);
+            }
+
             return global::System.Text.Json.JsonSerializer.Deserialize<global::WorldLabs.VideoPromptInputVideoPromptDiscriminator>(
                 json,
                 jsonSerializerOptions);
@@ -74,6 +105,17 @@ namespace WorldLabs
         }
 
         /// <summary>
+        /// Deserializes a JSON stream using the generated default JsonSerializerContext.
+        /// </summary>
+        public static global::System.Threading.Tasks.ValueTask<global::WorldLabs.VideoPromptInputVideoPromptDiscriminator?> FromJsonStreamAsync(
+            global::System.IO.Stream jsonStream)
+        {
+            return FromJsonStreamAsync(
+                jsonStream,
+                global::WorldLabs.SourceGenerationContext.Default);
+        }
+
+        /// <summary>
         /// Deserializes a JSON stream using the provided JsonSerializerOptions.
         /// </summary>
 #if NET8_0_OR_GREATER
@@ -84,6 +126,13 @@ namespace WorldLabs
             global::System.IO.Stream jsonStream,
             global::System.Text.Json.JsonSerializerOptions? jsonSerializerOptions = null)
         {
+            if (jsonSerializerOptions is null)
+            {
+                return FromJsonStreamAsync(
+                    jsonStream,
+                    global::WorldLabs.SourceGenerationContext.Default);
+            }
+
             return global::System.Text.Json.JsonSerializer.DeserializeAsync<global::WorldLabs.VideoPromptInputVideoPromptDiscriminator?>(
                 jsonStream,
                 jsonSerializerOptions);
