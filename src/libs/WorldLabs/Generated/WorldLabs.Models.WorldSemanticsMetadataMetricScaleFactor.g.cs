@@ -4,10 +4,7 @@
 namespace WorldLabs
 {
     /// <summary>
-    /// Multiplicative factor that converts raw asset coordinates to<br/>
-    /// meters. Multiply all XYZ positions (and isotropic scales) by this<br/>
-    /// value. A value of 1.0 means scale could not be inferred and the<br/>
-    /// asset was left in model units.
+    /// Multiplicative factor that converts raw asset coordinates to meters. Multiply all XYZ positions (and isotropic scales) by this value. A value of 1.0 means scale could not be inferred and the asset was left in model units.
     /// </summary>
     public sealed partial class WorldSemanticsMetadataMetricScaleFactor
     {

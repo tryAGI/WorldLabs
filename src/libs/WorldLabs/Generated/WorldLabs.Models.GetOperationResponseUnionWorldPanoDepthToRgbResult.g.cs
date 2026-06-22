@@ -9,6 +9,12 @@ namespace WorldLabs
     public sealed partial class GetOperationResponseUnionWorldPanoDepthToRgbResult
     {
         /// <summary>
+        /// Settled credit cost for the operation. Populated only on successful completion.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("cost")]
+        public global::WorldLabs.OperationCost? Cost { get; set; }
+
+        /// <summary>
         /// Creation timestamp
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("created_at")]
@@ -74,6 +80,9 @@ namespace WorldLabs
         /// <param name="operationId">
         /// Operation identifier
         /// </param>
+        /// <param name="cost">
+        /// Settled credit cost for the operation. Populated only on successful completion.
+        /// </param>
         /// <param name="createdAt">
         /// Creation timestamp
         /// </param>
@@ -98,6 +107,7 @@ namespace WorldLabs
         public GetOperationResponseUnionWorldPanoDepthToRgbResult(
             bool done,
             string operationId,
+            global::WorldLabs.OperationCost? cost,
             global::System.DateTime? createdAt,
             global::WorldLabs.OperationError? error,
             global::System.DateTime? expiresAt,
@@ -105,6 +115,7 @@ namespace WorldLabs
             global::WorldLabs.AnyOf<global::WorldLabs.World, global::WorldLabs.PanoDepthToRgbResult, object>? response,
             global::System.DateTime? updatedAt)
         {
+            this.Cost = cost;
             this.CreatedAt = createdAt;
             this.Done = done;
             this.Error = error;

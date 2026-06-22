@@ -2,7 +2,7 @@
 
 namespace WorldLabs
 {
-    public sealed partial class GenerateWorldMarbleV1WorldsGeneratePostResponse
+    public sealed partial class OperationCostLineItem
     {
         /// <summary>
         /// Serializes the current instance to a JSON string using the provided JsonSerializerContext.
@@ -47,20 +47,20 @@ namespace WorldLabs
         /// <summary>
         /// Deserializes a JSON string using the provided JsonSerializerContext.
         /// </summary>
-        public static global::WorldLabs.GenerateWorldMarbleV1WorldsGeneratePostResponse? FromJson(
+        public static global::WorldLabs.OperationCostLineItem? FromJson(
             string json,
             global::System.Text.Json.Serialization.JsonSerializerContext jsonSerializerContext)
         {
             return global::System.Text.Json.JsonSerializer.Deserialize(
                 json,
-                typeof(global::WorldLabs.GenerateWorldMarbleV1WorldsGeneratePostResponse),
-                jsonSerializerContext) as global::WorldLabs.GenerateWorldMarbleV1WorldsGeneratePostResponse;
+                typeof(global::WorldLabs.OperationCostLineItem),
+                jsonSerializerContext) as global::WorldLabs.OperationCostLineItem;
         }
 
         /// <summary>
         /// Deserializes a JSON string using the generated default JsonSerializerContext.
         /// </summary>
-        public static global::WorldLabs.GenerateWorldMarbleV1WorldsGeneratePostResponse? FromJson(
+        public static global::WorldLabs.OperationCostLineItem? FromJson(
             string json)
         {
             return FromJson(
@@ -75,7 +75,7 @@ namespace WorldLabs
         [global::System.Diagnostics.CodeAnalysis.RequiresUnreferencedCode("JSON serialization and deserialization might require types that cannot be statically analyzed. Use the overload that takes a JsonTypeInfo or JsonSerializerContext, or make sure all of the required types are preserved.")]
         [global::System.Diagnostics.CodeAnalysis.RequiresDynamicCode("JSON serialization and deserialization might require types that cannot be statically analyzed and might need runtime code generation. Use System.Text.Json source generation for native AOT applications.")]
 #endif
-        public static global::WorldLabs.GenerateWorldMarbleV1WorldsGeneratePostResponse? FromJson(
+        public static global::WorldLabs.OperationCostLineItem? FromJson(
             string json,
             global::System.Text.Json.JsonSerializerOptions? jsonSerializerOptions = null)
         {
@@ -86,7 +86,7 @@ namespace WorldLabs
                     global::WorldLabs.SourceGenerationContext.Default);
             }
 
-            return global::System.Text.Json.JsonSerializer.Deserialize<global::WorldLabs.GenerateWorldMarbleV1WorldsGeneratePostResponse>(
+            return global::System.Text.Json.JsonSerializer.Deserialize<global::WorldLabs.OperationCostLineItem>(
                 json,
                 jsonSerializerOptions);
         }
@@ -94,20 +94,20 @@ namespace WorldLabs
         /// <summary>
         /// Deserializes a JSON stream using the provided JsonSerializerContext.
         /// </summary>
-        public static async global::System.Threading.Tasks.ValueTask<global::WorldLabs.GenerateWorldMarbleV1WorldsGeneratePostResponse?> FromJsonStreamAsync(
+        public static async global::System.Threading.Tasks.ValueTask<global::WorldLabs.OperationCostLineItem?> FromJsonStreamAsync(
             global::System.IO.Stream jsonStream,
             global::System.Text.Json.Serialization.JsonSerializerContext jsonSerializerContext)
         {
             return (await global::System.Text.Json.JsonSerializer.DeserializeAsync(
                 jsonStream,
-                typeof(global::WorldLabs.GenerateWorldMarbleV1WorldsGeneratePostResponse),
-                jsonSerializerContext).ConfigureAwait(false)) as global::WorldLabs.GenerateWorldMarbleV1WorldsGeneratePostResponse;
+                typeof(global::WorldLabs.OperationCostLineItem),
+                jsonSerializerContext).ConfigureAwait(false)) as global::WorldLabs.OperationCostLineItem;
         }
 
         /// <summary>
         /// Deserializes a JSON stream using the generated default JsonSerializerContext.
         /// </summary>
-        public static global::System.Threading.Tasks.ValueTask<global::WorldLabs.GenerateWorldMarbleV1WorldsGeneratePostResponse?> FromJsonStreamAsync(
+        public static global::System.Threading.Tasks.ValueTask<global::WorldLabs.OperationCostLineItem?> FromJsonStreamAsync(
             global::System.IO.Stream jsonStream)
         {
             return FromJsonStreamAsync(
@@ -122,7 +122,7 @@ namespace WorldLabs
         [global::System.Diagnostics.CodeAnalysis.RequiresUnreferencedCode("JSON serialization and deserialization might require types that cannot be statically analyzed. Use the overload that takes a JsonTypeInfo or JsonSerializerContext, or make sure all of the required types are preserved.")]
         [global::System.Diagnostics.CodeAnalysis.RequiresDynamicCode("JSON serialization and deserialization might require types that cannot be statically analyzed and might need runtime code generation. Use System.Text.Json source generation for native AOT applications.")]
 #endif
-        public static global::System.Threading.Tasks.ValueTask<global::WorldLabs.GenerateWorldMarbleV1WorldsGeneratePostResponse?> FromJsonStreamAsync(
+        public static global::System.Threading.Tasks.ValueTask<global::WorldLabs.OperationCostLineItem?> FromJsonStreamAsync(
             global::System.IO.Stream jsonStream,
             global::System.Text.Json.JsonSerializerOptions? jsonSerializerOptions = null)
         {
@@ -133,7 +133,7 @@ namespace WorldLabs
                     global::WorldLabs.SourceGenerationContext.Default);
             }
 
-            return global::System.Text.Json.JsonSerializer.DeserializeAsync<global::WorldLabs.GenerateWorldMarbleV1WorldsGeneratePostResponse?>(
+            return global::System.Text.Json.JsonSerializer.DeserializeAsync<global::WorldLabs.OperationCostLineItem?>(
                 jsonStream,
                 jsonSerializerOptions);
         }

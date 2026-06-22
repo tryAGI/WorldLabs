@@ -68,295 +68,307 @@ namespace WorldLabs
         /// <summary>
         /// 
         /// </summary>
-        public global::System.DateTime? Type10 { get; set; }
+        public global::WorldLabs.OperationCost? Type10 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::WorldLabs.OperationError? Type11 { get; set; }
+        public global::System.DateTime? Type11 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::WorldLabs.GetOperationResponseUnionWorldPanoDepthToRgbResult? Type12 { get; set; }
+        public global::WorldLabs.OperationError? Type12 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::WorldLabs.AnyOf<global::WorldLabs.World, global::WorldLabs.PanoDepthToRgbResult, object>? Type13 { get; set; }
+        public global::WorldLabs.GetOperationResponseUnionWorldPanoDepthToRgbResult? Type13 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::WorldLabs.World? Type14 { get; set; }
+        public global::WorldLabs.AnyOf<global::WorldLabs.World, global::WorldLabs.PanoDepthToRgbResult, object>? Type14 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::WorldLabs.PanoDepthToRgbResult? Type15 { get; set; }
+        public global::WorldLabs.World? Type15 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::WorldLabs.HTTPValidationError? Type16 { get; set; }
+        public global::WorldLabs.PanoDepthToRgbResult? Type16 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::System.Collections.Generic.IList<global::WorldLabs.ValidationError>? Type17 { get; set; }
+        public global::WorldLabs.HTTPValidationError? Type17 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::WorldLabs.ValidationError? Type18 { get; set; }
+        public global::System.Collections.Generic.IList<global::WorldLabs.ValidationError>? Type18 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::WorldLabs.ImagePrompt? Type19 { get; set; }
+        public global::WorldLabs.ValidationError? Type19 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::WorldLabs.ImagePrompt1? Type20 { get; set; }
+        public global::WorldLabs.ImagePrompt? Type20 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::WorldLabs.MediaAssetReference? Type21 { get; set; }
+        public global::WorldLabs.ImagePrompt1? Type21 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::WorldLabs.UriReference? Type22 { get; set; }
+        public global::WorldLabs.MediaAssetReference? Type22 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::WorldLabs.ImagePromptImagePrompt1Discriminator? Type23 { get; set; }
+        public global::WorldLabs.UriReference? Type23 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::WorldLabs.ImagePromptImagePrompt1DiscriminatorSource? Type24 { get; set; }
+        public global::WorldLabs.ImagePromptImagePrompt1Discriminator? Type24 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::WorldLabs.ImageryAssets? Type25 { get; set; }
+        public global::WorldLabs.ImagePromptImagePrompt1DiscriminatorSource? Type25 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::WorldLabs.InpaintPanoPrompt? Type26 { get; set; }
+        public global::WorldLabs.PanoDetectionMode? Type26 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::WorldLabs.ListWorldsRequest? Type27 { get; set; }
+        public global::WorldLabs.ImageryAssets? Type27 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::WorldLabs.AnyOf<global::WorldLabs.ListWorldsRequestModelVariant1?, global::WorldLabs.ListWorldsRequestModelVariant2?, object>? Type28 { get; set; }
+        public global::WorldLabs.InpaintPanoPrompt? Type28 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::WorldLabs.ListWorldsRequestModelVariant1? Type29 { get; set; }
+        public global::WorldLabs.ListWorldsRequest? Type29 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::WorldLabs.ListWorldsRequestModelVariant2? Type30 { get; set; }
+        public global::WorldLabs.AnyOf<global::WorldLabs.ListWorldsRequestModelVariant1?, global::WorldLabs.ListWorldsRequestModelVariant2?, object>? Type30 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public int? Type31 { get; set; }
+        public global::WorldLabs.ListWorldsRequestModelVariant1? Type31 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::WorldLabs.ListWorldsRequestSortBy? Type32 { get; set; }
+        public global::WorldLabs.ListWorldsRequestModelVariant2? Type32 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::WorldLabs.ListWorldsRequestStatus2? Type33 { get; set; }
+        public int? Type33 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::System.Collections.Generic.IList<string>? Type34 { get; set; }
+        public global::WorldLabs.ListWorldsRequestSortBy? Type34 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::WorldLabs.ListWorldsResponse? Type35 { get; set; }
+        public global::WorldLabs.ListWorldsRequestStatus2? Type35 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::System.Collections.Generic.IList<global::WorldLabs.World>? Type36 { get; set; }
+        public global::System.Collections.Generic.IList<string>? Type36 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::WorldLabs.MediaAsset? Type37 { get; set; }
+        public global::WorldLabs.ListWorldsResponse? Type37 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::WorldLabs.MediaAssetKind? Type38 { get; set; }
+        public global::System.Collections.Generic.IList<global::WorldLabs.World>? Type38 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::WorldLabs.MediaAssetPrepareUploadRequest? Type39 { get; set; }
+        public global::WorldLabs.MediaAsset? Type39 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::WorldLabs.MediaAssetPrepareUploadResponse? Type40 { get; set; }
+        public global::WorldLabs.MediaAssetKind? Type40 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::WorldLabs.UploadUrlInfo? Type41 { get; set; }
+        public global::WorldLabs.MediaAssetPrepareUploadRequest? Type41 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::WorldLabs.MeshAssets? Type42 { get; set; }
+        public global::WorldLabs.MediaAssetPrepareUploadResponse? Type42 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::WorldLabs.MultiImagePromptInput? Type43 { get; set; }
+        public global::WorldLabs.UploadUrlInfo? Type43 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::System.Collections.Generic.IList<global::WorldLabs.SphericallyLocatedContentInput>? Type44 { get; set; }
+        public global::WorldLabs.MeshAssets? Type44 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::WorldLabs.SphericallyLocatedContentInput? Type45 { get; set; }
+        public global::WorldLabs.MultiImagePromptInput? Type45 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::WorldLabs.MultiImagePromptOutput? Type46 { get; set; }
+        public global::System.Collections.Generic.IList<global::WorldLabs.SphericallyLocatedContentInput>? Type46 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::System.Collections.Generic.IList<global::WorldLabs.SphericallyLocatedContentOutput>? Type47 { get; set; }
+        public global::WorldLabs.SphericallyLocatedContentInput? Type47 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::WorldLabs.SphericallyLocatedContentOutput? Type48 { get; set; }
+        public global::WorldLabs.MultiImagePromptOutput? Type48 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::WorldLabs.OperationPanoDepthToRgbResult? Type49 { get; set; }
+        public global::System.Collections.Generic.IList<global::WorldLabs.SphericallyLocatedContentOutput>? Type49 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::WorldLabs.PanoDepthToRgbRequest? Type50 { get; set; }
+        public global::WorldLabs.SphericallyLocatedContentOutput? Type50 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::WorldLabs.DepthPanoImage? Type51 { get; set; }
+        public global::System.Collections.Generic.IList<global::WorldLabs.OperationCostLineItem>? Type51 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::WorldLabs.PanoDepthToRgbRequestDepthPanoImageDiscriminator? Type52 { get; set; }
+        public global::WorldLabs.OperationCostLineItem? Type52 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::WorldLabs.PanoDepthToRgbRequestDepthPanoImageDiscriminatorSource? Type53 { get; set; }
+        public global::WorldLabs.OperationPanoDepthToRgbResult? Type53 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public long? Type54 { get; set; }
+        public global::WorldLabs.PanoDepthToRgbRequest? Type54 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::WorldLabs.Permission? Type55 { get; set; }
+        public global::WorldLabs.DepthPanoImage? Type55 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::WorldLabs.Prompt? Type56 { get; set; }
+        public global::WorldLabs.PanoDepthToRgbRequestDepthPanoImageDiscriminator? Type56 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::WorldLabs.Content2? Type57 { get; set; }
+        public global::WorldLabs.PanoDepthToRgbRequestDepthPanoImageDiscriminatorSource? Type57 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::WorldLabs.SphericallyLocatedContentInputContentDiscriminator? Type58 { get; set; }
+        public global::WorldLabs.Permission? Type58 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::WorldLabs.SphericallyLocatedContentInputContentDiscriminatorSource? Type59 { get; set; }
+        public global::WorldLabs.Prompt? Type59 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::WorldLabs.SplatAssets? Type60 { get; set; }
+        public global::WorldLabs.Content2? Type60 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::WorldLabs.WorldSemanticsMetadata? Type61 { get; set; }
+        public global::WorldLabs.SphericallyLocatedContentInputContentDiscriminator? Type61 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::System.Collections.Generic.Dictionary<string, string>? Type62 { get; set; }
+        public global::WorldLabs.SphericallyLocatedContentInputContentDiscriminatorSource? Type62 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::System.Collections.Generic.IList<global::WorldLabs.AnyOf<string, int?>>? Type63 { get; set; }
+        public global::WorldLabs.SplatAssets? Type63 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::WorldLabs.AnyOf<string, int?>? Type64 { get; set; }
+        public global::WorldLabs.WorldSemanticsMetadata? Type64 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::WorldLabs.VideoPromptInput? Type65 { get; set; }
+        public global::System.Collections.Generic.Dictionary<string, string>? Type65 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::WorldLabs.VideoPrompt? Type66 { get; set; }
+        public global::System.Collections.Generic.IList<global::WorldLabs.AnyOf<string, int?>>? Type66 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::WorldLabs.VideoPromptInputVideoPromptDiscriminator? Type67 { get; set; }
+        public global::WorldLabs.AnyOf<string, int?>? Type67 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::WorldLabs.VideoPromptInputVideoPromptDiscriminatorSource? Type68 { get; set; }
+        public global::WorldLabs.VideoPromptInput? Type68 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::WorldLabs.VideoPromptOutput? Type69 { get; set; }
+        public global::WorldLabs.VideoPrompt? Type69 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::WorldLabs.WorldAssets2? Type70 { get; set; }
+        public global::WorldLabs.VideoPromptInputVideoPromptDiscriminator? Type70 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::WorldLabs.WorldPromptVariant1? Type71 { get; set; }
+        public global::WorldLabs.VideoPromptInputVideoPromptDiscriminatorSource? Type71 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::WorldLabs.WorldTextPromptOutput? Type72 { get; set; }
+        public global::WorldLabs.VideoPromptOutput? Type72 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::WorldLabs.WorldWorldPromptVariant1Discriminator? Type73 { get; set; }
+        public global::WorldLabs.WorldAssets2? Type73 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::WorldLabs.WorldWorldPromptVariant1DiscriminatorType? Type74 { get; set; }
+        public global::WorldLabs.WorldPromptVariant1? Type74 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::WorldLabs.WorldTextPromptInput? Type75 { get; set; }
+        public global::WorldLabs.WorldTextPromptOutput? Type75 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::WorldLabs.WorldsGenerateRequest? Type76 { get; set; }
+        public global::WorldLabs.WorldWorldPromptVariant1Discriminator? Type76 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::WorldLabs.AnyOf<global::WorldLabs.WorldsGenerateRequestModelVariant1?, global::WorldLabs.WorldsGenerateRequestModelVariant2?>? Type77 { get; set; }
+        public global::WorldLabs.WorldWorldPromptVariant1DiscriminatorType? Type77 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::WorldLabs.WorldsGenerateRequestModelVariant1? Type78 { get; set; }
+        public global::WorldLabs.WorldTextPromptInput? Type78 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::WorldLabs.WorldsGenerateRequestModelVariant2? Type79 { get; set; }
+        public global::WorldLabs.WorldsGenerateRequest? Type79 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::WorldLabs.WorldPrompt? Type80 { get; set; }
+        public global::WorldLabs.AnyOf<global::WorldLabs.WorldsGenerateRequestModelVariant1?, global::WorldLabs.WorldsGenerateRequestModelVariant2?>? Type80 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::WorldLabs.WorldsGenerateRequestWorldPromptDiscriminator? Type81 { get; set; }
+        public global::WorldLabs.WorldsGenerateRequestModelVariant1? Type81 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::WorldLabs.WorldsGenerateRequestWorldPromptDiscriminatorType? Type82 { get; set; }
+        public global::WorldLabs.WorldsGenerateRequestModelVariant2? Type82 { get; set; }
+        /// <summary>
+        /// 
+        /// </summary>
+        public global::WorldLabs.WorldPrompt? Type83 { get; set; }
+        /// <summary>
+        /// 
+        /// </summary>
+        public global::WorldLabs.WorldsGenerateRequestWorldPromptDiscriminator? Type84 { get; set; }
+        /// <summary>
+        /// 
+        /// </summary>
+        public global::WorldLabs.WorldsGenerateRequestWorldPromptDiscriminatorType? Type85 { get; set; }
 
         /// <summary>
         /// 
@@ -381,6 +393,10 @@ namespace WorldLabs
         /// <summary>
         /// 
         /// </summary>
-        public global::System.Collections.Generic.List<global::WorldLabs.AnyOf<string, int?>>? ListType5 { get; set; }
+        public global::System.Collections.Generic.List<global::WorldLabs.OperationCostLineItem>? ListType5 { get; set; }
+        /// <summary>
+        /// 
+        /// </summary>
+        public global::System.Collections.Generic.List<global::WorldLabs.AnyOf<string, int?>>? ListType6 { get; set; }
     }
 }

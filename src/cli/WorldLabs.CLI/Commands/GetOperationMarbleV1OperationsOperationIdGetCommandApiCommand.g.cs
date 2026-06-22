@@ -54,6 +54,10 @@ Returns:
         - error: Error details if failed, null otherwise
         - metadata: Progress information and world_id
         - response: Generated World if done=true, null otherwise
+        - cost: Settled credit cost breakdown; populated only when the
+          operation completed successfully (done=true with no error)
+          and a public price is known for its operation type. Failed
+          or in-progress operations return null.
 
 Raises:
     HTTPException: 401 if unauthorized

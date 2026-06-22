@@ -5,11 +5,11 @@ using System.CommandLine;
 
 namespace WorldLabs.CLI.Commands;
 
-internal static partial class HealthzHealthzGetCommandApiCommand
+internal static partial class CreditsGetCreditsMarbleV1CreditsGetCommandApiCommand
 {
 
 
-                    private static string FormatResponse(ParseResult parseResult, string value, global::System.Text.Json.Serialization.JsonSerializerContext context, bool truncateLongStrings)
+                    private static string FormatResponse(ParseResult parseResult, global::WorldLabs.CreditsResponse value, global::System.Text.Json.Serialization.JsonSerializerContext context, bool truncateLongStrings)
                     {
                         string? text = null;
                         CustomizeResponseText(parseResult, value, ref text);
@@ -25,14 +25,21 @@ internal static partial class HealthzHealthzGetCommandApiCommand
                         return CliRuntime.FormatHumanReadable(value, context, truncateLongStrings, hints);
                     }
 
-                    static partial void CustomizeResponseText(ParseResult parseResult, string value, ref string? text);
+                    static partial void CustomizeResponseText(ParseResult parseResult, global::WorldLabs.CreditsResponse value, ref string? text);
                     static partial void CustomizeResponseFormatHints(Dictionary<string, CliFormatHint> hints);
 
 
     public static Command Create()
     {
-        var command = new Command(@"healthz-healthz-get", @"Healthz
-Health check endpoint for Kubernetes probes.");
+        var command = new Command(@"get-credits-marble-v1-credits-get", @"Get Credits
+Get remaining API credits for the authenticated user.
+
+Returns:
+    CreditsResponse with the current aggregate API credit balance.
+
+Raises:
+    HTTPException: 404 if the caller is not an API-enabled user
+    HTTPException: 503 if the billing backend is unavailable");
 
 
 
@@ -43,7 +50,7 @@ Health check endpoint for Kubernetes probes.");
                 using var client = await CliRuntime.CreateClientAsync(parseResult, cancellationToken).ConfigureAwait(false);
 
 
-                                var response = await client.HealthzHealthzGetAsync(
+                                var response = await client.GetCreditsMarbleV1CreditsGetAsync(
 
                                     cancellationToken: cancellationToken).ConfigureAwait(false);
 

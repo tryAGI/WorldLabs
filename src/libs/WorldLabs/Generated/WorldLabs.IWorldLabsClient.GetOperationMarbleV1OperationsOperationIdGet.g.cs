@@ -21,6 +21,10 @@ namespace WorldLabs
         ///         - error: Error details if failed, null otherwise<br/>
         ///         - metadata: Progress information and world_id<br/>
         ///         - response: Generated World if done=true, null otherwise<br/>
+        ///         - cost: Settled credit cost breakdown; populated only when the<br/>
+        ///           operation completed successfully (done=true with no error)<br/>
+        ///           and a public price is known for its operation type. Failed<br/>
+        ///           or in-progress operations return null.<br/>
         /// Raises:<br/>
         ///     HTTPException: 401 if unauthorized<br/>
         ///     HTTPException: 404 if operation not found<br/>
@@ -51,6 +55,10 @@ namespace WorldLabs
         ///         - error: Error details if failed, null otherwise<br/>
         ///         - metadata: Progress information and world_id<br/>
         ///         - response: Generated World if done=true, null otherwise<br/>
+        ///         - cost: Settled credit cost breakdown; populated only when the<br/>
+        ///           operation completed successfully (done=true with no error)<br/>
+        ///           and a public price is known for its operation type. Failed<br/>
+        ///           or in-progress operations return null.<br/>
         /// Raises:<br/>
         ///     HTTPException: 401 if unauthorized<br/>
         ///     HTTPException: 404 if operation not found<br/>

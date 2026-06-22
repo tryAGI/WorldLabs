@@ -10,7 +10,7 @@ internal static partial class GenerateWorldMarbleV1WorldsGeneratePostCommandApiC
     private static Option<string?> DisplayName { get; } = new(
         name: @"--display-name")
     {
-        Description = @"Optional display name (max 64 characters)",
+        Description = @"Optional human-readable title for the world (max 64 characters). Stored as world metadata and returned in world responses; does not affect generation. If omitted, World Labs may generate a title from the prompt.",
     };
 
     private static Option<global::WorldLabs.AnyOf<global::WorldLabs.WorldsGenerateRequestModelVariant1?, global::WorldLabs.WorldsGenerateRequestModelVariant2?>?> Model { get; } = new(
@@ -25,7 +25,7 @@ internal static partial class GenerateWorldMarbleV1WorldsGeneratePostCommandApiC
         Description = @"The permission for the world",
     };
 
-    private static Option<long?> Seed { get; } = new(
+    private static Option<int?> Seed { get; } = new(
         name: @"--seed")
     {
         Description = @"Random seed for generation",

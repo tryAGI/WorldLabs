@@ -10,6 +10,7 @@ internal static class ApiCommand
     {
         var command = new Command("api", "Generated endpoint commands.");
 
+                         command.Subcommands.Add(CreditsApiGroupCommand.Create());
                          command.Subcommands.Add(DefaultApiGroupCommand.Create());
         return command;
     }

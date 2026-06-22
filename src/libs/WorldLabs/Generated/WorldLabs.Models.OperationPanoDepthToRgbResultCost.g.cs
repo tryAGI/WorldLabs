@@ -4,9 +4,9 @@
 namespace WorldLabs
 {
     /// <summary>
-    /// 
+    /// Settled credit cost for the operation. Populated only on successful completion.
     /// </summary>
-    public sealed partial class PanoDepthToRgbMarbleV1PanoDepthToRgbPostResponse
+    public sealed partial class OperationPanoDepthToRgbResultCost
     {
 
         /// <summary>
