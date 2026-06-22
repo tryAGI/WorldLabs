@@ -363,24 +363,20 @@ namespace WorldLabs
                                 retryReason: global::System.String.Empty,
                                 cancellationToken: __effectiveCancellationToken)).ConfigureAwait(false);
                 }
-                            // Insufficient Credits
+                            // The account has insufficient API credits for this request.
                             if ((int)__response.StatusCode == 402)
                             {
                                 string? __content_402 = null;
                                 global::System.Exception? __exception_402 = null;
-                                string? __value_402 = null;
                                 try
                                 {
                                     if (__effectiveReadResponseAsString)
                                     {
                                         __content_402 = await __response.Content.ReadAsStringAsync(__effectiveCancellationToken).ConfigureAwait(false);
-                                        __value_402 = (string?)global::System.Text.Json.JsonSerializer.Deserialize(__content_402, typeof(string), JsonSerializerContext);
                                     }
                                     else
                                     {
                                         __content_402 = await __response.Content.ReadAsStringAsync(__effectiveCancellationToken).ConfigureAwait(false);
-
-                                        __value_402 = (string?)global::System.Text.Json.JsonSerializer.Deserialize(__content_402, typeof(string), JsonSerializerContext);
                                     }
                                 }
                                 catch (global::System.Exception __ex)
@@ -389,12 +385,11 @@ namespace WorldLabs
                                 }
 
 
-                                throw global::WorldLabs.ApiException<string>.Create(
+                                throw global::WorldLabs.ApiException.Create(
                                     statusCode: __response.StatusCode,
                                     message: __content_402 ?? __response.ReasonPhrase ?? string.Empty,
                                     innerException: __exception_402,
                                     responseBody: __content_402,
-                                    responseObject: __value_402,
                                     responseHeaders: global::System.Linq.Enumerable.ToDictionary(
                                         __response.Headers,
                                         h => h.Key,
@@ -551,11 +546,11 @@ namespace WorldLabs
         ///     HTTPException: 500 if generation could not be started
         /// </summary>
         /// <param name="displayName">
-        /// Optional display name (max 64 characters)
+        /// Optional human-readable title for the world (max 64 characters). Stored as world metadata and returned in world responses; does not affect generation. If omitted, World Labs may generate a title from the prompt.
         /// </param>
         /// <param name="model">
         /// The model to use for generation. marble-1.1-plus includes dynamic world sizing. Legacy names ('Marble 0.1-plus', etc.) still work but are deprecated and will be removed in a future release.<br/>
-        /// Default Value: marble-1.0
+        /// Default Value: marble-1.1
         /// </param>
         /// <param name="permission">
         /// The permission for the world<br/>
@@ -578,7 +573,7 @@ namespace WorldLabs
             string? displayName = default,
             global::WorldLabs.AnyOf<global::WorldLabs.WorldsGenerateRequestModelVariant1?, global::WorldLabs.WorldsGenerateRequestModelVariant2?>? model = default,
             global::WorldLabs.Permission? permission = default,
-            long? seed = default,
+            int? seed = default,
             global::System.Collections.Generic.IList<string>? tags = default,
             global::WorldLabs.AutoSDKRequestOptions? requestOptions = default,
             global::System.Threading.CancellationToken cancellationToken = default)

@@ -74,11 +74,11 @@ namespace WorldLabs
         ///     HTTPException: 500 if generation could not be started
         /// </summary>
         /// <param name="displayName">
-        /// Optional display name (max 64 characters)
+        /// Optional human-readable title for the world (max 64 characters). Stored as world metadata and returned in world responses; does not affect generation. If omitted, World Labs may generate a title from the prompt.
         /// </param>
         /// <param name="model">
         /// The model to use for generation. marble-1.1-plus includes dynamic world sizing. Legacy names ('Marble 0.1-plus', etc.) still work but are deprecated and will be removed in a future release.<br/>
-        /// Default Value: marble-1.0
+        /// Default Value: marble-1.1
         /// </param>
         /// <param name="permission">
         /// The permission for the world<br/>
@@ -101,7 +101,7 @@ namespace WorldLabs
             string? displayName = default,
             global::WorldLabs.AnyOf<global::WorldLabs.WorldsGenerateRequestModelVariant1?, global::WorldLabs.WorldsGenerateRequestModelVariant2?>? model = default,
             global::WorldLabs.Permission? permission = default,
-            long? seed = default,
+            int? seed = default,
             global::System.Collections.Generic.IList<string>? tags = default,
             global::WorldLabs.AutoSDKRequestOptions? requestOptions = default,
             global::System.Threading.CancellationToken cancellationToken = default);

@@ -4,9 +4,9 @@
 namespace WorldLabs
 {
     /// <summary>
-    /// 
+    /// Settled credit cost for the operation. Populated only on successful completion.
     /// </summary>
-    public sealed partial class HealthzHealthzGetResponse
+    public sealed partial class GetOperationResponseUnionWorldPanoDepthToRgbResultCost
     {
 
         /// <summary>

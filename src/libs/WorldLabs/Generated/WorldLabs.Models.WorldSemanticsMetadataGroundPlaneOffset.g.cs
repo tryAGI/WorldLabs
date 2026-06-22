@@ -4,9 +4,7 @@
 namespace WorldLabs
 {
     /// <summary>
-    /// Vertical (Y-axis) offset, in meters, of the detected ground plane<br/>
-    /// in the metric-scaled frame. Subtract from Y after applying<br/>
-    /// `metric_scale_factor` to place the ground at y=0.
+    /// Vertical (Y-axis) offset, in meters, of the detected ground plane in the metric-scaled frame. Subtract from Y after applying `metric_scale_factor` to place the ground at y=0.
     /// </summary>
     public sealed partial class WorldSemanticsMetadataGroundPlaneOffset
     {

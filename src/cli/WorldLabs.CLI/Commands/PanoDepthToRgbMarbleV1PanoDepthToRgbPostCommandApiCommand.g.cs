@@ -14,7 +14,7 @@ internal static partial class PanoDepthToRgbMarbleV1PanoDepthToRgbPostCommandApi
         Required = true,
     };
 
-    private static Option<long?> Seed { get; } = new(
+    private static Option<int?> Seed { get; } = new(
         name: @"--seed")
     {
         Description = @"Random seed for reproducible generation.",

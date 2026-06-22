@@ -26,10 +26,12 @@ namespace WorldLabs
         public required global::WorldLabs.ImagePrompt1 ImagePrompt1 { get; set; }
 
         /// <summary>
-        /// Whether the provided image is already a panorama
+        /// How to treat the image input as a panorama. `auto` detects valid equirectangular panoramas, `true` always uses the image as a panorama, and `false` treats it as a standard image.<br/>
+        /// Default Value: auto
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("is_pano")]
-        public bool? IsPano { get; set; }
+        [global::System.Text.Json.Serialization.JsonConverter(typeof(global::WorldLabs.JsonConverters.PanoDetectionModeJsonConverter))]
+        public global::WorldLabs.PanoDetectionMode? IsPano { get; set; }
 
         /// <summary>
         /// Optional text guidance (auto-generated if not provided)
@@ -59,7 +61,8 @@ namespace WorldLabs
         /// If True, use text_prompt as-is without recaptioning
         /// </param>
         /// <param name="isPano">
-        /// Whether the provided image is already a panorama
+        /// How to treat the image input as a panorama. `auto` detects valid equirectangular panoramas, `true` always uses the image as a panorama, and `false` treats it as a standard image.<br/>
+        /// Default Value: auto
         /// </param>
         /// <param name="textPrompt">
         /// Optional text guidance (auto-generated if not provided)
@@ -73,7 +76,7 @@ namespace WorldLabs
         public ImagePrompt(
             global::WorldLabs.ImagePrompt1 imagePrompt1,
             bool? disableRecaption,
-            bool? isPano,
+            global::WorldLabs.PanoDetectionMode? isPano,
             string? textPrompt,
             string? type)
         {

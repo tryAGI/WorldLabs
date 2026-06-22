@@ -14,7 +14,7 @@ namespace WorldLabs
     ///   and ``z_max``.<br/>
     /// * **PNG**: depth values normalized to [0, 1].<br/>
     ///   Provide both ``z_min`` and ``z_max`` so the service<br/>
-    ///   can decode the PNG back into metric depth.<br/>
+    ///   can decode the PNG correctly.<br/>
     /// For a complete PNG-based workflow, see the<br/>
     /// `web-chisel-depth-png example &lt;https://github.com/worldlabsai/worldlabs-api-examples/tree/main/web-chisel-depth-png&gt;`.<br/>
     /// This endpoint returns a long-running ``Operation``.<br/>
@@ -36,7 +36,7 @@ namespace WorldLabs
         /// Random seed for reproducible generation.
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("seed")]
-        public long? Seed { get; set; }
+        public int? Seed { get; set; }
 
         /// <summary>
         /// Text description of the desired appearance.
@@ -87,7 +87,7 @@ namespace WorldLabs
         public PanoDepthToRgbRequest(
             global::WorldLabs.DepthPanoImage depthPanoImage,
             string textPrompt,
-            long? seed,
+            int? seed,
             double? zMax,
             double? zMin)
         {
