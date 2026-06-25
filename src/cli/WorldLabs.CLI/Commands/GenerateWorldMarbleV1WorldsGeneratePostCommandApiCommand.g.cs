@@ -25,7 +25,7 @@ internal static partial class GenerateWorldMarbleV1WorldsGeneratePostCommandApiC
         Description = @"The permission for the world",
     };
 
-    private static Option<int?> Seed { get; } = new(
+    private static Option<long?> Seed { get; } = new(
         name: @"--seed")
     {
         Description = @"Random seed for generation",

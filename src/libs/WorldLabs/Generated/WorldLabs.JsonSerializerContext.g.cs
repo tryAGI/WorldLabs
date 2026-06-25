@@ -150,6 +150,7 @@ namespace WorldLabs
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::WorldLabs.DepthPanoImage), TypeInfoPropertyName = "DepthPanoImage2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::WorldLabs.PanoDepthToRgbRequestDepthPanoImageDiscriminator))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::WorldLabs.PanoDepthToRgbRequestDepthPanoImageDiscriminatorSource), TypeInfoPropertyName = "PanoDepthToRgbRequestDepthPanoImageDiscriminatorSource2")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(long))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::WorldLabs.Permission))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::WorldLabs.Prompt))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::WorldLabs.Content2), TypeInfoPropertyName = "Content22")]

@@ -260,115 +260,119 @@ namespace WorldLabs
         /// <summary>
         /// 
         /// </summary>
-        public global::WorldLabs.Permission? Type58 { get; set; }
+        public long? Type58 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::WorldLabs.Prompt? Type59 { get; set; }
+        public global::WorldLabs.Permission? Type59 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::WorldLabs.Content2? Type60 { get; set; }
+        public global::WorldLabs.Prompt? Type60 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::WorldLabs.SphericallyLocatedContentInputContentDiscriminator? Type61 { get; set; }
+        public global::WorldLabs.Content2? Type61 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::WorldLabs.SphericallyLocatedContentInputContentDiscriminatorSource? Type62 { get; set; }
+        public global::WorldLabs.SphericallyLocatedContentInputContentDiscriminator? Type62 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::WorldLabs.SplatAssets? Type63 { get; set; }
+        public global::WorldLabs.SphericallyLocatedContentInputContentDiscriminatorSource? Type63 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::WorldLabs.WorldSemanticsMetadata? Type64 { get; set; }
+        public global::WorldLabs.SplatAssets? Type64 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::System.Collections.Generic.Dictionary<string, string>? Type65 { get; set; }
+        public global::WorldLabs.WorldSemanticsMetadata? Type65 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::System.Collections.Generic.IList<global::WorldLabs.AnyOf<string, int?>>? Type66 { get; set; }
+        public global::System.Collections.Generic.Dictionary<string, string>? Type66 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::WorldLabs.AnyOf<string, int?>? Type67 { get; set; }
+        public global::System.Collections.Generic.IList<global::WorldLabs.AnyOf<string, int?>>? Type67 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::WorldLabs.VideoPromptInput? Type68 { get; set; }
+        public global::WorldLabs.AnyOf<string, int?>? Type68 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::WorldLabs.VideoPrompt? Type69 { get; set; }
+        public global::WorldLabs.VideoPromptInput? Type69 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::WorldLabs.VideoPromptInputVideoPromptDiscriminator? Type70 { get; set; }
+        public global::WorldLabs.VideoPrompt? Type70 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::WorldLabs.VideoPromptInputVideoPromptDiscriminatorSource? Type71 { get; set; }
+        public global::WorldLabs.VideoPromptInputVideoPromptDiscriminator? Type71 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::WorldLabs.VideoPromptOutput? Type72 { get; set; }
+        public global::WorldLabs.VideoPromptInputVideoPromptDiscriminatorSource? Type72 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::WorldLabs.WorldAssets2? Type73 { get; set; }
+        public global::WorldLabs.VideoPromptOutput? Type73 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::WorldLabs.WorldPromptVariant1? Type74 { get; set; }
+        public global::WorldLabs.WorldAssets2? Type74 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::WorldLabs.WorldTextPromptOutput? Type75 { get; set; }
+        public global::WorldLabs.WorldPromptVariant1? Type75 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::WorldLabs.WorldWorldPromptVariant1Discriminator? Type76 { get; set; }
+        public global::WorldLabs.WorldTextPromptOutput? Type76 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::WorldLabs.WorldWorldPromptVariant1DiscriminatorType? Type77 { get; set; }
+        public global::WorldLabs.WorldWorldPromptVariant1Discriminator? Type77 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::WorldLabs.WorldTextPromptInput? Type78 { get; set; }
+        public global::WorldLabs.WorldWorldPromptVariant1DiscriminatorType? Type78 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::WorldLabs.WorldsGenerateRequest? Type79 { get; set; }
+        public global::WorldLabs.WorldTextPromptInput? Type79 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::WorldLabs.AnyOf<global::WorldLabs.WorldsGenerateRequestModelVariant1?, global::WorldLabs.WorldsGenerateRequestModelVariant2?>? Type80 { get; set; }
+        public global::WorldLabs.WorldsGenerateRequest? Type80 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::WorldLabs.WorldsGenerateRequestModelVariant1? Type81 { get; set; }
+        public global::WorldLabs.AnyOf<global::WorldLabs.WorldsGenerateRequestModelVariant1?, global::WorldLabs.WorldsGenerateRequestModelVariant2?>? Type81 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::WorldLabs.WorldsGenerateRequestModelVariant2? Type82 { get; set; }
+        public global::WorldLabs.WorldsGenerateRequestModelVariant1? Type82 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::WorldLabs.WorldPrompt? Type83 { get; set; }
+        public global::WorldLabs.WorldsGenerateRequestModelVariant2? Type83 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::WorldLabs.WorldsGenerateRequestWorldPromptDiscriminator? Type84 { get; set; }
+        public global::WorldLabs.WorldPrompt? Type84 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::WorldLabs.WorldsGenerateRequestWorldPromptDiscriminatorType? Type85 { get; set; }
+        public global::WorldLabs.WorldsGenerateRequestWorldPromptDiscriminator? Type85 { get; set; }
+        /// <summary>
+        /// 
+        /// </summary>
+        public global::WorldLabs.WorldsGenerateRequestWorldPromptDiscriminatorType? Type86 { get; set; }
 
         /// <summary>
         /// 
