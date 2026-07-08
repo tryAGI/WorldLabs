@@ -2,6 +2,17 @@
   "Examples": [
     {
       "Order": 1,
+      "Title": "Export World",
+      "Slug": "export-world-marble-v1-worlds-world-id-export-post",
+      "Description": "Export a generated world asset.\n\nPLY splat exports are converted synchronously, cached in GCS, and returned\nas completed operations. HQ mesh exports reuse the existing async mesh\nexport service and return an in-progress operation.",
+      "Language": "http",
+      "Code": "### Export World\n# @name export_world_marble_v1_worlds__world_id__export_post\nPOST {{host}}/marble/v1/worlds/{{world_id}}:export\nWLT-Api-Key: {{api_key}}\nContent-Type: application/json\nAccept: application/json\n\n{\n  \u0022asset_type\u0022: \u0022splats\u0022,\n  \u0022format\u0022: \u0022ply\u0022,\n  \u0022mesh_variant\u0022: \u0022textured\u0022,\n  \u0022resolution\u0022: \u0022full_res\u0022\n}\n\n## Responses\n# 200\n# Description: Successful Response\n# Content-Type: application/json\n# 402\n# Description: The account has insufficient API credits for this request.\n# Content-Type: application/json\n# 422\n# Description: Validation Error\n# Content-Type: application/json",
+      "Format": "http",
+      "OperationId": "export_world_marble_v1_worlds__world_id__export_post",
+      "Setup": null
+    },
+    {
+      "Order": 2,
       "Title": "Generate World",
       "Slug": "generate-world-marble-v1-worlds-generate-post",
       "Description": "Start world generation.\n\nCreates a new world generation job and returns a long-running operation.\nPoll the /operations/{operation_id} endpoint to check generation status\nand retrieve the generated world when complete.\n\nArgs:\n    request: The world generation request containing world_prompt, display_name,\n        tags, model, seed, and permission settings.\n\nReturns:\n    GenerateWorldResponse with operation_id and timestamps. Use the operation_id\n    to poll for completion.\n\nRaises:\n    HTTPException: 400 if invalid request or content violates policies\n    HTTPException: 402 if insufficient credits\n    HTTPException: 500 if generation could not be started",
@@ -12,7 +23,7 @@
       "Setup": null
     },
     {
-      "Order": 2,
+      "Order": 3,
       "Title": "Pano Depth To Rgb",
       "Slug": "pano-depth-to-rgb-marble-v1-pano-depth-to-rgb-post",
       "Description": "Generate an RGB panorama from a depth panorama.\n\nProvide a depth panorama and a text prompt\ndescribing the desired appearance. The depth map\nsupplies the scene geometry; the model synthesizes\ntextures that match that geometry and returns a\npanoramic RGB image.\n\nAccepted depth inputs:\n\n* **EXR**: float depth values. Omit\n  \u0060\u0060z_min\u0060\u0060 and \u0060\u0060z_max\u0060\u0060.\n* **PNG**: depth values normalized to [0, 1].\n  Provide both \u0060\u0060z_min\u0060\u0060 and \u0060\u0060z_max\u0060\u0060 so the\n  service can decode the PNG correctly.\n\nFor a complete PNG-based workflow, see the\n[web-chisel-depth-png example](https://github.com/worldlabsai/worldlabs-api-examples/tree/main/web-chisel-depth-png).\n\nReturns a long-running \u0060\u0060Operation\u0060\u0060. Poll\n\u0060\u0060GET /operations/{operation_id}\u0060\u0060 until\n\u0060\u0060done\u0060\u0060 is \u0060\u0060true\u0060\u0060, then read the generated\npanorama URL from \u0060\u0060response.pano_url\u0060\u0060.\n\nRaises:\n    HTTPException: 400 if invalid request\n    HTTPException: 402 if insufficient credits\n    HTTPException: 500 if generation could not start",

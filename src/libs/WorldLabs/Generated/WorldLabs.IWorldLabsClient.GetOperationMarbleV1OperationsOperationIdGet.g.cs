@@ -34,7 +34,7 @@ namespace WorldLabs
         /// <param name="requestOptions">Per-request overrides such as headers, query parameters, timeout, retries, and response buffering.</param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::WorldLabs.ApiException"></exception>
-        global::System.Threading.Tasks.Task<global::WorldLabs.GetOperationResponseUnionWorldPanoDepthToRgbResult> GetOperationMarbleV1OperationsOperationIdGetAsync(
+        global::System.Threading.Tasks.Task<global::WorldLabs.GetOperationResponseUnionWorldPanoDepthToRgbResultExportWorldResult> GetOperationMarbleV1OperationsOperationIdGetAsync(
             string operationId,
             global::WorldLabs.AutoSDKRequestOptions? requestOptions = default,
             global::System.Threading.CancellationToken cancellationToken = default);
@@ -68,7 +68,7 @@ namespace WorldLabs
         /// <param name="requestOptions">Per-request overrides such as headers, query parameters, timeout, retries, and response buffering.</param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::WorldLabs.ApiException"></exception>
-        global::System.Threading.Tasks.Task<global::WorldLabs.AutoSDKHttpResponse<global::WorldLabs.GetOperationResponseUnionWorldPanoDepthToRgbResult>> GetOperationMarbleV1OperationsOperationIdGetAsResponseAsync(
+        global::System.Threading.Tasks.Task<global::WorldLabs.AutoSDKHttpResponse<global::WorldLabs.GetOperationResponseUnionWorldPanoDepthToRgbResultExportWorldResult>> GetOperationMarbleV1OperationsOperationIdGetAsResponseAsync(
             string operationId,
             global::WorldLabs.AutoSDKRequestOptions? requestOptions = default,
             global::System.Threading.CancellationToken cancellationToken = default);
