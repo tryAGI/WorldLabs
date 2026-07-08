@@ -15,6 +15,18 @@ namespace WorldLabs
         public string? ColliderMeshUrl { get; set; }
 
         /// <summary>
+        /// Full-resolution vertex-colored mesh URL
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("full_res_mesh_url")]
+        public string? FullResMeshUrl { get; set; }
+
+        /// <summary>
+        /// High-quality textured mesh URL
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("hq_mesh_url")]
+        public string? HqMeshUrl { get; set; }
+
+        /// <summary>
         /// Additional properties that are not explicitly defined in the schema
         /// </summary>
         [global::System.Text.Json.Serialization.JsonExtensionData]
@@ -26,13 +38,23 @@ namespace WorldLabs
         /// <param name="colliderMeshUrl">
         /// Collider mesh URL
         /// </param>
+        /// <param name="fullResMeshUrl">
+        /// Full-resolution vertex-colored mesh URL
+        /// </param>
+        /// <param name="hqMeshUrl">
+        /// High-quality textured mesh URL
+        /// </param>
 #if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
 #endif
         public MeshAssets(
-            string? colliderMeshUrl)
+            string? colliderMeshUrl,
+            string? fullResMeshUrl,
+            string? hqMeshUrl)
         {
             this.ColliderMeshUrl = colliderMeshUrl;
+            this.FullResMeshUrl = fullResMeshUrl;
+            this.HqMeshUrl = hqMeshUrl;
         }
 
         /// <summary>
