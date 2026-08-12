@@ -36,7 +36,7 @@ namespace WorldLabs
         /// Random seed for reproducible generation.
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("seed")]
-        public long? Seed { get; set; }
+        public int? Seed { get; set; }
 
         /// <summary>
         /// Text description of the desired appearance.
@@ -87,7 +87,7 @@ namespace WorldLabs
         public PanoDepthToRgbRequest(
             global::WorldLabs.DepthPanoImage depthPanoImage,
             string textPrompt,
-            long? seed,
+            int? seed,
             double? zMax,
             double? zMin)
         {

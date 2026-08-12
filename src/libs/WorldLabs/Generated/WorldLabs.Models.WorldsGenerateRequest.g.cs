@@ -33,7 +33,7 @@ namespace WorldLabs
         /// Random seed for generation
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("seed")]
-        public long? Seed { get; set; }
+        public int? Seed { get; set; }
 
         /// <summary>
         /// Optional tags for the world (max 10 tags, each up to 32 characters)
@@ -86,7 +86,7 @@ namespace WorldLabs
             string? displayName,
             global::WorldLabs.AnyOf<global::WorldLabs.WorldsGenerateRequestModelVariant1?, global::WorldLabs.WorldsGenerateRequestModelVariant2?>? model,
             global::WorldLabs.Permission? permission,
-            long? seed,
+            int? seed,
             global::System.Collections.Generic.IList<string>? tags)
         {
             this.DisplayName = displayName;
