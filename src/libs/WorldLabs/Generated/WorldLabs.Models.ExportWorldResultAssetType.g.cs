@@ -9,11 +9,11 @@ namespace WorldLabs
     public enum ExportWorldResultAssetType
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Mesh,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Splats,
     }

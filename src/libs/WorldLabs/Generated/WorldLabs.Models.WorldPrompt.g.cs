@@ -10,7 +10,7 @@ namespace WorldLabs
     public readonly partial struct WorldPrompt : global::System.IEquatable<WorldPrompt>
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public global::WorldLabs.WorldsGenerateRequestWorldPromptDiscriminatorType? Type { get; }
 
@@ -25,7 +25,7 @@ namespace WorldLabs
 #endif
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
 #if NET6_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.MemberNotNullWhen(true, nameof(Text))]
@@ -33,7 +33,7 @@ namespace WorldLabs
         public bool IsText => Text != null;
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public bool TryPickText(
 #if NET6_0_OR_GREATER
@@ -46,7 +46,7 @@ namespace WorldLabs
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public global::WorldLabs.WorldTextPromptInput PickText() => IsText
             ? Text!
@@ -65,7 +65,7 @@ namespace WorldLabs
 #endif
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
 #if NET6_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.MemberNotNullWhen(true, nameof(Image))]
@@ -73,7 +73,7 @@ namespace WorldLabs
         public bool IsImage => Image != null;
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public bool TryPickImage(
 #if NET6_0_OR_GREATER
@@ -86,7 +86,7 @@ namespace WorldLabs
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public global::WorldLabs.ImagePrompt PickImage() => IsImage
             ? Image!
@@ -104,7 +104,7 @@ namespace WorldLabs
 #endif
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
 #if NET6_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.MemberNotNullWhen(true, nameof(MultiImage))]
@@ -112,7 +112,7 @@ namespace WorldLabs
         public bool IsMultiImage => MultiImage != null;
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public bool TryPickMultiImage(
 #if NET6_0_OR_GREATER
@@ -125,7 +125,7 @@ namespace WorldLabs
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public global::WorldLabs.MultiImagePromptInput PickMultiImage() => IsMultiImage
             ? MultiImage!
@@ -144,7 +144,7 @@ namespace WorldLabs
 #endif
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
 #if NET6_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.MemberNotNullWhen(true, nameof(Video))]
@@ -152,7 +152,7 @@ namespace WorldLabs
         public bool IsVideo => Video != null;
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public bool TryPickVideo(
 #if NET6_0_OR_GREATER
@@ -165,23 +165,23 @@ namespace WorldLabs
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public global::WorldLabs.VideoPromptInput PickVideo() => IsVideo
             ? Video!
             : throw new global::System.InvalidOperationException($"Expected union variant 'Video' but the value was {ToString()}.");
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public static implicit operator WorldPrompt(global::WorldLabs.WorldTextPromptInput value) => new WorldPrompt((global::WorldLabs.WorldTextPromptInput?)value);
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public static implicit operator global::WorldLabs.WorldTextPromptInput?(WorldPrompt @this) => @this.Text;
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public WorldPrompt(global::WorldLabs.WorldTextPromptInput? value)
         {
@@ -189,22 +189,22 @@ namespace WorldLabs
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public static WorldPrompt FromText(global::WorldLabs.WorldTextPromptInput? value) => new WorldPrompt(value);
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public static implicit operator WorldPrompt(global::WorldLabs.ImagePrompt value) => new WorldPrompt((global::WorldLabs.ImagePrompt?)value);
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public static implicit operator global::WorldLabs.ImagePrompt?(WorldPrompt @this) => @this.Image;
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public WorldPrompt(global::WorldLabs.ImagePrompt? value)
         {
@@ -212,22 +212,22 @@ namespace WorldLabs
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public static WorldPrompt FromImage(global::WorldLabs.ImagePrompt? value) => new WorldPrompt(value);
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public static implicit operator WorldPrompt(global::WorldLabs.MultiImagePromptInput value) => new WorldPrompt((global::WorldLabs.MultiImagePromptInput?)value);
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public static implicit operator global::WorldLabs.MultiImagePromptInput?(WorldPrompt @this) => @this.MultiImage;
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public WorldPrompt(global::WorldLabs.MultiImagePromptInput? value)
         {
@@ -235,22 +235,22 @@ namespace WorldLabs
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public static WorldPrompt FromMultiImage(global::WorldLabs.MultiImagePromptInput? value) => new WorldPrompt(value);
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public static implicit operator WorldPrompt(global::WorldLabs.VideoPromptInput value) => new WorldPrompt((global::WorldLabs.VideoPromptInput?)value);
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public static implicit operator global::WorldLabs.VideoPromptInput?(WorldPrompt @this) => @this.Video;
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public WorldPrompt(global::WorldLabs.VideoPromptInput? value)
         {
@@ -258,12 +258,12 @@ namespace WorldLabs
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public static WorldPrompt FromVideo(global::WorldLabs.VideoPromptInput? value) => new WorldPrompt(value);
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public WorldPrompt(
             global::WorldLabs.WorldsGenerateRequestWorldPromptDiscriminatorType? type,
@@ -282,27 +282,27 @@ namespace WorldLabs
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public object? Object =>
             Video as object ??
             MultiImage as object ??
             Image as object ??
-            Text as object 
+            Text as object
             ;
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public override string? ToString() =>
             Text?.ToString() ??
             Image?.ToString() ??
             MultiImage?.ToString() ??
-            Video?.ToString() 
+            Video?.ToString()
             ;
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public bool Validate()
         {
@@ -310,7 +310,7 @@ namespace WorldLabs
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public TResult? Match<TResult>(
             global::System.Func<global::WorldLabs.WorldTextPromptInput, TResult>? text = null,
@@ -345,7 +345,7 @@ namespace WorldLabs
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public void Match(
             global::System.Action<global::WorldLabs.WorldTextPromptInput>? text = null,
@@ -381,7 +381,7 @@ namespace WorldLabs
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public void Switch(
             global::System.Action<global::WorldLabs.WorldTextPromptInput>? text = null,
@@ -414,7 +414,7 @@ namespace WorldLabs
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public override int GetHashCode()
         {
@@ -439,7 +439,7 @@ namespace WorldLabs
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public bool Equals(WorldPrompt other)
         {
@@ -447,12 +447,12 @@ namespace WorldLabs
                 global::System.Collections.Generic.EqualityComparer<global::WorldLabs.WorldTextPromptInput?>.Default.Equals(Text, other.Text) &&
                 global::System.Collections.Generic.EqualityComparer<global::WorldLabs.ImagePrompt?>.Default.Equals(Image, other.Image) &&
                 global::System.Collections.Generic.EqualityComparer<global::WorldLabs.MultiImagePromptInput?>.Default.Equals(MultiImage, other.MultiImage) &&
-                global::System.Collections.Generic.EqualityComparer<global::WorldLabs.VideoPromptInput?>.Default.Equals(Video, other.Video) 
+                global::System.Collections.Generic.EqualityComparer<global::WorldLabs.VideoPromptInput?>.Default.Equals(Video, other.Video)
                 ;
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public static bool operator ==(WorldPrompt obj1, WorldPrompt obj2)
         {
@@ -460,7 +460,7 @@ namespace WorldLabs
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public static bool operator !=(WorldPrompt obj1, WorldPrompt obj2)
         {
@@ -468,7 +468,7 @@ namespace WorldLabs
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public override bool Equals(object? obj)
         {

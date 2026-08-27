@@ -9,13 +9,13 @@ namespace WorldLabs
     public sealed partial class SphericallyLocatedContentOutput
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("azimuth")]
         public double? Azimuth { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("data_base64")]
         public string? DataBase64 { get; set; }
@@ -27,7 +27,7 @@ namespace WorldLabs
         public string? Extension { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("uri")]
         public string? Uri { get; set; }

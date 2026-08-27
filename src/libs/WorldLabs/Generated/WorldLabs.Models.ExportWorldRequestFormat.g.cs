@@ -9,11 +9,11 @@ namespace WorldLabs
     public enum ExportWorldRequestFormat
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Glb,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Ply,
     }

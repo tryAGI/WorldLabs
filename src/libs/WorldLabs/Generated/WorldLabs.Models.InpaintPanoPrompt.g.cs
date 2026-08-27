@@ -25,7 +25,7 @@ namespace WorldLabs
         public required global::WorldLabs.Content PanoMask { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("text_prompt")]
         public string? TextPrompt { get; set; }

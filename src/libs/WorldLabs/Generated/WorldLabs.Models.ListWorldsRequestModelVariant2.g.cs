@@ -4,20 +4,20 @@
 namespace WorldLabs
 {
     /// <summary>
-    /// 
+    ///
     /// </summary>
     public enum ListWorldsRequestModelVariant2
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Marble01Mini,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Marble01Plus,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Marble11Plus,
     }

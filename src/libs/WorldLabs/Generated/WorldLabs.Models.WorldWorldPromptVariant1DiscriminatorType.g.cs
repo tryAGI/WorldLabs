@@ -4,32 +4,32 @@
 namespace WorldLabs
 {
     /// <summary>
-    /// 
+    ///
     /// </summary>
     public enum WorldWorldPromptVariant1DiscriminatorType
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         DepthPano,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Image,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         InpaintPano,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         MultiImage,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Text,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Video,
     }

@@ -15,13 +15,13 @@ namespace WorldLabs
         public bool? AllowIdAccess { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("allowed_readers")]
         public global::System.Collections.Generic.IList<string>? AllowedReaders { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("allowed_writers")]
         public global::System.Collections.Generic.IList<string>? AllowedWriters { get; set; }

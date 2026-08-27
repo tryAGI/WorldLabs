@@ -10,11 +10,11 @@ namespace WorldLabs
     public enum ListWorldsRequestSortBy
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         CreatedAt,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         UpdatedAt,
     }

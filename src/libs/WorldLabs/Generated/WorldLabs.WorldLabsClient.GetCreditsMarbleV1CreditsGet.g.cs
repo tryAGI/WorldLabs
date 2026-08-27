@@ -136,7 +136,7 @@ namespace WorldLabs
                          __authorization.Location == "Header")
                 {
                     __httpRequest.Headers.Add(__authorization.Name, __authorization.Value);
-                } 
+                }
             }
                 global::WorldLabs.AutoSDKRequestOptionsSupport.ApplyHeaders(
                     request: __httpRequest,

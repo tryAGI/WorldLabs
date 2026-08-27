@@ -10,11 +10,11 @@ namespace WorldLabs
     public enum ExportWorldRequestMeshVariant
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Textured,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         VertexColored,
     }

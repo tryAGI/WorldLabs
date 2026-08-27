@@ -4,12 +4,12 @@
 namespace WorldLabs
 {
     /// <summary>
-    /// 
+    ///
     /// </summary>
     public sealed partial class WorldWorldPromptVariant1Discriminator
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("type")]
         [global::System.Text.Json.Serialization.JsonConverter(typeof(global::WorldLabs.JsonConverters.WorldWorldPromptVariant1DiscriminatorTypeJsonConverter))]

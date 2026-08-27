@@ -9,11 +9,11 @@ namespace WorldLabs
     public enum MediaAssetKind
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Image,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Video,
     }
