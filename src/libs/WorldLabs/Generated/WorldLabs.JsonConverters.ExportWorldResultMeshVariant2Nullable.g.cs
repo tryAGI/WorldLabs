@@ -20,7 +20,7 @@ namespace WorldLabs.JsonConverters
                     {
                         return global::WorldLabs.ExportWorldResultMeshVariant2Extensions.ToEnum(stringValue);
                     }
-                    
+
                     break;
                 }
                 case global::System.Text.Json.JsonTokenType.Number:

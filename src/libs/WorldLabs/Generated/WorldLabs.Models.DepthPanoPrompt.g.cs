@@ -21,7 +21,7 @@ namespace WorldLabs
         public required global::WorldLabs.Content DepthPanoImage { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("text_prompt")]
         public string? TextPrompt { get; set; }
@@ -33,13 +33,13 @@ namespace WorldLabs
         public string? Type { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("z_max")]
         public double? ZMax { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("z_min")]
         public double? ZMin { get; set; }

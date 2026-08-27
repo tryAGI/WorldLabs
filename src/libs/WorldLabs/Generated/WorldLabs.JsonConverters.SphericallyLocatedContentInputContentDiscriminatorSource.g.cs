@@ -20,7 +20,7 @@ namespace WorldLabs.JsonConverters
                     {
                         return global::WorldLabs.SphericallyLocatedContentInputContentDiscriminatorSourceExtensions.ToEnum(stringValue) ?? default;
                     }
-                    
+
                     break;
                 }
                 case global::System.Text.Json.JsonTokenType.Number:

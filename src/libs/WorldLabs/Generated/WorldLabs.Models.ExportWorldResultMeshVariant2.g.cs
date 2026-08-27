@@ -4,16 +4,16 @@
 namespace WorldLabs
 {
     /// <summary>
-    /// 
+    ///
     /// </summary>
     public enum ExportWorldResultMeshVariant2
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Textured,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         VertexColored,
     }

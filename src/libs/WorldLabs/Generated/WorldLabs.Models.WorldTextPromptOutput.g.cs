@@ -9,7 +9,7 @@ namespace WorldLabs
     public sealed partial class WorldTextPromptOutput
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("text_prompt")]
         public string? TextPrompt { get; set; }

@@ -4,20 +4,20 @@
 namespace WorldLabs
 {
     /// <summary>
-    /// 
+    ///
     /// </summary>
     public enum PanoDepthToRgbRequestDepthPanoImageDiscriminatorSource
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         DataBase64,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         MediaAsset,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Uri,
     }

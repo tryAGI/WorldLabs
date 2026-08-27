@@ -9,7 +9,7 @@ namespace WorldLabs
     public sealed partial class MultiImagePromptOutput
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("multi_image_prompt")]
         [global::System.Text.Json.Serialization.JsonRequired]
@@ -22,7 +22,7 @@ namespace WorldLabs
         public bool? ReconstructImages { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("text_prompt")]
         public string? TextPrompt { get; set; }

@@ -4,20 +4,20 @@
 namespace WorldLabs
 {
     /// <summary>
-    /// 
+    ///
     /// </summary>
     public enum ImagePromptImagePrompt1DiscriminatorSource
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         DataBase64,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         MediaAsset,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Uri,
     }

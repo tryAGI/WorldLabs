@@ -10,19 +10,19 @@ namespace WorldLabs
     public enum ExportWorldRequestResolution
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         x100k,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         x150k,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         x500k,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         FullRes,
     }

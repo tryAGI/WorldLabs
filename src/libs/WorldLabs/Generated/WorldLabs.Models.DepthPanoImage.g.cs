@@ -10,7 +10,7 @@ namespace WorldLabs
     public readonly partial struct DepthPanoImage : global::System.IEquatable<DepthPanoImage>
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public global::WorldLabs.PanoDepthToRgbRequestDepthPanoImageDiscriminatorSource? Source { get; }
 
@@ -24,7 +24,7 @@ namespace WorldLabs
 #endif
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
 #if NET6_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.MemberNotNullWhen(true, nameof(MediaAsset))]
@@ -32,7 +32,7 @@ namespace WorldLabs
         public bool IsMediaAsset => MediaAsset != null;
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public bool TryPickMediaAsset(
 #if NET6_0_OR_GREATER
@@ -45,7 +45,7 @@ namespace WorldLabs
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public global::WorldLabs.MediaAssetReference PickMediaAsset() => IsMediaAsset
             ? MediaAsset!
@@ -61,7 +61,7 @@ namespace WorldLabs
 #endif
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
 #if NET6_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.MemberNotNullWhen(true, nameof(Uri))]
@@ -69,7 +69,7 @@ namespace WorldLabs
         public bool IsUri => Uri != null;
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public bool TryPickUri(
 #if NET6_0_OR_GREATER
@@ -82,7 +82,7 @@ namespace WorldLabs
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public global::WorldLabs.UriReference PickUri() => IsUri
             ? Uri!
@@ -98,7 +98,7 @@ namespace WorldLabs
 #endif
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
 #if NET6_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.MemberNotNullWhen(true, nameof(DataBase64))]
@@ -106,7 +106,7 @@ namespace WorldLabs
         public bool IsDataBase64 => DataBase64 != null;
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public bool TryPickDataBase64(
 #if NET6_0_OR_GREATER
@@ -119,23 +119,23 @@ namespace WorldLabs
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public global::WorldLabs.DataBase64Reference PickDataBase64() => IsDataBase64
             ? DataBase64!
             : throw new global::System.InvalidOperationException($"Expected union variant 'DataBase64' but the value was {ToString()}.");
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public static implicit operator DepthPanoImage(global::WorldLabs.MediaAssetReference value) => new DepthPanoImage((global::WorldLabs.MediaAssetReference?)value);
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public static implicit operator global::WorldLabs.MediaAssetReference?(DepthPanoImage @this) => @this.MediaAsset;
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public DepthPanoImage(global::WorldLabs.MediaAssetReference? value)
         {
@@ -143,22 +143,22 @@ namespace WorldLabs
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public static DepthPanoImage FromMediaAsset(global::WorldLabs.MediaAssetReference? value) => new DepthPanoImage(value);
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public static implicit operator DepthPanoImage(global::WorldLabs.UriReference value) => new DepthPanoImage((global::WorldLabs.UriReference?)value);
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public static implicit operator global::WorldLabs.UriReference?(DepthPanoImage @this) => @this.Uri;
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public DepthPanoImage(global::WorldLabs.UriReference? value)
         {
@@ -166,22 +166,22 @@ namespace WorldLabs
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public static DepthPanoImage FromUri(global::WorldLabs.UriReference? value) => new DepthPanoImage(value);
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public static implicit operator DepthPanoImage(global::WorldLabs.DataBase64Reference value) => new DepthPanoImage((global::WorldLabs.DataBase64Reference?)value);
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public static implicit operator global::WorldLabs.DataBase64Reference?(DepthPanoImage @this) => @this.DataBase64;
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public DepthPanoImage(global::WorldLabs.DataBase64Reference? value)
         {
@@ -189,12 +189,12 @@ namespace WorldLabs
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public static DepthPanoImage FromDataBase64(global::WorldLabs.DataBase64Reference? value) => new DepthPanoImage(value);
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public DepthPanoImage(
             global::WorldLabs.PanoDepthToRgbRequestDepthPanoImageDiscriminatorSource? source,
@@ -211,25 +211,25 @@ namespace WorldLabs
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public object? Object =>
             DataBase64 as object ??
             Uri as object ??
-            MediaAsset as object 
+            MediaAsset as object
             ;
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public override string? ToString() =>
             MediaAsset?.ToString() ??
             Uri?.ToString() ??
-            DataBase64?.ToString() 
+            DataBase64?.ToString()
             ;
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public bool Validate()
         {
@@ -237,7 +237,7 @@ namespace WorldLabs
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public TResult? Match<TResult>(
             global::System.Func<global::WorldLabs.MediaAssetReference, TResult>? mediaAsset = null,
@@ -267,7 +267,7 @@ namespace WorldLabs
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public void Match(
             global::System.Action<global::WorldLabs.MediaAssetReference>? mediaAsset = null,
@@ -297,7 +297,7 @@ namespace WorldLabs
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public void Switch(
             global::System.Action<global::WorldLabs.MediaAssetReference>? mediaAsset = null,
@@ -325,7 +325,7 @@ namespace WorldLabs
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public override int GetHashCode()
         {
@@ -348,19 +348,19 @@ namespace WorldLabs
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public bool Equals(DepthPanoImage other)
         {
             return
                 global::System.Collections.Generic.EqualityComparer<global::WorldLabs.MediaAssetReference?>.Default.Equals(MediaAsset, other.MediaAsset) &&
                 global::System.Collections.Generic.EqualityComparer<global::WorldLabs.UriReference?>.Default.Equals(Uri, other.Uri) &&
-                global::System.Collections.Generic.EqualityComparer<global::WorldLabs.DataBase64Reference?>.Default.Equals(DataBase64, other.DataBase64) 
+                global::System.Collections.Generic.EqualityComparer<global::WorldLabs.DataBase64Reference?>.Default.Equals(DataBase64, other.DataBase64)
                 ;
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public static bool operator ==(DepthPanoImage obj1, DepthPanoImage obj2)
         {
@@ -368,7 +368,7 @@ namespace WorldLabs
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public static bool operator !=(DepthPanoImage obj1, DepthPanoImage obj2)
         {
@@ -376,7 +376,7 @@ namespace WorldLabs
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public override bool Equals(object? obj)
         {

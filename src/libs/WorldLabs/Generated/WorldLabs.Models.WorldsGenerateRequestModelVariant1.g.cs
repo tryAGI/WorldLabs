@@ -4,24 +4,24 @@
 namespace WorldLabs
 {
     /// <summary>
-    /// 
+    ///
     /// </summary>
     public enum WorldsGenerateRequestModelVariant1
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Marble10,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Marble10Draft,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Marble11,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Marble11Plus,
     }

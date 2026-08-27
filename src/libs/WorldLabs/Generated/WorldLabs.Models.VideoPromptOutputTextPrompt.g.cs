@@ -4,7 +4,7 @@
 namespace WorldLabs
 {
     /// <summary>
-    /// 
+    ///
     /// </summary>
     public sealed partial class VideoPromptOutputTextPrompt
     {

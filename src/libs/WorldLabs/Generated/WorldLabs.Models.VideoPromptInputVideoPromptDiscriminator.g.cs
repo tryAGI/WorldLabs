@@ -4,12 +4,12 @@
 namespace WorldLabs
 {
     /// <summary>
-    /// 
+    ///
     /// </summary>
     public sealed partial class VideoPromptInputVideoPromptDiscriminator
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("source")]
         [global::System.Text.Json.Serialization.JsonConverter(typeof(global::WorldLabs.JsonConverters.VideoPromptInputVideoPromptDiscriminatorSourceJsonConverter))]
