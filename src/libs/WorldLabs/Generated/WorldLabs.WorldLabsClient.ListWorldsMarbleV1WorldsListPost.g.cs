@@ -565,7 +565,7 @@ namespace WorldLabs
             int? pageSize = default,
             string? pageToken = default,
             global::WorldLabs.ListWorldsRequestSortBy? sortBy = default,
-            global::WorldLabs.ListWorldsRequestStatus2? status = default,
+            global::WorldLabs.ListWorldsRequestStatus? status = default,
             global::System.Collections.Generic.IList<string>? tags = default,
             global::WorldLabs.AutoSDKRequestOptions? requestOptions = default,
             global::System.Threading.CancellationToken cancellationToken = default)

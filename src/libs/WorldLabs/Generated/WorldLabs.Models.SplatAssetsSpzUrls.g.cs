@@ -4,7 +4,7 @@
 namespace WorldLabs
 {
     /// <summary>
-    /// URLs for SPZ format Gaussian splat files
+    ///
     /// </summary>
     public sealed partial class SplatAssetsSpzUrls
     {

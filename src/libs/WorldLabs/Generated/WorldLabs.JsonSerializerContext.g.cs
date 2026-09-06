@@ -37,9 +37,9 @@ namespace WorldLabs
 
             typeof(global::WorldLabs.JsonConverters.ExportWorldResultFormatNullableJsonConverter),
 
-            typeof(global::WorldLabs.JsonConverters.ExportWorldResultMeshVariant2JsonConverter),
+            typeof(global::WorldLabs.JsonConverters.ExportWorldResultMeshVariantJsonConverter),
 
-            typeof(global::WorldLabs.JsonConverters.ExportWorldResultMeshVariant2NullableJsonConverter),
+            typeof(global::WorldLabs.JsonConverters.ExportWorldResultMeshVariantNullableJsonConverter),
 
             typeof(global::WorldLabs.JsonConverters.ImagePromptImagePrompt1DiscriminatorSourceJsonConverter),
 
@@ -57,9 +57,9 @@ namespace WorldLabs
 
             typeof(global::WorldLabs.JsonConverters.ListWorldsRequestSortByNullableJsonConverter),
 
-            typeof(global::WorldLabs.JsonConverters.ListWorldsRequestStatus2JsonConverter),
+            typeof(global::WorldLabs.JsonConverters.ListWorldsRequestStatusJsonConverter),
 
-            typeof(global::WorldLabs.JsonConverters.ListWorldsRequestStatus2NullableJsonConverter),
+            typeof(global::WorldLabs.JsonConverters.ListWorldsRequestStatusNullableJsonConverter),
 
             typeof(global::WorldLabs.JsonConverters.MediaAssetKindJsonConverter),
 
@@ -142,7 +142,7 @@ namespace WorldLabs
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::WorldLabs.ExportWorldResult))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::WorldLabs.ExportWorldResultAssetType), TypeInfoPropertyName = "ExportWorldResultAssetType2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::WorldLabs.ExportWorldResultFormat), TypeInfoPropertyName = "ExportWorldResultFormat2")]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::WorldLabs.ExportWorldResultMeshVariant2), TypeInfoPropertyName = "ExportWorldResultMeshVariant22")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::WorldLabs.ExportWorldResultMeshVariant), TypeInfoPropertyName = "ExportWorldResultMeshVariant2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::WorldLabs.GenerateWorldResponse))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::WorldLabs.GetOperationResponseUnionWorldPanoDepthToRgbResultExportWorldResult))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::WorldLabs.AnyOf<global::WorldLabs.World, global::WorldLabs.PanoDepthToRgbResult, global::WorldLabs.ExportWorldResult, object>), TypeInfoPropertyName = "AnyOfWorldPanoDepthToRgbResultExportWorldResultObject2")]
@@ -166,7 +166,7 @@ namespace WorldLabs
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::WorldLabs.ListWorldsRequestModelVariant2), TypeInfoPropertyName = "ListWorldsRequestModelVariant22")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(int))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::WorldLabs.ListWorldsRequestSortBy), TypeInfoPropertyName = "ListWorldsRequestSortBy2")]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::WorldLabs.ListWorldsRequestStatus2), TypeInfoPropertyName = "ListWorldsRequestStatus22")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::WorldLabs.ListWorldsRequestStatus), TypeInfoPropertyName = "ListWorldsRequestStatus2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.IList<string>))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::WorldLabs.ListWorldsResponse))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.IList<global::WorldLabs.World>))]
@@ -204,7 +204,7 @@ namespace WorldLabs
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::WorldLabs.VideoPromptInputVideoPromptDiscriminator))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::WorldLabs.VideoPromptInputVideoPromptDiscriminatorSource), TypeInfoPropertyName = "VideoPromptInputVideoPromptDiscriminatorSource2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::WorldLabs.VideoPromptOutput))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::WorldLabs.WorldAssets2))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::WorldLabs.WorldAssets))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::WorldLabs.WorldPromptVariant1))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::WorldLabs.WorldTextPromptOutput))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::WorldLabs.WorldWorldPromptVariant1Discriminator))]

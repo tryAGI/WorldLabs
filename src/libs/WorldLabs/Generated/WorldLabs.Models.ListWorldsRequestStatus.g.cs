@@ -4,16 +4,60 @@
 namespace WorldLabs
 {
     /// <summary>
-    /// Filter by world status
+    ///
     /// </summary>
-    public sealed partial class ListWorldsRequestStatus
+    public enum ListWorldsRequestStatus
     {
-
         /// <summary>
-        /// Additional properties that are not explicitly defined in the schema
+        ///
         /// </summary>
-        [global::System.Text.Json.Serialization.JsonExtensionData]
-        public global::System.Collections.Generic.IDictionary<string, object> AdditionalProperties { get; set; } = new global::System.Collections.Generic.Dictionary<string, object>();
+        Failed,
+        /// <summary>
+        ///
+        /// </summary>
+        Pending,
+        /// <summary>
+        ///
+        /// </summary>
+        Running,
+        /// <summary>
+        ///
+        /// </summary>
+        Succeeded,
+    }
 
+    /// <summary>
+    /// Enum extensions to do fast conversions without the reflection.
+    /// </summary>
+    public static class ListWorldsRequestStatusExtensions
+    {
+        /// <summary>
+        /// Converts an enum to a string.
+        /// </summary>
+        public static string ToValueString(this ListWorldsRequestStatus value)
+        {
+            return value switch
+            {
+                ListWorldsRequestStatus.Failed => "FAILED",
+                ListWorldsRequestStatus.Pending => "PENDING",
+                ListWorldsRequestStatus.Running => "RUNNING",
+                ListWorldsRequestStatus.Succeeded => "SUCCEEDED",
+                _ => throw new global::System.ArgumentOutOfRangeException(nameof(value), value, null),
+            };
+        }
+        /// <summary>
+        /// Converts an string to a enum.
+        /// </summary>
+        public static ListWorldsRequestStatus? ToEnum(string value)
+        {
+            return value switch
+            {
+                "FAILED" => ListWorldsRequestStatus.Failed,
+                "PENDING" => ListWorldsRequestStatus.Pending,
+                "RUNNING" => ListWorldsRequestStatus.Running,
+                "SUCCEEDED" => ListWorldsRequestStatus.Succeeded,
+                _ => null,
+            };
+        }
     }
 }

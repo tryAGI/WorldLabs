@@ -4,7 +4,7 @@
 namespace WorldLabs
 {
     /// <summary>
-    /// Result payload when done=true and no error. Structure depends on operation type.
+    ///
     /// </summary>
     public sealed partial class GenerateWorldResponseResponse
     {

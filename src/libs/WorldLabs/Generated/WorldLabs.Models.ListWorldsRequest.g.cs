@@ -58,7 +58,7 @@ namespace WorldLabs
         /// Filter by world status
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("status")]
-        public global::WorldLabs.ListWorldsRequestStatus2? Status { get; set; }
+        public global::WorldLabs.ListWorldsRequestStatus? Status { get; set; }
 
         /// <summary>
         /// Filter by tags (returns worlds with ANY of these tags)
@@ -115,7 +115,7 @@ namespace WorldLabs
             int? pageSize,
             string? pageToken,
             global::WorldLabs.ListWorldsRequestSortBy? sortBy,
-            global::WorldLabs.ListWorldsRequestStatus2? status,
+            global::WorldLabs.ListWorldsRequestStatus? status,
             global::System.Collections.Generic.IList<string>? tags)
         {
             this.CreatedAfter = createdAfter;

@@ -4,7 +4,7 @@
 namespace WorldLabs
 {
     /// <summary>
-    /// Optional application-specific metadata
+    ///
     /// </summary>
     public sealed partial class MediaAssetPrepareUploadRequestMetadata
     {
