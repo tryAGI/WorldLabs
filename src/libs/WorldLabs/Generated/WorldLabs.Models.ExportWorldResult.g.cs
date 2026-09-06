@@ -28,7 +28,7 @@ namespace WorldLabs
         /// Mesh variant returned for this export, if applicable
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("mesh_variant")]
-        public global::WorldLabs.ExportWorldResultMeshVariant2? MeshVariant { get; set; }
+        public global::WorldLabs.ExportWorldResultMeshVariant? MeshVariant { get; set; }
 
         /// <summary>
         /// Splat resolution used for this export, if applicable
@@ -74,7 +74,7 @@ namespace WorldLabs
             global::WorldLabs.ExportWorldResultAssetType assetType,
             global::WorldLabs.ExportWorldResultFormat format,
             string url,
-            global::WorldLabs.ExportWorldResultMeshVariant2? meshVariant,
+            global::WorldLabs.ExportWorldResultMeshVariant? meshVariant,
             string? resolution)
         {
             this.AssetType = assetType;

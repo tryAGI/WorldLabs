@@ -3,10 +3,10 @@
 namespace WorldLabs.JsonConverters
 {
     /// <inheritdoc />
-    public sealed class ExportWorldResultMeshVariant2JsonConverter : global::System.Text.Json.Serialization.JsonConverter<global::WorldLabs.ExportWorldResultMeshVariant2>
+    public sealed class ExportWorldResultMeshVariantJsonConverter : global::System.Text.Json.Serialization.JsonConverter<global::WorldLabs.ExportWorldResultMeshVariant>
     {
         /// <inheritdoc />
-        public override global::WorldLabs.ExportWorldResultMeshVariant2 Read(
+        public override global::WorldLabs.ExportWorldResultMeshVariant Read(
             ref global::System.Text.Json.Utf8JsonReader reader,
             global::System.Type typeToConvert,
             global::System.Text.Json.JsonSerializerOptions options)
@@ -18,7 +18,7 @@ namespace WorldLabs.JsonConverters
                     var stringValue = reader.GetString();
                     if (stringValue != null)
                     {
-                        return global::WorldLabs.ExportWorldResultMeshVariant2Extensions.ToEnum(stringValue) ?? default;
+                        return global::WorldLabs.ExportWorldResultMeshVariantExtensions.ToEnum(stringValue) ?? default;
                     }
 
                     break;
@@ -26,11 +26,11 @@ namespace WorldLabs.JsonConverters
                 case global::System.Text.Json.JsonTokenType.Number:
                 {
                     var numValue = reader.GetInt32();
-                    return (global::WorldLabs.ExportWorldResultMeshVariant2)numValue;
+                    return (global::WorldLabs.ExportWorldResultMeshVariant)numValue;
                 }
                 case global::System.Text.Json.JsonTokenType.Null:
                 {
-                    return default(global::WorldLabs.ExportWorldResultMeshVariant2);
+                    return default(global::WorldLabs.ExportWorldResultMeshVariant);
                 }
                 default:
                     throw new global::System.ArgumentOutOfRangeException(nameof(reader));
@@ -42,12 +42,12 @@ namespace WorldLabs.JsonConverters
         /// <inheritdoc />
         public override void Write(
             global::System.Text.Json.Utf8JsonWriter writer,
-            global::WorldLabs.ExportWorldResultMeshVariant2 value,
+            global::WorldLabs.ExportWorldResultMeshVariant value,
             global::System.Text.Json.JsonSerializerOptions options)
         {
             writer = writer ?? throw new global::System.ArgumentNullException(nameof(writer));
 
-            writer.WriteStringValue(global::WorldLabs.ExportWorldResultMeshVariant2Extensions.ToValueString(value));
+            writer.WriteStringValue(global::WorldLabs.ExportWorldResultMeshVariantExtensions.ToValueString(value));
         }
     }
 }

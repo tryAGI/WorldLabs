@@ -4,7 +4,7 @@
 namespace WorldLabs
 {
     /// <summary>
-    /// Service-specific metadata, such as progress percentage
+    ///
     /// </summary>
     public sealed partial class OperationPanoDepthToRgbResultMetadata
     {

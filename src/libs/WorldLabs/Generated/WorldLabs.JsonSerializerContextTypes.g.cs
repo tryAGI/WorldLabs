@@ -117,7 +117,7 @@ namespace WorldLabs
         /// <summary>
         ///
         /// </summary>
-        public global::WorldLabs.ExportWorldResultMeshVariant2? Type21 { get; set; }
+        public global::WorldLabs.ExportWorldResultMeshVariant? Type21 { get; set; }
         /// <summary>
         ///
         /// </summary>
@@ -213,7 +213,7 @@ namespace WorldLabs
         /// <summary>
         ///
         /// </summary>
-        public global::WorldLabs.ListWorldsRequestStatus2? Type45 { get; set; }
+        public global::WorldLabs.ListWorldsRequestStatus? Type45 { get; set; }
         /// <summary>
         ///
         /// </summary>
@@ -365,7 +365,7 @@ namespace WorldLabs
         /// <summary>
         ///
         /// </summary>
-        public global::WorldLabs.WorldAssets2? Type83 { get; set; }
+        public global::WorldLabs.WorldAssets? Type83 { get; set; }
         /// <summary>
         ///
         /// </summary>

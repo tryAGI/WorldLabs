@@ -12,7 +12,7 @@ namespace WorldLabs
         /// Generated world assets
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("assets")]
-        public global::WorldLabs.WorldAssets2? Assets { get; set; }
+        public global::WorldLabs.WorldAssets? Assets { get; set; }
 
         /// <summary>
         /// Creation timestamp
@@ -117,7 +117,7 @@ namespace WorldLabs
             string displayName,
             string worldId,
             string worldMarbleUrl,
-            global::WorldLabs.WorldAssets2? assets,
+            global::WorldLabs.WorldAssets? assets,
             global::System.DateTime? createdAt,
             string? model,
             global::WorldLabs.Permission? permission,

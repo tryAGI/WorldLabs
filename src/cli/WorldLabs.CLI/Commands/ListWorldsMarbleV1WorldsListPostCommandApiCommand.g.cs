@@ -47,7 +47,7 @@ internal static partial class ListWorldsMarbleV1WorldsListPostCommandApiCommand
         Description = @"Sort results by created_at or updated_at",
     };
 
-    private static Option<global::WorldLabs.ListWorldsRequestStatus2?> Status { get; } = new(
+    private static Option<global::WorldLabs.ListWorldsRequestStatus?> Status { get; } = new(
         name: @"--status")
     {
         Description = @"Filter by world status",

@@ -4,7 +4,7 @@
 namespace WorldLabs
 {
     /// <summary>
-    /// Headers that MUST be included when uploading (e.g. Content-Type)
+    ///
     /// </summary>
     public sealed partial class UploadUrlInfoRequiredHeaders
     {
