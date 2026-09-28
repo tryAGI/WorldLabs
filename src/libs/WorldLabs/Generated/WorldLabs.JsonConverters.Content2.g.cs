@@ -68,19 +68,19 @@ namespace WorldLabs.JsonConverters
             {
                 var typeInfo = typeInfoResolver.GetTypeInfo(typeof(global::WorldLabs.MediaAssetReference), options) as global::System.Text.Json.Serialization.Metadata.JsonTypeInfo<global::WorldLabs.MediaAssetReference?> ??
                                throw new global::System.InvalidOperationException($"Cannot get type info for {typeof(global::WorldLabs.MediaAssetReference).Name}");
-                global::System.Text.Json.JsonSerializer.Serialize(writer, value.MediaAsset!, typeInfo);
+                global::System.Text.Json.JsonSerializer.Serialize(writer, value.PickMediaAsset(), typeInfo);
             }
             else if (value.IsUri)
             {
                 var typeInfo = typeInfoResolver.GetTypeInfo(typeof(global::WorldLabs.UriReference), options) as global::System.Text.Json.Serialization.Metadata.JsonTypeInfo<global::WorldLabs.UriReference?> ??
                                throw new global::System.InvalidOperationException($"Cannot get type info for {typeof(global::WorldLabs.UriReference).Name}");
-                global::System.Text.Json.JsonSerializer.Serialize(writer, value.Uri!, typeInfo);
+                global::System.Text.Json.JsonSerializer.Serialize(writer, value.PickUri(), typeInfo);
             }
             else if (value.IsDataBase64)
             {
                 var typeInfo = typeInfoResolver.GetTypeInfo(typeof(global::WorldLabs.DataBase64Reference), options) as global::System.Text.Json.Serialization.Metadata.JsonTypeInfo<global::WorldLabs.DataBase64Reference?> ??
                                throw new global::System.InvalidOperationException($"Cannot get type info for {typeof(global::WorldLabs.DataBase64Reference).Name}");
-                global::System.Text.Json.JsonSerializer.Serialize(writer, value.DataBase64!, typeInfo);
+                global::System.Text.Json.JsonSerializer.Serialize(writer, value.PickDataBase64(), typeInfo);
             }
         }
     }

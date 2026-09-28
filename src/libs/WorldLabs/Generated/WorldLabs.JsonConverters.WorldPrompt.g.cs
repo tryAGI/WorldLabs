@@ -77,25 +77,25 @@ namespace WorldLabs.JsonConverters
             {
                 var typeInfo = typeInfoResolver.GetTypeInfo(typeof(global::WorldLabs.WorldTextPromptInput), options) as global::System.Text.Json.Serialization.Metadata.JsonTypeInfo<global::WorldLabs.WorldTextPromptInput?> ??
                                throw new global::System.InvalidOperationException($"Cannot get type info for {typeof(global::WorldLabs.WorldTextPromptInput).Name}");
-                global::System.Text.Json.JsonSerializer.Serialize(writer, value.Text!, typeInfo);
+                global::System.Text.Json.JsonSerializer.Serialize(writer, value.PickText(), typeInfo);
             }
             else if (value.IsImage)
             {
                 var typeInfo = typeInfoResolver.GetTypeInfo(typeof(global::WorldLabs.ImagePrompt), options) as global::System.Text.Json.Serialization.Metadata.JsonTypeInfo<global::WorldLabs.ImagePrompt?> ??
                                throw new global::System.InvalidOperationException($"Cannot get type info for {typeof(global::WorldLabs.ImagePrompt).Name}");
-                global::System.Text.Json.JsonSerializer.Serialize(writer, value.Image!, typeInfo);
+                global::System.Text.Json.JsonSerializer.Serialize(writer, value.PickImage(), typeInfo);
             }
             else if (value.IsMultiImage)
             {
                 var typeInfo = typeInfoResolver.GetTypeInfo(typeof(global::WorldLabs.MultiImagePromptInput), options) as global::System.Text.Json.Serialization.Metadata.JsonTypeInfo<global::WorldLabs.MultiImagePromptInput?> ??
                                throw new global::System.InvalidOperationException($"Cannot get type info for {typeof(global::WorldLabs.MultiImagePromptInput).Name}");
-                global::System.Text.Json.JsonSerializer.Serialize(writer, value.MultiImage!, typeInfo);
+                global::System.Text.Json.JsonSerializer.Serialize(writer, value.PickMultiImage(), typeInfo);
             }
             else if (value.IsVideo)
             {
                 var typeInfo = typeInfoResolver.GetTypeInfo(typeof(global::WorldLabs.VideoPromptInput), options) as global::System.Text.Json.Serialization.Metadata.JsonTypeInfo<global::WorldLabs.VideoPromptInput?> ??
                                throw new global::System.InvalidOperationException($"Cannot get type info for {typeof(global::WorldLabs.VideoPromptInput).Name}");
-                global::System.Text.Json.JsonSerializer.Serialize(writer, value.Video!, typeInfo);
+                global::System.Text.Json.JsonSerializer.Serialize(writer, value.PickVideo(), typeInfo);
             }
         }
     }

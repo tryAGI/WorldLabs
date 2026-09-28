@@ -47,8 +47,8 @@ namespace WorldLabs
         /// <summary>
         ///
         /// </summary>
-        public global::WorldLabs.WorldTextPromptOutput PickText() => IsText
-            ? Text!
+        public global::WorldLabs.WorldTextPromptOutput PickText() => Text is { } value
+            ? value
             : throw new global::System.InvalidOperationException($"Expected union variant 'Text' but the value was {ToString()}.");
 
         /// <summary>
@@ -86,8 +86,8 @@ namespace WorldLabs
         /// <summary>
         ///
         /// </summary>
-        public global::WorldLabs.Prompt PickDepthPano1() => IsDepthPano1
-            ? DepthPano1!
+        public global::WorldLabs.Prompt PickDepthPano1() => DepthPano1 is { } value
+            ? value
             : throw new global::System.InvalidOperationException($"Expected union variant 'DepthPano1' but the value was {ToString()}.");
 
         /// <summary>
@@ -123,8 +123,8 @@ namespace WorldLabs
         /// <summary>
         ///
         /// </summary>
-        public global::WorldLabs.MultiImagePromptOutput PickMultiImage() => IsMultiImage
-            ? MultiImage!
+        public global::WorldLabs.MultiImagePromptOutput PickMultiImage() => MultiImage is { } value
+            ? value
             : throw new global::System.InvalidOperationException($"Expected union variant 'MultiImage' but the value was {ToString()}.");
 
         /// <summary>
@@ -160,8 +160,8 @@ namespace WorldLabs
         /// <summary>
         ///
         /// </summary>
-        public global::WorldLabs.VideoPromptOutput PickVideo() => IsVideo
-            ? Video!
+        public global::WorldLabs.VideoPromptOutput PickVideo() => Video is { } value
+            ? value
             : throw new global::System.InvalidOperationException($"Expected union variant 'Video' but the value was {ToString()}.");
 
         /// <summary>
@@ -201,8 +201,8 @@ namespace WorldLabs
         /// <summary>
         ///
         /// </summary>
-        public global::WorldLabs.DepthPanoPrompt PickDepthPano2() => IsDepthPano2
-            ? DepthPano2!
+        public global::WorldLabs.DepthPanoPrompt PickDepthPano2() => DepthPano2 is { } value
+            ? value
             : throw new global::System.InvalidOperationException($"Expected union variant 'DepthPano2' but the value was {ToString()}.");
 
         /// <summary>
@@ -238,8 +238,8 @@ namespace WorldLabs
         /// <summary>
         ///
         /// </summary>
-        public global::WorldLabs.InpaintPanoPrompt PickInpaintPano() => IsInpaintPano
-            ? InpaintPano!
+        public global::WorldLabs.InpaintPanoPrompt PickInpaintPano() => InpaintPano is { } value
+            ? value
             : throw new global::System.InvalidOperationException($"Expected union variant 'InpaintPano' but the value was {ToString()}.");
         /// <summary>
         ///
@@ -451,29 +451,29 @@ namespace WorldLabs
                 Validate();
             }
 
-            if (IsText && text != null)
+            if (Text is { } __value0 && text != null)
             {
-                return text(Text!);
+                return text(__value0);
             }
-            else if (IsDepthPano1 && depthPano1 != null)
+            else if (DepthPano1 is { } __value1 && depthPano1 != null)
             {
-                return depthPano1(DepthPano1!);
+                return depthPano1(__value1);
             }
-            else if (IsMultiImage && multiImage != null)
+            else if (MultiImage is { } __value2 && multiImage != null)
             {
-                return multiImage(MultiImage!);
+                return multiImage(__value2);
             }
-            else if (IsVideo && video != null)
+            else if (Video is { } __value3 && video != null)
             {
-                return video(Video!);
+                return video(__value3);
             }
-            else if (IsDepthPano2 && depthPano2 != null)
+            else if (DepthPano2 is { } __value4 && depthPano2 != null)
             {
-                return depthPano2(DepthPano2!);
+                return depthPano2(__value4);
             }
-            else if (IsInpaintPano && inpaintPano != null)
+            else if (InpaintPano is { } __value5 && inpaintPano != null)
             {
-                return inpaintPano(InpaintPano!);
+                return inpaintPano(__value5);
             }
 
             return default(TResult);
@@ -501,29 +501,29 @@ namespace WorldLabs
                 Validate();
             }
 
-            if (IsText)
+            if (Text is { } __value0)
             {
-                text?.Invoke(Text!);
+                text?.Invoke(__value0);
             }
-            else if (IsDepthPano1)
+            else if (DepthPano1 is { } __value1)
             {
-                depthPano1?.Invoke(DepthPano1!);
+                depthPano1?.Invoke(__value1);
             }
-            else if (IsMultiImage)
+            else if (MultiImage is { } __value2)
             {
-                multiImage?.Invoke(MultiImage!);
+                multiImage?.Invoke(__value2);
             }
-            else if (IsVideo)
+            else if (Video is { } __value3)
             {
-                video?.Invoke(Video!);
+                video?.Invoke(__value3);
             }
-            else if (IsDepthPano2)
+            else if (DepthPano2 is { } __value4)
             {
-                depthPano2?.Invoke(DepthPano2!);
+                depthPano2?.Invoke(__value4);
             }
-            else if (IsInpaintPano)
+            else if (InpaintPano is { } __value5)
             {
-                inpaintPano?.Invoke(InpaintPano!);
+                inpaintPano?.Invoke(__value5);
             }
         }
 
@@ -544,29 +544,29 @@ namespace WorldLabs
                 Validate();
             }
 
-            if (IsText)
+            if (Text is { } __value0)
             {
-                text?.Invoke(Text!);
+                text?.Invoke(__value0);
             }
-            else if (IsDepthPano1)
+            else if (DepthPano1 is { } __value1)
             {
-                depthPano1?.Invoke(DepthPano1!);
+                depthPano1?.Invoke(__value1);
             }
-            else if (IsMultiImage)
+            else if (MultiImage is { } __value2)
             {
-                multiImage?.Invoke(MultiImage!);
+                multiImage?.Invoke(__value2);
             }
-            else if (IsVideo)
+            else if (Video is { } __value3)
             {
-                video?.Invoke(Video!);
+                video?.Invoke(__value3);
             }
-            else if (IsDepthPano2)
+            else if (DepthPano2 is { } __value4)
             {
-                depthPano2?.Invoke(DepthPano2!);
+                depthPano2?.Invoke(__value4);
             }
-            else if (IsInpaintPano)
+            else if (InpaintPano is { } __value5)
             {
-                inpaintPano?.Invoke(InpaintPano!);
+                inpaintPano?.Invoke(__value5);
             }
         }
 
