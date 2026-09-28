@@ -80,6 +80,8 @@ internal static partial class GenerateWorldMarbleV1WorldsGeneratePostCommandApiC
                     static partial void CustomizeResponseFormatHints(Dictionary<string, CliFormatHint> hints);
 
 
+    static partial void CustomizeCommand(ref Command command);
+
     public static Command Create()
     {
         var command = new Command(@"generate-world-marble-v1-worlds-generate-post", @"Generate World
@@ -158,6 +160,7 @@ Raises:
                                     FormatResponse,
                                     cancellationToken).ConfigureAwait(false);
             }, cancellationToken).ConfigureAwait(false));
+        CustomizeCommand(ref command);
         return command;
     }
 }

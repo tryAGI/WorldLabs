@@ -33,6 +33,8 @@ internal static partial class GetMediaAssetMarbleV1MediaAssetsMediaAssetIdGetCom
                     static partial void CustomizeResponseFormatHints(Dictionary<string, CliFormatHint> hints);
 
 
+    static partial void CustomizeCommand(ref Command command);
+
     public static Command Create()
     {
         var command = new Command(@"get-media-asset-marble-v1-media-assets-media-asset-id-get", @"Get Media Asset
@@ -71,6 +73,7 @@ Raises:
                                     FormatResponse,
                                     cancellationToken).ConfigureAwait(false);
             }, cancellationToken).ConfigureAwait(false));
+        CustomizeCommand(ref command);
         return command;
     }
 }

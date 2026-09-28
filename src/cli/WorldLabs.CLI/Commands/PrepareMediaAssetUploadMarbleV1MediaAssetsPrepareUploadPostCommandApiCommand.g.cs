@@ -69,6 +69,8 @@ internal static partial class PrepareMediaAssetUploadMarbleV1MediaAssetsPrepareU
                     static partial void CustomizeResponseFormatHints(Dictionary<string, CliFormatHint> hints);
 
 
+    static partial void CustomizeCommand(ref Command command);
+
     public static Command Create()
     {
         var command = new Command(@"prepare-media-asset-upload-marble-v1-media-assets-prepare-upload-post", @"Prepare a media asset upload
@@ -183,6 +185,7 @@ After uploading, use the `media_asset_id` in a world generation request:
                                     FormatResponse,
                                     cancellationToken).ConfigureAwait(false);
             }, cancellationToken).ConfigureAwait(false));
+        CustomizeCommand(ref command);
         return command;
     }
 }

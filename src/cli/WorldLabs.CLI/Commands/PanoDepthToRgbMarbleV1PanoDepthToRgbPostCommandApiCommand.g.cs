@@ -75,6 +75,8 @@ internal static partial class PanoDepthToRgbMarbleV1PanoDepthToRgbPostCommandApi
                     static partial void CustomizeResponseFormatHints(Dictionary<string, CliFormatHint> hints);
 
 
+    static partial void CustomizeCommand(ref Command command);
+
     public static Command Create()
     {
         var command = new Command(@"pano-depth-to-rgb-marble-v1-pano-depth-to-rgb-post", @"Pano Depth To Rgb
@@ -160,6 +162,7 @@ Raises:
                                     FormatResponse,
                                     cancellationToken).ConfigureAwait(false);
             }, cancellationToken).ConfigureAwait(false));
+        CustomizeCommand(ref command);
         return command;
     }
 }
