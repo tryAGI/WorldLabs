@@ -33,6 +33,8 @@ internal static partial class DeleteWorldMarbleV1WorldsWorldIdDeleteCommandApiCo
                     static partial void CustomizeResponseFormatHints(Dictionary<string, CliFormatHint> hints);
 
 
+    static partial void CustomizeCommand(ref Command command);
+
     public static Command Create()
     {
         var command = new Command(@"delete-world-marble-v1-worlds-world-id-delete", @"Delete World
@@ -73,6 +75,7 @@ Raises:
                                     FormatResponse,
                                     cancellationToken).ConfigureAwait(false);
             }, cancellationToken).ConfigureAwait(false));
+        CustomizeCommand(ref command);
         return command;
     }
 }

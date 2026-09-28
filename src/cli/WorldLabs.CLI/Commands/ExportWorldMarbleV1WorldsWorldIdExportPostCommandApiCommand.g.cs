@@ -75,6 +75,8 @@ internal static partial class ExportWorldMarbleV1WorldsWorldIdExportPostCommandA
                     static partial void CustomizeResponseFormatHints(Dictionary<string, CliFormatHint> hints);
 
 
+    static partial void CustomizeCommand(ref Command command);
+
     public static Command Create()
     {
         var command = new Command(@"export-world-marble-v1-worlds-world-id-export-post", @"Export World
@@ -137,6 +139,7 @@ export service and return an in-progress operation.");
                                     FormatResponse,
                                     cancellationToken).ConfigureAwait(false);
             }, cancellationToken).ConfigureAwait(false));
+        CustomizeCommand(ref command);
         return command;
     }
 }

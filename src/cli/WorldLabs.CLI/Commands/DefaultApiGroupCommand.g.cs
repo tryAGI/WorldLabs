@@ -4,8 +4,10 @@ using System.CommandLine;
 
 namespace WorldLabs.CLI.Commands;
 
-internal static class DefaultApiGroupCommand
+internal static partial class DefaultApiGroupCommand
 {
+    static partial void CustomizeCommand(ref Command command);
+
     public static Command Create()
     {
         var command = new Command(@"default", @"default endpoint commands.");
@@ -18,6 +20,7 @@ internal static class DefaultApiGroupCommand
                          command.Subcommands.Add(ListWorldsMarbleV1WorldsListPostCommandApiCommand.Create());
                          command.Subcommands.Add(PanoDepthToRgbMarbleV1PanoDepthToRgbPostCommandApiCommand.Create());
                          command.Subcommands.Add(PrepareMediaAssetUploadMarbleV1MediaAssetsPrepareUploadPostCommandApiCommand.Create());
+        CustomizeCommand(ref command);
         return command;
     }
 }
