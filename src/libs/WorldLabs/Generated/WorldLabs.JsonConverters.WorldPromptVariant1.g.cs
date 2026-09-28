@@ -95,37 +95,37 @@ namespace WorldLabs.JsonConverters
             {
                 var typeInfo = typeInfoResolver.GetTypeInfo(typeof(global::WorldLabs.WorldTextPromptOutput), options) as global::System.Text.Json.Serialization.Metadata.JsonTypeInfo<global::WorldLabs.WorldTextPromptOutput?> ??
                                throw new global::System.InvalidOperationException($"Cannot get type info for {typeof(global::WorldLabs.WorldTextPromptOutput).Name}");
-                global::System.Text.Json.JsonSerializer.Serialize(writer, value.Text!, typeInfo);
+                global::System.Text.Json.JsonSerializer.Serialize(writer, value.PickText(), typeInfo);
             }
             else if (value.IsDepthPano1)
             {
                 var typeInfo = typeInfoResolver.GetTypeInfo(typeof(global::WorldLabs.Prompt), options) as global::System.Text.Json.Serialization.Metadata.JsonTypeInfo<global::WorldLabs.Prompt?> ??
                                throw new global::System.InvalidOperationException($"Cannot get type info for {typeof(global::WorldLabs.Prompt).Name}");
-                global::System.Text.Json.JsonSerializer.Serialize(writer, value.DepthPano1!, typeInfo);
+                global::System.Text.Json.JsonSerializer.Serialize(writer, value.PickDepthPano1(), typeInfo);
             }
             else if (value.IsMultiImage)
             {
                 var typeInfo = typeInfoResolver.GetTypeInfo(typeof(global::WorldLabs.MultiImagePromptOutput), options) as global::System.Text.Json.Serialization.Metadata.JsonTypeInfo<global::WorldLabs.MultiImagePromptOutput?> ??
                                throw new global::System.InvalidOperationException($"Cannot get type info for {typeof(global::WorldLabs.MultiImagePromptOutput).Name}");
-                global::System.Text.Json.JsonSerializer.Serialize(writer, value.MultiImage!, typeInfo);
+                global::System.Text.Json.JsonSerializer.Serialize(writer, value.PickMultiImage(), typeInfo);
             }
             else if (value.IsVideo)
             {
                 var typeInfo = typeInfoResolver.GetTypeInfo(typeof(global::WorldLabs.VideoPromptOutput), options) as global::System.Text.Json.Serialization.Metadata.JsonTypeInfo<global::WorldLabs.VideoPromptOutput?> ??
                                throw new global::System.InvalidOperationException($"Cannot get type info for {typeof(global::WorldLabs.VideoPromptOutput).Name}");
-                global::System.Text.Json.JsonSerializer.Serialize(writer, value.Video!, typeInfo);
+                global::System.Text.Json.JsonSerializer.Serialize(writer, value.PickVideo(), typeInfo);
             }
             else if (value.IsDepthPano2)
             {
                 var typeInfo = typeInfoResolver.GetTypeInfo(typeof(global::WorldLabs.DepthPanoPrompt), options) as global::System.Text.Json.Serialization.Metadata.JsonTypeInfo<global::WorldLabs.DepthPanoPrompt?> ??
                                throw new global::System.InvalidOperationException($"Cannot get type info for {typeof(global::WorldLabs.DepthPanoPrompt).Name}");
-                global::System.Text.Json.JsonSerializer.Serialize(writer, value.DepthPano2!, typeInfo);
+                global::System.Text.Json.JsonSerializer.Serialize(writer, value.PickDepthPano2(), typeInfo);
             }
             else if (value.IsInpaintPano)
             {
                 var typeInfo = typeInfoResolver.GetTypeInfo(typeof(global::WorldLabs.InpaintPanoPrompt), options) as global::System.Text.Json.Serialization.Metadata.JsonTypeInfo<global::WorldLabs.InpaintPanoPrompt?> ??
                                throw new global::System.InvalidOperationException($"Cannot get type info for {typeof(global::WorldLabs.InpaintPanoPrompt).Name}");
-                global::System.Text.Json.JsonSerializer.Serialize(writer, value.InpaintPano!, typeInfo);
+                global::System.Text.Json.JsonSerializer.Serialize(writer, value.PickInpaintPano(), typeInfo);
             }
         }
     }

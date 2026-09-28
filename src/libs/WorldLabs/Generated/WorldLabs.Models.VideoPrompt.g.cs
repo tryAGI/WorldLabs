@@ -47,8 +47,8 @@ namespace WorldLabs
         /// <summary>
         ///
         /// </summary>
-        public global::WorldLabs.MediaAssetReference PickMediaAsset() => IsMediaAsset
-            ? MediaAsset!
+        public global::WorldLabs.MediaAssetReference PickMediaAsset() => MediaAsset is { } value
+            ? value
             : throw new global::System.InvalidOperationException($"Expected union variant 'MediaAsset' but the value was {ToString()}.");
 
         /// <summary>
@@ -84,8 +84,8 @@ namespace WorldLabs
         /// <summary>
         ///
         /// </summary>
-        public global::WorldLabs.UriReference PickUri() => IsUri
-            ? Uri!
+        public global::WorldLabs.UriReference PickUri() => Uri is { } value
+            ? value
             : throw new global::System.InvalidOperationException($"Expected union variant 'Uri' but the value was {ToString()}.");
 
         /// <summary>
@@ -121,8 +121,8 @@ namespace WorldLabs
         /// <summary>
         ///
         /// </summary>
-        public global::WorldLabs.DataBase64Reference PickDataBase64() => IsDataBase64
-            ? DataBase64!
+        public global::WorldLabs.DataBase64Reference PickDataBase64() => DataBase64 is { } value
+            ? value
             : throw new global::System.InvalidOperationException($"Expected union variant 'DataBase64' but the value was {ToString()}.");
         /// <summary>
         ///
@@ -250,17 +250,17 @@ namespace WorldLabs
                 Validate();
             }
 
-            if (IsMediaAsset && mediaAsset != null)
+            if (MediaAsset is { } __value0 && mediaAsset != null)
             {
-                return mediaAsset(MediaAsset!);
+                return mediaAsset(__value0);
             }
-            else if (IsUri && uri != null)
+            else if (Uri is { } __value1 && uri != null)
             {
-                return uri(Uri!);
+                return uri(__value1);
             }
-            else if (IsDataBase64 && dataBase64 != null)
+            else if (DataBase64 is { } __value2 && dataBase64 != null)
             {
-                return dataBase64(DataBase64!);
+                return dataBase64(__value2);
             }
 
             return default(TResult);
@@ -282,17 +282,17 @@ namespace WorldLabs
                 Validate();
             }
 
-            if (IsMediaAsset)
+            if (MediaAsset is { } __value0)
             {
-                mediaAsset?.Invoke(MediaAsset!);
+                mediaAsset?.Invoke(__value0);
             }
-            else if (IsUri)
+            else if (Uri is { } __value1)
             {
-                uri?.Invoke(Uri!);
+                uri?.Invoke(__value1);
             }
-            else if (IsDataBase64)
+            else if (DataBase64 is { } __value2)
             {
-                dataBase64?.Invoke(DataBase64!);
+                dataBase64?.Invoke(__value2);
             }
         }
 
@@ -310,17 +310,17 @@ namespace WorldLabs
                 Validate();
             }
 
-            if (IsMediaAsset)
+            if (MediaAsset is { } __value0)
             {
-                mediaAsset?.Invoke(MediaAsset!);
+                mediaAsset?.Invoke(__value0);
             }
-            else if (IsUri)
+            else if (Uri is { } __value1)
             {
-                uri?.Invoke(Uri!);
+                uri?.Invoke(__value1);
             }
-            else if (IsDataBase64)
+            else if (DataBase64 is { } __value2)
             {
-                dataBase64?.Invoke(DataBase64!);
+                dataBase64?.Invoke(__value2);
             }
         }
 

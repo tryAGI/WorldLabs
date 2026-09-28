@@ -48,8 +48,8 @@ namespace WorldLabs
         /// <summary>
         ///
         /// </summary>
-        public global::WorldLabs.WorldTextPromptInput PickText() => IsText
-            ? Text!
+        public global::WorldLabs.WorldTextPromptInput PickText() => Text is { } value
+            ? value
             : throw new global::System.InvalidOperationException($"Expected union variant 'Text' but the value was {ToString()}.");
 
         /// <summary>
@@ -88,8 +88,8 @@ namespace WorldLabs
         /// <summary>
         ///
         /// </summary>
-        public global::WorldLabs.ImagePrompt PickImage() => IsImage
-            ? Image!
+        public global::WorldLabs.ImagePrompt PickImage() => Image is { } value
+            ? value
             : throw new global::System.InvalidOperationException($"Expected union variant 'Image' but the value was {ToString()}.");
 
         /// <summary>
@@ -127,8 +127,8 @@ namespace WorldLabs
         /// <summary>
         ///
         /// </summary>
-        public global::WorldLabs.MultiImagePromptInput PickMultiImage() => IsMultiImage
-            ? MultiImage!
+        public global::WorldLabs.MultiImagePromptInput PickMultiImage() => MultiImage is { } value
+            ? value
             : throw new global::System.InvalidOperationException($"Expected union variant 'MultiImage' but the value was {ToString()}.");
 
         /// <summary>
@@ -167,8 +167,8 @@ namespace WorldLabs
         /// <summary>
         ///
         /// </summary>
-        public global::WorldLabs.VideoPromptInput PickVideo() => IsVideo
-            ? Video!
+        public global::WorldLabs.VideoPromptInput PickVideo() => Video is { } value
+            ? value
             : throw new global::System.InvalidOperationException($"Expected union variant 'Video' but the value was {ToString()}.");
         /// <summary>
         ///
@@ -324,21 +324,21 @@ namespace WorldLabs
                 Validate();
             }
 
-            if (IsText && text != null)
+            if (Text is { } __value0 && text != null)
             {
-                return text(Text!);
+                return text(__value0);
             }
-            else if (IsImage && image != null)
+            else if (Image is { } __value1 && image != null)
             {
-                return image(Image!);
+                return image(__value1);
             }
-            else if (IsMultiImage && multiImage != null)
+            else if (MultiImage is { } __value2 && multiImage != null)
             {
-                return multiImage(MultiImage!);
+                return multiImage(__value2);
             }
-            else if (IsVideo && video != null)
+            else if (Video is { } __value3 && video != null)
             {
-                return video(Video!);
+                return video(__value3);
             }
 
             return default(TResult);
@@ -362,21 +362,21 @@ namespace WorldLabs
                 Validate();
             }
 
-            if (IsText)
+            if (Text is { } __value0)
             {
-                text?.Invoke(Text!);
+                text?.Invoke(__value0);
             }
-            else if (IsImage)
+            else if (Image is { } __value1)
             {
-                image?.Invoke(Image!);
+                image?.Invoke(__value1);
             }
-            else if (IsMultiImage)
+            else if (MultiImage is { } __value2)
             {
-                multiImage?.Invoke(MultiImage!);
+                multiImage?.Invoke(__value2);
             }
-            else if (IsVideo)
+            else if (Video is { } __value3)
             {
-                video?.Invoke(Video!);
+                video?.Invoke(__value3);
             }
         }
 
@@ -395,21 +395,21 @@ namespace WorldLabs
                 Validate();
             }
 
-            if (IsText)
+            if (Text is { } __value0)
             {
-                text?.Invoke(Text!);
+                text?.Invoke(__value0);
             }
-            else if (IsImage)
+            else if (Image is { } __value1)
             {
-                image?.Invoke(Image!);
+                image?.Invoke(__value1);
             }
-            else if (IsMultiImage)
+            else if (MultiImage is { } __value2)
             {
-                multiImage?.Invoke(MultiImage!);
+                multiImage?.Invoke(__value2);
             }
-            else if (IsVideo)
+            else if (Video is { } __value3)
             {
-                video?.Invoke(Video!);
+                video?.Invoke(__value3);
             }
         }
 
