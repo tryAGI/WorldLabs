@@ -77,9 +77,9 @@ internal static partial class PanoDepthToRgbMarbleV1PanoDepthToRgbPostCommandApi
 
     static partial void CustomizeCommand(ref Command command);
 
-    public static Command Create()
+    public static Command Create(string? commandName = null)
     {
-        var command = new Command(@"pano-depth-to-rgb-marble-v1-pano-depth-to-rgb-post", @"Pano Depth To Rgb
+        var command = new Command(commandName ?? @"pano-depth-to-rgb-marble-v1-pano-depth-to-rgb-post", @"Pano Depth To Rgb
 Generate an RGB panorama from a depth panorama.
 
 Provide a depth panorama and a text prompt

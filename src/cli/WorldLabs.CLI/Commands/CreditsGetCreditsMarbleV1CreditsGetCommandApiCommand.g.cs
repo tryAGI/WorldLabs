@@ -31,9 +31,9 @@ internal static partial class CreditsGetCreditsMarbleV1CreditsGetCommandApiComma
 
     static partial void CustomizeCommand(ref Command command);
 
-    public static Command Create()
+    public static Command Create(string? commandName = null)
     {
-        var command = new Command(@"get-credits-marble-v1-credits-get", @"Get Credits
+        var command = new Command(commandName ?? @"get-credits-marble-v1-credits-get", @"Get Credits
 Get remaining API credits for the authenticated user.
 
 Returns:

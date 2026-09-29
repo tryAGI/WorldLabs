@@ -35,9 +35,9 @@ internal static partial class GetMediaAssetMarbleV1MediaAssetsMediaAssetIdGetCom
 
     static partial void CustomizeCommand(ref Command command);
 
-    public static Command Create()
+    public static Command Create(string? commandName = null)
     {
-        var command = new Command(@"get-media-asset-marble-v1-media-assets-media-asset-id-get", @"Get Media Asset
+        var command = new Command(commandName ?? @"get-media-asset-marble-v1-media-assets-media-asset-id-get", @"Get Media Asset
 Get a media asset by ID.
 
 Retrieves metadata for a previously created media asset.

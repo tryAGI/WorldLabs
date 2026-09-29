@@ -35,9 +35,9 @@ internal static partial class GetOperationMarbleV1OperationsOperationIdGetComman
 
     static partial void CustomizeCommand(ref Command command);
 
-    public static Command Create()
+    public static Command Create(string? commandName = null)
     {
-        var command = new Command(@"get-operation-marble-v1-operations-operation-id-get", @"Get Operation
+        var command = new Command(commandName ?? @"get-operation-marble-v1-operations-operation-id-get", @"Get Operation
 Get an operation by ID.
 
 Poll this endpoint to check the status of a long-running operation.
