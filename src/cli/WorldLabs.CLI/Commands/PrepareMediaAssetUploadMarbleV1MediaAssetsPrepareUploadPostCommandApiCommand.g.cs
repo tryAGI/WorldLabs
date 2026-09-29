@@ -71,9 +71,9 @@ internal static partial class PrepareMediaAssetUploadMarbleV1MediaAssetsPrepareU
 
     static partial void CustomizeCommand(ref Command command);
 
-    public static Command Create()
+    public static Command Create(string? commandName = null)
     {
-        var command = new Command(@"prepare-media-asset-upload-marble-v1-media-assets-prepare-upload-post", @"Prepare a media asset upload
+        var command = new Command(commandName ?? @"prepare-media-asset-upload-marble-v1-media-assets-prepare-upload-post", @"Prepare a media asset upload
 Prepare a media asset upload for use in world generation.
 
 This API endpoint creates a media asset record and returns a signed upload URL.

@@ -97,9 +97,9 @@ internal static partial class ListWorldsMarbleV1WorldsListPostCommandApiCommand
 
     static partial void CustomizeCommand(ref Command command);
 
-    public static Command Create()
+    public static Command Create(string? commandName = null)
     {
-        var command = new Command(@"list-worlds-marble-v1-worlds-list-post", @"List Worlds
+        var command = new Command(commandName ?? @"list-worlds-marble-v1-worlds-list-post", @"List Worlds
 List worlds with optional filters.
 
 Returns worlds created through the API with optional filtering and pagination.

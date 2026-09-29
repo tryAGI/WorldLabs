@@ -82,9 +82,9 @@ internal static partial class GenerateWorldMarbleV1WorldsGeneratePostCommandApiC
 
     static partial void CustomizeCommand(ref Command command);
 
-    public static Command Create()
+    public static Command Create(string? commandName = null)
     {
-        var command = new Command(@"generate-world-marble-v1-worlds-generate-post", @"Generate World
+        var command = new Command(commandName ?? @"generate-world-marble-v1-worlds-generate-post", @"Generate World
 Start world generation.
 
 Creates a new world generation job and returns a long-running operation.

@@ -35,9 +35,9 @@ internal static partial class DeleteWorldMarbleV1WorldsWorldIdDeleteCommandApiCo
 
     static partial void CustomizeCommand(ref Command command);
 
-    public static Command Create()
+    public static Command Create(string? commandName = null)
     {
-        var command = new Command(@"delete-world-marble-v1-worlds-world-id-delete", @"Delete World
+        var command = new Command(commandName ?? @"delete-world-marble-v1-worlds-world-id-delete", @"Delete World
 Delete a world by ID.
 
 Permanently deletes a world and its associated assets.

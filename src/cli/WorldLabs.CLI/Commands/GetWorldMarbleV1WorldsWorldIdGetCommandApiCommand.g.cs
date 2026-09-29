@@ -35,9 +35,9 @@ internal static partial class GetWorldMarbleV1WorldsWorldIdGetCommandApiCommand
 
     static partial void CustomizeCommand(ref Command command);
 
-    public static Command Create()
+    public static Command Create(string? commandName = null)
     {
-        var command = new Command(@"get-world-marble-v1-worlds-world-id-get", @"Get World
+        var command = new Command(commandName ?? @"get-world-marble-v1-worlds-world-id-get", @"Get World
 Get a world by ID.
 
 Retrieves a world's details including generated assets if available.

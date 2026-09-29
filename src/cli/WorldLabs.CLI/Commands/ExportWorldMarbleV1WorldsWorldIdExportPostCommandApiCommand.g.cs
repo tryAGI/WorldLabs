@@ -77,9 +77,9 @@ internal static partial class ExportWorldMarbleV1WorldsWorldIdExportPostCommandA
 
     static partial void CustomizeCommand(ref Command command);
 
-    public static Command Create()
+    public static Command Create(string? commandName = null)
     {
-        var command = new Command(@"export-world-marble-v1-worlds-world-id-export-post", @"Export World
+        var command = new Command(commandName ?? @"export-world-marble-v1-worlds-world-id-export-post", @"Export World
 Export a generated world asset.
 
 PLY splat exports are converted synchronously, cached in GCS, and returned
