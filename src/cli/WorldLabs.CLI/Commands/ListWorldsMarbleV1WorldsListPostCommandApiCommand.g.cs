@@ -23,7 +23,7 @@ internal static partial class ListWorldsMarbleV1WorldsListPostCommandApiCommand
         name: @"--is-public",
         description: @"Filter by visibility. true=public only, false=private only, null=all");
 
-    private static Option<global::WorldLabs.AnyOf<global::WorldLabs.ListWorldsRequestModelVariant1?, global::WorldLabs.ListWorldsRequestModelVariant2?, object>?> Model { get; } = new(
+    private static Option<global::WorldLabs.AnyOf<global::WorldLabs.ListWorldsRequestModelVariant1?, global::WorldLabs.ListWorldsRequestModelVariant2?>?> Model { get; } = new(
         name: @"--model")
     {
         Description = @"Filter by model used for generation. Legacy names are deprecated; use the new lowercase names.",

@@ -129,7 +129,7 @@ namespace WorldLabs
         /// <summary>
         ///
         /// </summary>
-        public global::WorldLabs.AnyOf<global::WorldLabs.World, global::WorldLabs.PanoDepthToRgbResult, global::WorldLabs.ExportWorldResult, object>? Type24 { get; set; }
+        public global::WorldLabs.AnyOf<global::WorldLabs.World, global::WorldLabs.PanoDepthToRgbResult, global::WorldLabs.ExportWorldResult>? Type24 { get; set; }
         /// <summary>
         ///
         /// </summary>
@@ -193,7 +193,7 @@ namespace WorldLabs
         /// <summary>
         ///
         /// </summary>
-        public global::WorldLabs.AnyOf<global::WorldLabs.ListWorldsRequestModelVariant1?, global::WorldLabs.ListWorldsRequestModelVariant2?, object>? Type40 { get; set; }
+        public global::WorldLabs.AnyOf<global::WorldLabs.ListWorldsRequestModelVariant1?, global::WorldLabs.ListWorldsRequestModelVariant2?>? Type40 { get; set; }
         /// <summary>
         ///
         /// </summary>

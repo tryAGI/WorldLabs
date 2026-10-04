@@ -561,7 +561,7 @@ namespace WorldLabs
             global::System.DateTime? createdAfter = default,
             global::System.DateTime? createdBefore = default,
             bool? isPublic = default,
-            global::WorldLabs.AnyOf<global::WorldLabs.ListWorldsRequestModelVariant1?, global::WorldLabs.ListWorldsRequestModelVariant2?, object>? model = default,
+            global::WorldLabs.AnyOf<global::WorldLabs.ListWorldsRequestModelVariant1?, global::WorldLabs.ListWorldsRequestModelVariant2?>? model = default,
             int? pageSize = default,
             string? pageToken = default,
             global::WorldLabs.ListWorldsRequestSortBy? sortBy = default,
