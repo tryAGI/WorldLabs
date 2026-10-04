@@ -30,8 +30,8 @@ namespace WorldLabs
         /// Filter by model used for generation. Legacy names are deprecated; use the new lowercase names.
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("model")]
-        [global::System.Text.Json.Serialization.JsonConverter(typeof(global::WorldLabs.JsonConverters.AnyOfJsonConverter<global::WorldLabs.ListWorldsRequestModelVariant1?, global::WorldLabs.ListWorldsRequestModelVariant2?, object>))]
-        public global::WorldLabs.AnyOf<global::WorldLabs.ListWorldsRequestModelVariant1?, global::WorldLabs.ListWorldsRequestModelVariant2?, object>? Model { get; set; }
+        [global::System.Text.Json.Serialization.JsonConverter(typeof(global::WorldLabs.JsonConverters.AnyOfJsonConverter<global::WorldLabs.ListWorldsRequestModelVariant1?, global::WorldLabs.ListWorldsRequestModelVariant2?>))]
+        public global::WorldLabs.AnyOf<global::WorldLabs.ListWorldsRequestModelVariant1?, global::WorldLabs.ListWorldsRequestModelVariant2?>? Model { get; set; }
 
         /// <summary>
         /// Number of results per page (1-100)<br/>
@@ -111,7 +111,7 @@ namespace WorldLabs
             global::System.DateTime? createdAfter,
             global::System.DateTime? createdBefore,
             bool? isPublic,
-            global::WorldLabs.AnyOf<global::WorldLabs.ListWorldsRequestModelVariant1?, global::WorldLabs.ListWorldsRequestModelVariant2?, object>? model,
+            global::WorldLabs.AnyOf<global::WorldLabs.ListWorldsRequestModelVariant1?, global::WorldLabs.ListWorldsRequestModelVariant2?>? model,
             int? pageSize,
             string? pageToken,
             global::WorldLabs.ListWorldsRequestSortBy? sortBy,

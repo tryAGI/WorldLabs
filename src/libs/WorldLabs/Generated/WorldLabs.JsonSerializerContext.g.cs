@@ -107,9 +107,9 @@ namespace WorldLabs
 
             typeof(global::WorldLabs.JsonConverters.WorldPromptJsonConverter),
 
-            typeof(global::WorldLabs.JsonConverters.AnyOfJsonConverter<global::WorldLabs.World, global::WorldLabs.PanoDepthToRgbResult, global::WorldLabs.ExportWorldResult, object>),
+            typeof(global::WorldLabs.JsonConverters.AnyOfJsonConverter<global::WorldLabs.World, global::WorldLabs.PanoDepthToRgbResult, global::WorldLabs.ExportWorldResult>),
 
-            typeof(global::WorldLabs.JsonConverters.AnyOfJsonConverter<global::WorldLabs.ListWorldsRequestModelVariant1?, global::WorldLabs.ListWorldsRequestModelVariant2?, object>),
+            typeof(global::WorldLabs.JsonConverters.AnyOfJsonConverter<global::WorldLabs.ListWorldsRequestModelVariant1?, global::WorldLabs.ListWorldsRequestModelVariant2?>),
 
             typeof(global::WorldLabs.JsonConverters.AnyOfJsonConverter<string, int?>),
 
@@ -144,7 +144,7 @@ namespace WorldLabs
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::WorldLabs.ExportWorldResultMeshVariant), TypeInfoPropertyName = "ExportWorldResultMeshVariant2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::WorldLabs.GenerateWorldResponse))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::WorldLabs.GetOperationResponseUnionWorldPanoDepthToRgbResultExportWorldResult))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::WorldLabs.AnyOf<global::WorldLabs.World, global::WorldLabs.PanoDepthToRgbResult, global::WorldLabs.ExportWorldResult, object>), TypeInfoPropertyName = "AnyOfWorldPanoDepthToRgbResultExportWorldResultObject2")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::WorldLabs.AnyOf<global::WorldLabs.World, global::WorldLabs.PanoDepthToRgbResult, global::WorldLabs.ExportWorldResult>), TypeInfoPropertyName = "AnyOfWorldPanoDepthToRgbResultExportWorldResult2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::WorldLabs.World))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::WorldLabs.PanoDepthToRgbResult))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::WorldLabs.HTTPValidationError))]
@@ -160,7 +160,7 @@ namespace WorldLabs
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::WorldLabs.ImageryAssets))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::WorldLabs.InpaintPanoPrompt))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::WorldLabs.ListWorldsRequest))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::WorldLabs.AnyOf<global::WorldLabs.ListWorldsRequestModelVariant1?, global::WorldLabs.ListWorldsRequestModelVariant2?, object>), TypeInfoPropertyName = "AnyOfListWorldsRequestModelVariant1ListWorldsRequestModelVariant2Object2")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::WorldLabs.AnyOf<global::WorldLabs.ListWorldsRequestModelVariant1?, global::WorldLabs.ListWorldsRequestModelVariant2?>), TypeInfoPropertyName = "AnyOfListWorldsRequestModelVariant1ListWorldsRequestModelVariant22")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::WorldLabs.ListWorldsRequestModelVariant1), TypeInfoPropertyName = "ListWorldsRequestModelVariant12")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::WorldLabs.ListWorldsRequestModelVariant2), TypeInfoPropertyName = "ListWorldsRequestModelVariant22")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(int))]

@@ -56,8 +56,8 @@ namespace WorldLabs
         /// Result payload when done=true and no error. Structure depends on operation type.
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("response")]
-        [global::System.Text.Json.Serialization.JsonConverter(typeof(global::WorldLabs.JsonConverters.AnyOfJsonConverter<global::WorldLabs.World, global::WorldLabs.PanoDepthToRgbResult, global::WorldLabs.ExportWorldResult, object>))]
-        public global::WorldLabs.AnyOf<global::WorldLabs.World, global::WorldLabs.PanoDepthToRgbResult, global::WorldLabs.ExportWorldResult, object>? Response { get; set; }
+        [global::System.Text.Json.Serialization.JsonConverter(typeof(global::WorldLabs.JsonConverters.AnyOfJsonConverter<global::WorldLabs.World, global::WorldLabs.PanoDepthToRgbResult, global::WorldLabs.ExportWorldResult>))]
+        public global::WorldLabs.AnyOf<global::WorldLabs.World, global::WorldLabs.PanoDepthToRgbResult, global::WorldLabs.ExportWorldResult>? Response { get; set; }
 
         /// <summary>
         /// Last update timestamp
@@ -112,7 +112,7 @@ namespace WorldLabs
             global::WorldLabs.OperationError? error,
             global::System.DateTime? expiresAt,
             object? metadata,
-            global::WorldLabs.AnyOf<global::WorldLabs.World, global::WorldLabs.PanoDepthToRgbResult, global::WorldLabs.ExportWorldResult, object>? response,
+            global::WorldLabs.AnyOf<global::WorldLabs.World, global::WorldLabs.PanoDepthToRgbResult, global::WorldLabs.ExportWorldResult>? response,
             global::System.DateTime? updatedAt)
         {
             this.Cost = cost;
