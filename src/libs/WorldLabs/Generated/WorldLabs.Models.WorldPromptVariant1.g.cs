@@ -57,38 +57,38 @@ namespace WorldLabs
         /// If no text prompt is provided, it will be generated via recaption.
         /// </summary>
 #if NET6_0_OR_GREATER
-        public global::WorldLabs.Prompt? DepthPano1 { get; init; }
+        public global::WorldLabs.Prompt? Image { get; init; }
 #else
-        public global::WorldLabs.Prompt? DepthPano1 { get; }
+        public global::WorldLabs.Prompt? Image { get; }
 #endif
 
         /// <summary>
         ///
         /// </summary>
 #if NET6_0_OR_GREATER
-        [global::System.Diagnostics.CodeAnalysis.MemberNotNullWhen(true, nameof(DepthPano1))]
+        [global::System.Diagnostics.CodeAnalysis.MemberNotNullWhen(true, nameof(Image))]
 #endif
-        public bool IsDepthPano1 => DepthPano1 != null;
+        public bool IsImage => Image != null;
 
         /// <summary>
         ///
         /// </summary>
-        public bool TryPickDepthPano1(
+        public bool TryPickImage(
 #if NET6_0_OR_GREATER
             [global::System.Diagnostics.CodeAnalysis.NotNullWhen(true)]
 #endif
             out global::WorldLabs.Prompt? value)
         {
-            value = DepthPano1;
-            return IsDepthPano1;
+            value = Image;
+            return IsImage;
         }
 
         /// <summary>
         ///
         /// </summary>
-        public global::WorldLabs.Prompt PickDepthPano1() => DepthPano1 is { } value
+        public global::WorldLabs.Prompt PickImage() => Image is { } value
             ? value
-            : throw new global::System.InvalidOperationException($"Expected union variant 'DepthPano1' but the value was {ToString()}.");
+            : throw new global::System.InvalidOperationException($"Expected union variant 'Image' but the value was {ToString()}.");
 
         /// <summary>
         /// For world models supporting multi-image (+ text) input.
@@ -172,38 +172,38 @@ namespace WorldLabs
         /// Please set z_min and z_max both to None when using an EXR file.
         /// </summary>
 #if NET6_0_OR_GREATER
-        public global::WorldLabs.DepthPanoPrompt? DepthPano2 { get; init; }
+        public global::WorldLabs.DepthPanoPrompt? DepthPano { get; init; }
 #else
-        public global::WorldLabs.DepthPanoPrompt? DepthPano2 { get; }
+        public global::WorldLabs.DepthPanoPrompt? DepthPano { get; }
 #endif
 
         /// <summary>
         ///
         /// </summary>
 #if NET6_0_OR_GREATER
-        [global::System.Diagnostics.CodeAnalysis.MemberNotNullWhen(true, nameof(DepthPano2))]
+        [global::System.Diagnostics.CodeAnalysis.MemberNotNullWhen(true, nameof(DepthPano))]
 #endif
-        public bool IsDepthPano2 => DepthPano2 != null;
+        public bool IsDepthPano => DepthPano != null;
 
         /// <summary>
         ///
         /// </summary>
-        public bool TryPickDepthPano2(
+        public bool TryPickDepthPano(
 #if NET6_0_OR_GREATER
             [global::System.Diagnostics.CodeAnalysis.NotNullWhen(true)]
 #endif
             out global::WorldLabs.DepthPanoPrompt? value)
         {
-            value = DepthPano2;
-            return IsDepthPano2;
+            value = DepthPano;
+            return IsDepthPano;
         }
 
         /// <summary>
         ///
         /// </summary>
-        public global::WorldLabs.DepthPanoPrompt PickDepthPano2() => DepthPano2 is { } value
+        public global::WorldLabs.DepthPanoPrompt PickDepthPano() => DepthPano is { } value
             ? value
-            : throw new global::System.InvalidOperationException($"Expected union variant 'DepthPano2' but the value was {ToString()}.");
+            : throw new global::System.InvalidOperationException($"Expected union variant 'DepthPano' but the value was {ToString()}.");
 
         /// <summary>
         /// For models that inpaint the masked portion of a pano image.
@@ -272,20 +272,20 @@ namespace WorldLabs
         /// <summary>
         ///
         /// </summary>
-        public static implicit operator global::WorldLabs.Prompt?(WorldPromptVariant1 @this) => @this.DepthPano1;
+        public static implicit operator global::WorldLabs.Prompt?(WorldPromptVariant1 @this) => @this.Image;
 
         /// <summary>
         ///
         /// </summary>
         public WorldPromptVariant1(global::WorldLabs.Prompt? value)
         {
-            DepthPano1 = value;
+            Image = value;
         }
 
         /// <summary>
         ///
         /// </summary>
-        public static WorldPromptVariant1 FromDepthPano1(global::WorldLabs.Prompt? value) => new WorldPromptVariant1(value);
+        public static WorldPromptVariant1 FromImage(global::WorldLabs.Prompt? value) => new WorldPromptVariant1(value);
 
         /// <summary>
         ///
@@ -341,20 +341,20 @@ namespace WorldLabs
         /// <summary>
         ///
         /// </summary>
-        public static implicit operator global::WorldLabs.DepthPanoPrompt?(WorldPromptVariant1 @this) => @this.DepthPano2;
+        public static implicit operator global::WorldLabs.DepthPanoPrompt?(WorldPromptVariant1 @this) => @this.DepthPano;
 
         /// <summary>
         ///
         /// </summary>
         public WorldPromptVariant1(global::WorldLabs.DepthPanoPrompt? value)
         {
-            DepthPano2 = value;
+            DepthPano = value;
         }
 
         /// <summary>
         ///
         /// </summary>
-        public static WorldPromptVariant1 FromDepthPano2(global::WorldLabs.DepthPanoPrompt? value) => new WorldPromptVariant1(value);
+        public static WorldPromptVariant1 FromDepthPano(global::WorldLabs.DepthPanoPrompt? value) => new WorldPromptVariant1(value);
 
         /// <summary>
         ///
@@ -385,20 +385,20 @@ namespace WorldLabs
         public WorldPromptVariant1(
             global::WorldLabs.WorldWorldPromptVariant1DiscriminatorType? type,
             global::WorldLabs.WorldTextPromptOutput? text,
-            global::WorldLabs.Prompt? depthPano1,
+            global::WorldLabs.Prompt? image,
             global::WorldLabs.MultiImagePromptOutput? multiImage,
             global::WorldLabs.VideoPromptOutput? video,
-            global::WorldLabs.DepthPanoPrompt? depthPano2,
+            global::WorldLabs.DepthPanoPrompt? depthPano,
             global::WorldLabs.InpaintPanoPrompt? inpaintPano
             )
         {
             Type = type;
 
             Text = text;
-            DepthPano1 = depthPano1;
+            Image = image;
             MultiImage = multiImage;
             Video = video;
-            DepthPano2 = depthPano2;
+            DepthPano = depthPano;
             InpaintPano = inpaintPano;
         }
 
@@ -407,10 +407,10 @@ namespace WorldLabs
         /// </summary>
         public object? Object =>
             InpaintPano as object ??
-            DepthPano2 as object ??
+            DepthPano as object ??
             Video as object ??
             MultiImage as object ??
-            DepthPano1 as object ??
+            Image as object ??
             Text as object
             ;
 
@@ -419,10 +419,10 @@ namespace WorldLabs
         /// </summary>
         public override string? ToString() =>
             Text?.ToString() ??
-            DepthPano1?.ToString() ??
+            Image?.ToString() ??
             MultiImage?.ToString() ??
             Video?.ToString() ??
-            DepthPano2?.ToString() ??
+            DepthPano?.ToString() ??
             InpaintPano?.ToString()
             ;
 
@@ -431,7 +431,7 @@ namespace WorldLabs
         /// </summary>
         public bool Validate()
         {
-            return IsText && !IsDepthPano1 && !IsMultiImage && !IsVideo && !IsDepthPano2 && !IsInpaintPano || !IsText && IsDepthPano1 && !IsMultiImage && !IsVideo && !IsDepthPano2 && !IsInpaintPano || !IsText && !IsDepthPano1 && IsMultiImage && !IsVideo && !IsDepthPano2 && !IsInpaintPano || !IsText && !IsDepthPano1 && !IsMultiImage && IsVideo && !IsDepthPano2 && !IsInpaintPano || !IsText && !IsDepthPano1 && !IsMultiImage && !IsVideo && IsDepthPano2 && !IsInpaintPano || !IsText && !IsDepthPano1 && !IsMultiImage && !IsVideo && !IsDepthPano2 && IsInpaintPano;
+            return IsText && !IsImage && !IsMultiImage && !IsVideo && !IsDepthPano && !IsInpaintPano || !IsText && IsImage && !IsMultiImage && !IsVideo && !IsDepthPano && !IsInpaintPano || !IsText && !IsImage && IsMultiImage && !IsVideo && !IsDepthPano && !IsInpaintPano || !IsText && !IsImage && !IsMultiImage && IsVideo && !IsDepthPano && !IsInpaintPano || !IsText && !IsImage && !IsMultiImage && !IsVideo && IsDepthPano && !IsInpaintPano || !IsText && !IsImage && !IsMultiImage && !IsVideo && !IsDepthPano && IsInpaintPano;
         }
 
         /// <summary>
@@ -439,10 +439,10 @@ namespace WorldLabs
         /// </summary>
         public TResult? Match<TResult>(
             global::System.Func<global::WorldLabs.WorldTextPromptOutput, TResult>? text = null,
-            global::System.Func<global::WorldLabs.Prompt, TResult>? depthPano1 = null,
+            global::System.Func<global::WorldLabs.Prompt, TResult>? image = null,
             global::System.Func<global::WorldLabs.MultiImagePromptOutput, TResult>? multiImage = null,
             global::System.Func<global::WorldLabs.VideoPromptOutput, TResult>? video = null,
-            global::System.Func<global::WorldLabs.DepthPanoPrompt, TResult>? depthPano2 = null,
+            global::System.Func<global::WorldLabs.DepthPanoPrompt, TResult>? depthPano = null,
             global::System.Func<global::WorldLabs.InpaintPanoPrompt, TResult>? inpaintPano = null,
             bool validate = true)
         {
@@ -455,9 +455,9 @@ namespace WorldLabs
             {
                 return text(__value0);
             }
-            else if (DepthPano1 is { } __value1 && depthPano1 != null)
+            else if (Image is { } __value1 && image != null)
             {
-                return depthPano1(__value1);
+                return image(__value1);
             }
             else if (MultiImage is { } __value2 && multiImage != null)
             {
@@ -467,9 +467,9 @@ namespace WorldLabs
             {
                 return video(__value3);
             }
-            else if (DepthPano2 is { } __value4 && depthPano2 != null)
+            else if (DepthPano is { } __value4 && depthPano != null)
             {
-                return depthPano2(__value4);
+                return depthPano(__value4);
             }
             else if (InpaintPano is { } __value5 && inpaintPano != null)
             {
@@ -485,13 +485,13 @@ namespace WorldLabs
         public void Match(
             global::System.Action<global::WorldLabs.WorldTextPromptOutput>? text = null,
 
-            global::System.Action<global::WorldLabs.Prompt>? depthPano1 = null,
+            global::System.Action<global::WorldLabs.Prompt>? image = null,
 
             global::System.Action<global::WorldLabs.MultiImagePromptOutput>? multiImage = null,
 
             global::System.Action<global::WorldLabs.VideoPromptOutput>? video = null,
 
-            global::System.Action<global::WorldLabs.DepthPanoPrompt>? depthPano2 = null,
+            global::System.Action<global::WorldLabs.DepthPanoPrompt>? depthPano = null,
 
             global::System.Action<global::WorldLabs.InpaintPanoPrompt>? inpaintPano = null,
             bool validate = true)
@@ -505,9 +505,9 @@ namespace WorldLabs
             {
                 text?.Invoke(__value0);
             }
-            else if (DepthPano1 is { } __value1)
+            else if (Image is { } __value1)
             {
-                depthPano1?.Invoke(__value1);
+                image?.Invoke(__value1);
             }
             else if (MultiImage is { } __value2)
             {
@@ -517,9 +517,9 @@ namespace WorldLabs
             {
                 video?.Invoke(__value3);
             }
-            else if (DepthPano2 is { } __value4)
+            else if (DepthPano is { } __value4)
             {
-                depthPano2?.Invoke(__value4);
+                depthPano?.Invoke(__value4);
             }
             else if (InpaintPano is { } __value5)
             {
@@ -532,10 +532,10 @@ namespace WorldLabs
         /// </summary>
         public void Switch(
             global::System.Action<global::WorldLabs.WorldTextPromptOutput>? text = null,
-            global::System.Action<global::WorldLabs.Prompt>? depthPano1 = null,
+            global::System.Action<global::WorldLabs.Prompt>? image = null,
             global::System.Action<global::WorldLabs.MultiImagePromptOutput>? multiImage = null,
             global::System.Action<global::WorldLabs.VideoPromptOutput>? video = null,
-            global::System.Action<global::WorldLabs.DepthPanoPrompt>? depthPano2 = null,
+            global::System.Action<global::WorldLabs.DepthPanoPrompt>? depthPano = null,
             global::System.Action<global::WorldLabs.InpaintPanoPrompt>? inpaintPano = null,
             bool validate = true)
         {
@@ -548,9 +548,9 @@ namespace WorldLabs
             {
                 text?.Invoke(__value0);
             }
-            else if (DepthPano1 is { } __value1)
+            else if (Image is { } __value1)
             {
-                depthPano1?.Invoke(__value1);
+                image?.Invoke(__value1);
             }
             else if (MultiImage is { } __value2)
             {
@@ -560,9 +560,9 @@ namespace WorldLabs
             {
                 video?.Invoke(__value3);
             }
-            else if (DepthPano2 is { } __value4)
+            else if (DepthPano is { } __value4)
             {
-                depthPano2?.Invoke(__value4);
+                depthPano?.Invoke(__value4);
             }
             else if (InpaintPano is { } __value5)
             {
@@ -579,13 +579,13 @@ namespace WorldLabs
             {
                 Text,
                 typeof(global::WorldLabs.WorldTextPromptOutput),
-                DepthPano1,
+                Image,
                 typeof(global::WorldLabs.Prompt),
                 MultiImage,
                 typeof(global::WorldLabs.MultiImagePromptOutput),
                 Video,
                 typeof(global::WorldLabs.VideoPromptOutput),
-                DepthPano2,
+                DepthPano,
                 typeof(global::WorldLabs.DepthPanoPrompt),
                 InpaintPano,
                 typeof(global::WorldLabs.InpaintPanoPrompt),
@@ -606,10 +606,10 @@ namespace WorldLabs
         {
             return
                 global::System.Collections.Generic.EqualityComparer<global::WorldLabs.WorldTextPromptOutput?>.Default.Equals(Text, other.Text) &&
-                global::System.Collections.Generic.EqualityComparer<global::WorldLabs.Prompt?>.Default.Equals(DepthPano1, other.DepthPano1) &&
+                global::System.Collections.Generic.EqualityComparer<global::WorldLabs.Prompt?>.Default.Equals(Image, other.Image) &&
                 global::System.Collections.Generic.EqualityComparer<global::WorldLabs.MultiImagePromptOutput?>.Default.Equals(MultiImage, other.MultiImage) &&
                 global::System.Collections.Generic.EqualityComparer<global::WorldLabs.VideoPromptOutput?>.Default.Equals(Video, other.Video) &&
-                global::System.Collections.Generic.EqualityComparer<global::WorldLabs.DepthPanoPrompt?>.Default.Equals(DepthPano2, other.DepthPano2) &&
+                global::System.Collections.Generic.EqualityComparer<global::WorldLabs.DepthPanoPrompt?>.Default.Equals(DepthPano, other.DepthPano) &&
                 global::System.Collections.Generic.EqualityComparer<global::WorldLabs.InpaintPanoPrompt?>.Default.Equals(InpaintPano, other.InpaintPano)
                 ;
         }
