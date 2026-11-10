@@ -18,7 +18,7 @@ namespace WorldLabs.JsonConverters
                     var stringValue = reader.GetString();
                     if (stringValue != null)
                     {
-                        return global::WorldLabs.WorldsGenerateRequestModelVariant1Extensions.ToEnum(stringValue) ?? default;
+                        return global::WorldLabs.WorldsGenerateRequestModelVariant1Extensions.ToEnum(stringValue) ?? throw new global::System.Text.Json.JsonException($"Unknown value '{stringValue}' for global::WorldLabs.WorldsGenerateRequestModelVariant1.");
                     }
 
                     break;
